@@ -1,14 +1,10 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Elliott&#x27;s Automotive · Auto Repair Shop in Pearland</title>
 <meta name="description" content="Elliott&#x27;s Automotive · Honest auto repair, close to home in Pearland. Call (281) 485-0041.">
-<meta property="og:title" content="Elliott&#x27;s Automotive · Pearland, TX">
+<meta property="og:title" content="Elliott&#x27;s Automotive · Pearland, TX"><meta property="og:image" content="https://sitiolisto.github.io/assets/img/taller-0.jpg">
 <meta property="og:description" content="Honest auto repair, close to home. 4.5★ on Google · Call (281) 485-0041.">
-<meta property="og:image" content="https://sitiolisto.github.io/assets/img/taller-0.jpg">
 <meta name="theme-color" content="#eeede8">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,267 +12,246 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoRepair", "name": "Elliott's Automotive", "telephone": "+12814850041", "areaServed": "Pearland", "image": "https://sitiolisto.github.io/assets/img/taller-0.jpg", "address": {"@type": "PostalAddress", "streetAddress": "4707 W Walnut St", "addressLocality": "Pearland", "addressRegion": "TX", "addressCountry": "US"}}</script>
 <script>document.documentElement.className = "js";</script>
 <style>
-:root { --bg: #eeede8; --ink: #141414; --mu: #5d5952; --line: rgba(20,20,20,.12); --acc: #f97316; --dk: #0f172a; }
+:root { --bg: #eeede8; --ink: #141414; --mu: #5d5952; --card: #ffffff; --line: rgba(20,20,20,.12); --acc: #f97316; --dk: #0f172a; --r: 22px; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 html, body { overflow-x: hidden; }
 body { background: var(--bg); color: var(--ink); font-family: Inter, -apple-system, Arial, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 .wrap { max-width: 1220px; margin: 0 auto; padding: 0 22px; }
-.d { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; }
+.d, h1, h2, .brand { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; }
 .kick { font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--mu); }
 .ic { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
-.preview { background: var(--ink); color: #cfcac0; font-size: 12px; text-align: center; padding: 7px 16px; }
+.preview { background: #111; color: #cfcac0; font: 12px Inter, sans-serif; text-align: center; padding: 7px 16px; }
 .preview b { color: #fff; }
-/* header */
-header { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+header { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 18px; height: 70px; }
-.brand { display: flex; align-items: center; gap: 12px; min-width: 0; font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 21px; }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; font-size: 22px; }
 .brand span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .logo { height: 42px; width: auto; max-width: 84px; border-radius: 8px; object-fit: cover; }
 nav { display: flex; gap: 26px; font-size: 14px; font-weight: 500; color: var(--mu); }
 nav a:hover { color: var(--ink); }
 .acts { display: flex; gap: 10px; align-items: center; flex: none; }
-.lang { border: 1px solid var(--line); background: none; border-radius: 99px; padding: 7px 13px; font: 600 12.5px Inter, sans-serif; cursor: pointer; color: var(--mu); }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 99px; padding: 15px 24px; font-weight: 600; font-size: 15px; border: 1.5px solid var(--ink); cursor: pointer; font-family: inherit; transition: transform .2s, background .2s, color .2s; }
+.lang { border: 1px solid var(--line); background: none; color: var(--mu); border-radius: 99px; padding: 7px 13px; font: 600 12.5px Inter, sans-serif; cursor: pointer; }
+.status { display: inline-flex; align-items: center; gap: 8px; font: 600 12.5px Inter, sans-serif; padding: 6px 12px; border-radius: 99px; background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: #9ca3af; }
+.status.open i { background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.2); }
+.badge { display: inline-flex; align-items: center; gap: 6px; font: 600 12.5px Inter, sans-serif; padding: 6px 12px; border-radius: 99px; background: color-mix(in srgb, var(--acc) 22%, transparent); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: min(var(--r), 99px); padding: 15px 24px; font: 600 15px Inter, sans-serif; border: 1.5px solid var(--ink); cursor: pointer; transition: transform .2s, background .2s, color .2s; background: transparent; color: var(--ink); }
 .btn:hover { transform: translateY(-2px); }
 .btn.solid { background: var(--ink); color: var(--bg); }
 .btn.acc { background: var(--acc); border-color: var(--acc); color: #111; }
-.btn.line { background: transparent; }
 .btn.sm { padding: 10px 16px; font-size: 13.5px; }
-/* hero */
-.hero { padding: 64px 0 80px; }
-.hero .wrap { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 56px; align-items: center; }
-.where { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 24px; }
-.where i { width: 10px; height: 10px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 0 5px color-mix(in srgb, var(--acc) 25%, transparent); }
-h1 { font-size: clamp(48px, 7vw, 92px); line-height: .9; margin-bottom: 26px; }
-h1 em { font-style: normal; color: var(--ink); background: linear-gradient(transparent 62%, var(--acc) 62%); }
-.sub { font-size: 19px; color: #36322d; max-width: 540px; margin-bottom: 32px; }
+section { padding: 104px 0; }
+h1 { font-size: clamp(46px, 6.8vw, 96px); line-height: .95; margin-bottom: 24px; }
+h2 { font-size: clamp(36px, 4.8vw, 66px); line-height: 1; margin: 14px 0 0; max-width: 820px; }
+.sub { font-size: 19px; color: var(--mu); max-width: 560px; margin-bottom: 30px; }
 .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
-.stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; margin-top: 44px; border-top: 1px solid var(--ink); }
-.stats div { padding: 16px 16px 0 0; }
-.stats div + div { padding-left: 16px; border-left: 1px solid var(--line); }
-.stats b { display: block; font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; font-size: 34px; line-height: 1.1; letter-spacing: -.035em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.stats div:last-child b { font-size: 26px; padding-top: 6px; }
-.stats b em { font-style: normal; color: #f4b400; font-size: 24px; margin-left: 4px; }
-.stats span { font-size: 13px; color: var(--mu); }
-.photo { position: relative; }
-.photo .img { aspect-ratio: 4 / 5; border-radius: 22px; background: #ccc center / cover no-repeat; box-shadow: 0 30px 60px rgba(0,0,0,.18); }
-.seal { position: absolute; left: -46px; bottom: 40px; width: 150px; height: 150px; border-radius: 50%; background: var(--acc); display: grid; place-items: center; box-shadow: 0 16px 40px rgba(0,0,0,.2); }
-.seal svg { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 22s linear infinite; }
-.seal text { font: 700 11.5px Inter, sans-serif; letter-spacing: 2.4px; fill: #111; }
-.seal b { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; font-size: 40px; color: #111; line-height: 1; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.open { position: absolute; right: -14px; top: 28px; background: #fff; border-radius: 14px; padding: 12px 16px; box-shadow: 0 14px 30px rgba(0,0,0,.14); font-size: 13px; max-width: 220px; }
-.open b { display: block; font-size: 14px; }
-/* ribbon */
-.ribbon { background: var(--dk); color: #fff; overflow: hidden; padding: 20px 0; transform: rotate(-1.2deg); margin: 0 -20px; }
-.ribbon .run { display: flex; width: max-content; animation: run 40s linear infinite; }
-.ribbon .run > span { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; font-size: 30px; letter-spacing: -.035em; padding: 0 26px; white-space: nowrap; }
-.ribbon .run > span::after { content: "✦"; color: var(--acc); margin-left: 52px; font-size: 20px; vertical-align: middle; }
-@keyframes run { to { transform: translateX(-33.33%); } }
-section { padding: 110px 0; }
-h2 { font-size: clamp(38px, 5vw, 70px); line-height: .98; margin: 14px 0 0; max-width: 820px; }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 30px; }
+.tool h3 { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 28px; line-height: 1.1; margin-bottom: 6px; }
+.tool .hint { color: var(--mu); font-size: 14px; margin-bottom: 18px; }
+label { display: block; margin-bottom: 14px; font: 600 12.5px Inter, sans-serif; color: var(--mu); }
+input, select, textarea { display: block; width: 100%; min-width: 0; margin-top: 6px; border: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 60%, var(--card)); color: var(--ink); padding: 12px 13px; font: 500 15.5px Inter, sans-serif; outline: none; border-radius: min(var(--r), 12px); }
+input:focus, select:focus, textarea:focus { border-color: var(--acc); }
+textarea { resize: vertical; min-height: 70px; }
+.two { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 16px; }
+.chips button { font: 600 13px Inter, sans-serif; border: 1px solid var(--line); background: none; color: var(--ink); padding: 9px 14px; border-radius: 99px; cursor: pointer; }
+.chips button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.tool .btn { width: 100%; margin-top: 6px; }
+.note { font-size: 12.5px; color: var(--mu); margin-top: 10px; text-align: center; }
 /* services */
-.svc { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 60px; align-items: start; }
-.svc .side { position: sticky; top: 110px; }
-.svc .side p { color: var(--mu); margin: 20px 0 28px; max-width: 380px; }
-.rows { list-style: none; border-top: 1px solid var(--ink); }
-.row { display: grid; grid-template-columns: 56px minmax(0,1fr) 30px; gap: 16px; align-items: baseline; padding: 24px 12px; border-bottom: 1px solid var(--line); transition: background .25s, padding .25s; border-radius: 4px; }
-.row:hover { background: color-mix(in srgb, var(--acc) 22%, transparent); padding-left: 20px; }
-.row .no { font: 600 13px Inter, sans-serif; color: var(--mu); }
-.row h3 { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 26px; line-height: 1.1; }
-.row p { color: var(--mu); font-size: 15px; margin-top: 4px; }
-.row .arr { font-size: 20px; color: var(--mu); }
+.svcgrid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; margin-top: 50px; }
+.svc { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 28px; }
+.svc .no { font: 600 12px Inter, sans-serif; color: var(--acc); letter-spacing: .1em; }
+.svc h3 { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 24px; line-height: 1.15; margin: 14px 0 6px; }
+.svc p { color: var(--mu); font-size: 15px; }
 /* about */
-.about { background: #fff; }
-.ab { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 70px; align-items: center; }
-.duo { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,.8fr); gap: 14px; align-items: end; }
-.duo div { border-radius: 18px; background: #ddd center / cover; }
-.duo div:first-child { aspect-ratio: 3 / 4; } .duo div:last-child { aspect-ratio: 3 / 4; margin-bottom: 60px; }
-.ab p.lead { font-size: 19px; color: #36322d; margin: 22px 0 26px; }
-.ab ul { list-style: none; display: grid; gap: 14px; margin-bottom: 30px; }
+.ab { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 64px; align-items: center; }
+.ab .pic { aspect-ratio: 4 / 3; border-radius: var(--r); background: #ccc center / cover; }
+.ab p.lead { font-size: 18.5px; color: var(--mu); margin: 20px 0 24px; }
+.ab ul { list-style: none; display: grid; gap: 12px; }
 .ab li { display: flex; gap: 12px; align-items: center; font-weight: 600; }
-.ab li .ic { width: 28px; height: 28px; padding: 6px; border-radius: 50%; background: var(--acc); color: #111; }
+.ab li .ic { width: 26px; height: 26px; padding: 5px; border-radius: 50%; background: var(--acc); color: #111; }
 /* voices */
 .voices { background: var(--dk); color: #fff; text-align: center; }
-.voices .kick { color: color-mix(in srgb, #fff 60%, var(--acc)); }
-.slides { position: relative; min-height: 260px; margin-top: 30px; }
-.q { position: absolute; inset: 0; opacity: 0; transition: opacity .8s; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.q.on { opacity: 1; }
-.q blockquote { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: clamp(26px, 3.6vw, 46px); line-height: 1.15; max-width: 940px; }
-.q blockquote::before { content: "“"; display: block; font-size: 1.8em; line-height: .6; color: var(--acc); }
-.q figcaption { margin-top: 22px; color: #c9c5bd; font-size: 15px; }
-.dots { display: flex; gap: 10px; justify-content: center; margin-top: 26px; }
+.voices .kick { color: var(--acc); }
+.slides { position: relative; min-height: 240px; margin-top: 26px; }
+.q { position: absolute; inset: 0; opacity: 0; transition: opacity .8s; display: flex; flex-direction: column; justify-content: center; align-items: center; pointer-events: none; }
+.q.on { opacity: 1; pointer-events: auto; }
+.q blockquote { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: clamp(24px, 3.4vw, 44px); line-height: 1.18; max-width: 920px; }
+.q blockquote::before { content: "\201C"; display: block; font-size: 1.6em; line-height: .6; color: var(--acc); }
+.q figcaption { margin-top: 20px; color: rgba(255,255,255,.7); font-size: 15px; }
+.dots { display: flex; gap: 10px; justify-content: center; margin-top: 22px; }
 .dots button { width: 34px; height: 4px; border-radius: 4px; border: 0; background: rgba(255,255,255,.25); cursor: pointer; }
 .dots button.on { background: var(--acc); }
-.more { display: inline-block; margin-top: 30px; border-bottom: 1px solid rgba(255,255,255,.5); font-size: 15px; }
-/* steps */
-.steps { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; margin-top: 56px; border-top: 1px solid var(--ink); }
-.steps li { padding: 30px 30px 0 0; }
-.steps li + li { padding-left: 30px; border-left: 1px solid var(--line); }
-.steps .big { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; font-size: 96px; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px var(--ink); }
-.steps h3 { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 24px; margin: 18px 0 8px; }
-.steps p { color: var(--mu); }
+.more { display: inline-block; margin-top: 26px; border-bottom: 1px solid rgba(255,255,255,.5); font-size: 15px; }
 /* contact */
-.contact { background: #fff; }
-.ct { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 40px; align-items: start; }
-form { background: color-mix(in srgb, var(--acc) 18%, var(--bg)); border-radius: 26px; padding: 34px; }
-form h3 { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 36px; line-height: 1.05; margin-bottom: 18px; }
-label { display: block; margin-bottom: 14px; font-size: 13px; font-weight: 600; color: #3a362f; }
-input, select, textarea { display: block; width: 100%; min-width: 0; margin-top: 6px; border: 0; border-bottom: 1.5px solid var(--ink); background: transparent; padding: 10px 2px; font: 500 16px Inter, sans-serif; color: var(--ink); outline: none; border-radius: 0; }
-textarea { resize: vertical; min-height: 64px; }
-form .btn { width: 100%; margin-top: 10px; }
-.card { border: 1px solid var(--line); border-radius: 26px; overflow: hidden; }
+.ct { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 32px; align-items: start; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
 .card .in { padding: 30px; }
-.card .phone { display: block; font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 40px; line-height: 1.1; margin: 8px 0 14px; }
-.card .addr { color: var(--mu); margin-bottom: 16px; }
-.hours ul { list-style: none; margin-top: 8px; display: grid; gap: 4px; font-size: 15px; }
+.card .phone { display: block; font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 38px; line-height: 1.1; margin: 8px 0 12px; }
+.card .addr { color: var(--mu); margin-bottom: 14px; }
+.hours { list-style: none; display: grid; gap: 4px; font-size: 15px; margin: 8px 0 20px; }
 .card iframe { display: block; width: 100%; height: 280px; border: 0; }
-/* faq */
 details { border-top: 1px solid var(--line); padding: 22px 0; }
 details:last-child { border-bottom: 1px solid var(--line); }
-summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 22px; }
+summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; font-size: 24px; }
 summary::-webkit-details-marker { display: none; }
 summary::after { content: "+"; color: var(--mu); transition: transform .25s; }
 details[open] summary::after { transform: rotate(45deg); }
 details p { color: var(--mu); margin-top: 10px; max-width: 680px; }
 .faq { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: 60px; }
-/* footer */
-footer { background: var(--ink); color: #bdb8ae; padding: 80px 0 120px; overflow: hidden; }
-.giant { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; color: var(--bg); font-size: clamp(54px, 11vw, 170px); line-height: .9; overflow-wrap: anywhere; }
-.foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(255,255,255,.15); margin-top: 40px; padding-top: 22px; font-size: 14px; }
-.foot a:hover { color: #fff; }
+footer { background: var(--dk); color: rgba(255,255,255,.7); padding: 72px 0 120px; overflow: hidden; }
+.giant { font-family: "Archivo", "Arial Narrow", sans-serif; font-weight: 850; font-stretch: 112%; letter-spacing: -.035em; color: #fff; font-size: clamp(48px, 9vw, 140px); line-height: .95; overflow-wrap: anywhere; }
+.foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; border-top: 1px solid rgba(255,255,255,.15); margin-top: 36px; padding-top: 20px; font-size: 14px; }
 .mbar { display: none; }
-.js .rv { opacity: 0; transform: translateY(26px); transition: opacity .9s ease, transform .9s ease; }
+.lb { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.88); display: none; place-items: center; padding: 30px; cursor: zoom-out; }
+.lb.on { display: grid; }
+.lb img { max-width: 100%; max-height: 90vh; }
+.js .rv { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
 .js .rv.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .seal svg, .ribbon .run { animation: none; } .js .rv { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; } .js .rv { opacity: 1; transform: none; } }
 @media (max-width: 980px) {
-  nav { display: none; }
-  .hero .wrap, .svc, .ab, .ct, .faq { grid-template-columns: minmax(0,1fr); gap: 40px; }
-  .svc .side { position: static; }
-  .photo { max-width: 460px; margin-left: 40px; }
-  .steps { grid-template-columns: minmax(0,1fr); } .steps li, .steps li + li { padding: 26px 0; border-left: 0; border-bottom: 1px solid var(--line); }
-  section { padding: 80px 0; }
+  nav, .bar .status { display: none; }
+  .ab, .ct, .faq, .svcgrid { grid-template-columns: minmax(0,1fr); gap: 36px; }
+  section { padding: 76px 0; }
 }
 @media (max-width: 620px) {
-  .bar { height: 62px; } .acts .sm { display: none; }
-  .brand { font-size: 17px; }
-  .stats { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } .stats div:nth-child(3) { display: none; }
-  .ctas .btn { flex: 1 1 100%; }
-  .photo { margin-left: 26px; } .seal { width: 120px; height: 120px; left: -30px; } .seal b { font-size: 32px; }
-  .open { right: 0; }
-  .card .phone { font-size: 32px; }
-  form, .card .in { padding: 24px; }
+  .bar { height: 62px; } .acts .sm { display: none; } .brand { font-size: 18px; }
+  .ctas .btn { flex: 1 1 100%; } .two { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .panel, .card .in { padding: 22px; } .card .phone { font-size: 30px; }
   .mbar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; }
-  .mbar a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px; font-weight: 700; }
+  .mbar a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px; font: 700 15px Inter, sans-serif; }
   .mbar a:first-child { background: var(--ink); color: var(--bg); }
   .mbar a:last-child { background: var(--acc); color: #111; }
 }
-</style>
-</head>
-<body>
+
+.hero { padding: 60px 0 76px; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 56px; align-items: center; }
+h1 { font-size: clamp(46px, 6.6vw, 90px); line-height: .9; }
+.photo { position: relative; } .photo .img { aspect-ratio: 4 / 5; border-radius: 22px; background: #ccc center / cover; box-shadow: 0 30px 60px rgba(0,0,0,.18); }
+.seal { position: absolute; left: -46px; bottom: 40px; width: 150px; height: 150px; border-radius: 50%; background: var(--acc); display: grid; place-items: center; box-shadow: 0 16px 40px rgba(0,0,0,.2); }
+.seal svg { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 22s linear infinite; }
+.seal text { font: 700 11.5px Inter, sans-serif; letter-spacing: 2.4px; fill: #111; }
+.seal b { font-family: "Archivo", sans-serif; font-weight: 850; font-stretch: 112%; font-size: 40px; color: #111; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.ribbon { background: var(--dk); color: #fff; overflow: hidden; padding: 18px 0; transform: rotate(-1.2deg); margin: 0 -20px; }
+.ribbon .run { display: flex; width: max-content; animation: run 40s linear infinite; }
+.ribbon .run > span { font-family: "Archivo", sans-serif; font-weight: 850; font-stretch: 112%; font-size: 28px; padding: 0 26px; white-space: nowrap; }
+.ribbon .run > span::after { content: "\2726"; color: var(--acc); margin-left: 52px; font-size: 18px; vertical-align: middle; }
+@keyframes run { to { transform: translateX(-33.33%); } }
+.quote { background: color-mix(in srgb, var(--acc) 16%, var(--bg)); }
+@media (max-width: 980px) { .hero .wrap { grid-template-columns: minmax(0,1fr); } .photo { max-width: 460px; margin-left: 40px; } }
+@media (max-width: 620px) { .photo { margin-left: 26px; } .seal { width: 120px; height: 120px; left: -30px; } .seal b { font-size: 32px; } }
+</style></head>
+<body class="f-oficio">
 <div class="preview"><span data-en="&lt;b&gt;Website preview&lt;/b&gt; built by Sitio Listo for Elliott&amp;#x27;s Automotive. Not live yet · photos are illustrative." data-es="&lt;b&gt;Vista previa&lt;/b&gt; hecha por Sitio Listo para Elliott&amp;#x27;s Automotive. Aún no está publicada · fotos ilustrativas."><b>Website preview</b> built by Sitio Listo for Elliott&#x27;s Automotive. Not live yet · photos are illustrative.</span></div>
-<header><div class="wrap bar">
-  <a class="brand" href="#top"><span>Elliott&#x27;s Automotive</span></a>
-  <nav><a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a><a href="#about"><span data-en="About" data-es="Nosotros">About</span></a><a href="#contact"><span data-en="Contact" data-es="Contacto">Contact</span></a></nav>
+<header><div class="wrap bar"><a class="brand" href="#top"><span>Elliott&#x27;s Automotive</span></a>
+  <nav><a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a><a href="#quote"><span data-en="Estimate" data-es="Cotización">Estimate</span></a><a href="#about"><span data-en="About" data-es="Nosotros">About</span></a><a href="#contact"><span data-en="Contact" data-es="Contacto">Contact</span></a></nav>
   <div class="acts"><button class="lang" onclick="cambiarIdioma()">Español</button><a class="btn solid sm" href="tel:+12814850041"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(281) 485-0041</a></div>
 </div></header>
-
-<section class="hero" id="top"><div class="wrap">
-  <div>
-    <p class="where kick"><i></i><span data-en="auto repair shop · Pearland, TX" data-es="taller mecánico · Pearland, TX">auto repair shop · Pearland, TX</span></p>
-    <h1 class="d"><span data-en="Honest auto repair, close to home" data-es="Mecánica honesta, cerca de casa">Honest auto repair, close to home</span></h1>
-    <p class="sub" data-en="Elliott&#x27;s Automotive takes care of your car in Pearland and nearby areas. Call or send us a message and get a quote today." data-es="Elliott&#x27;s Automotive cuida su carro en Pearland y alrededores. Llame o escríbanos y reciba su cotización hoy.">Elliott&#x27;s Automotive takes care of your car in Pearland and nearby areas. Call or send us a message and get a quote today.</p>
-    <div class="ctas"><a class="btn solid" href="tel:+12814850041"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call" data-es="Llamar">Call</span> (281) 485-0041</a><a class="btn line" href="#contact"><span data-en="Request a quote" data-es="Pedir cotización">Request a quote</span> →</a></div>
-    <div class="stats"><div><b>4.5<em>★</em></b><span data-en="Google rating" data-es="Calificación en Google">Google rating</span></div><div><b>63</b><span data-en="Customer reviews" data-es="Reseñas de clientes">Customer reviews</span></div><div><b>Pearland</b><span data-en="and nearby areas" data-es="y alrededores">and nearby areas</span></div></div>
-  </div>
-  <div class="photo">
-    <div class="img" style="background-image:url('https://sitiolisto.github.io/assets/img/taller-0.jpg')"></div>
-    <div class="seal"><svg viewBox="0 0 150 150" aria-hidden="true"><defs><path id="c" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#c">★ 4.5 ON GOOGLE ★ 63 REVIEWS ★ 4.5 ON GOOGLE ★ 63 REVIEWS ★ 4.5 ON GOOGL</textPath></text></svg><b>4.5</b></div>
-    
-  </div>
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div><p class="kick"><span data-en="auto repair shop · Pearland, TX" data-es="taller mecánico · Pearland, TX">auto repair shop · Pearland, TX</span></p><h1 style="margin-top:18px"><span data-en="Honest auto repair, close to home" data-es="Mecánica honesta, cerca de casa">Honest auto repair, close to home</span></h1><p class="sub" data-en="Elliott&#x27;s Automotive serves Pearland and nearby areas. Call or send a message and we&#x27;ll get back to you today." data-es="Elliott&#x27;s Automotive atiende Pearland y alrededores. Llame o escríbanos y le respondemos hoy.">Elliott&#x27;s Automotive serves Pearland and nearby areas. Call or send a message and we&#x27;ll get back to you today.</p>
+    <div class="ctas"><a class="btn solid" href="tel:+12814850041"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call" data-es="Llamar">Call</span> (281) 485-0041</a><a class="btn" href="#quote"><span data-en="Free estimate" data-es="Cotización">Free estimate</span> →</a></div>
+    <div class="ctas" style="margin-top:18px"><span class="badge">★ <span data-en="4.5★ · 63 Google reviews" data-es="4.5★ · 63 reseñas en Google">4.5★ · 63 Google reviews</span></span></div></div>
+  <div class="photo"><div class="img" style="background-image:url('https://sitiolisto.github.io/assets/img/taller-0.jpg')"></div>
+    <div class="seal"><svg viewBox="0 0 150 150" aria-hidden="true"><defs><path id="c" d="M75,75 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"/></defs><text><textPath href="#c">★ 4.5 ON GOOGLE ★ 63 REVIEWS ★ 4.5 ON GOOGLE ★ 63 REVIEWS ★ 4.5 ON GOOGL</textPath></text></svg><b>4.5</b></div></div>
 </div></section>
-
 <div class="ribbon"><div class="run"><span><span data-en="General repair" data-es="Mecánica general">General repair</span></span><span><span data-en="Brakes" data-es="Frenos">Brakes</span></span><span><span data-en="Oil change" data-es="Cambio de aceite">Oil change</span></span><span><span data-en="Check engine light" data-es="Luz de check engine">Check engine light</span></span><span><span data-en="A/C repair" data-es="Aire acondicionado">A/C repair</span></span><span><span data-en="Suspension &amp; steering" data-es="Suspensión y dirección">Suspension &amp; steering</span></span><span><span data-en="General repair" data-es="Mecánica general">General repair</span></span><span><span data-en="Brakes" data-es="Frenos">Brakes</span></span><span><span data-en="Oil change" data-es="Cambio de aceite">Oil change</span></span><span><span data-en="Check engine light" data-es="Luz de check engine">Check engine light</span></span><span><span data-en="A/C repair" data-es="Aire acondicionado">A/C repair</span></span><span><span data-en="Suspension &amp; steering" data-es="Suspensión y dirección">Suspension &amp; steering</span></span><span><span data-en="General repair" data-es="Mecánica general">General repair</span></span><span><span data-en="Brakes" data-es="Frenos">Brakes</span></span><span><span data-en="Oil change" data-es="Cambio de aceite">Oil change</span></span><span><span data-en="Check engine light" data-es="Luz de check engine">Check engine light</span></span><span><span data-en="A/C repair" data-es="Aire acondicionado">A/C repair</span></span><span><span data-en="Suspension &amp; steering" data-es="Suspensión y dirección">Suspension &amp; steering</span></span></div></div>
+<section id="services"><div class="wrap"><p class="kick rv"><span data-en="What we do" data-es="Lo que hacemos">What we do</span></p>
+  <h2 class="rv"><span data-en="Services" data-es="Servicios">Services</span></h2><div class="svcgrid"><article class="svc rv"><span class="no">01</span><h3><span data-en="General repair" data-es="Mecánica general">General repair</span></h3><p  data-en="Engine, cooling, steering and everything in between." data-es="Motor, enfriamiento, dirección y todo lo demás.">Engine, cooling, steering and everything in between.</p></article><article class="svc rv"><span class="no">02</span><h3><span data-en="Brakes" data-es="Frenos">Brakes</span></h3><p  data-en="Pads, rotors and brake fluid inspected and replaced." data-es="Balatas, discos y líquido de frenos.">Pads, rotors and brake fluid inspected and replaced.</p></article><article class="svc rv"><span class="no">03</span><h3><span data-en="Oil change" data-es="Cambio de aceite">Oil change</span></h3><p  data-en="Oil and filter service to keep your engine healthy." data-es="Aceite y filtro para cuidar su motor.">Oil and filter service to keep your engine healthy.</p></article><article class="svc rv"><span class="no">04</span><h3><span data-en="Check engine light" data-es="Luz de check engine">Check engine light</span></h3><p  data-en="Computer diagnostics to find the real problem." data-es="Diagnóstico por computadora para encontrar la falla real.">Computer diagnostics to find the real problem.</p></article><article class="svc rv"><span class="no">05</span><h3><span data-en="A/C repair" data-es="Aire acondicionado">A/C repair</span></h3><p  data-en="Stay cool in the Texas heat." data-es="Manténgase fresco en el calor de Texas.">Stay cool in the Texas heat.</p></article><article class="svc rv"><span class="no">06</span><h3><span data-en="Suspension &amp; steering" data-es="Suspensión y dirección">Suspension &amp; steering</span></h3><p  data-en="Shocks, struts and steering for a smooth ride." data-es="Amortiguadores y dirección para un manejo suave.">Shocks, struts and steering for a smooth ride.</p></article></div></div></section>
+<section class="quote" id="quote"><div class="wrap ab"><div><p class="kick rv"><span data-en="Estimate" data-es="Cotización">Estimate</span></p><h2 class="rv"><span data-en="Tell us what you need." data-es="Cuéntenos qué necesita.">Tell us what you need.</span></h2><p class="sub" style="margin-top:18px" data-en="We answer fast, with a clear price before any work." data-es="Respondemos rápido, con un precio claro antes de empezar.">We answer fast, with a clear price before any work.</p></div><form class="tool panel" onsubmit="return mandar([(es?'Hola, quiero una cotización.':'Hi, I\'d like a quote.'), 'Name: ' + val(this,'n'), val(this,'v'), 'Service: ' + val(this,'s'), val(this,'d')])">
+  <h3><span data-en="Get a free estimate" data-es="Pida su cotización">Get a free estimate</span></h3><p class="hint"><span data-en="Send the details and we&#x27;ll get back to you today." data-es="Mándenos los detalles y le respondemos hoy.">Send the details and we&#x27;ll get back to you today.</span></p>
+  <div class="two"><label><span data-en="Your name" data-es="Su nombre">Your name</span><input name="n" required></label><label><span data-en="Vehicle (year, make, model)" data-es="Vehículo (año, marca, modelo)">Vehicle (year, make, model)</span><input name="v"></label></div>
+  <label><span data-en="Service" data-es="Servicio">Service</span><select name="s"><option>General repair</option><option>Brakes</option><option>Oil change</option><option>Check engine light</option><option>A/C repair</option><option>Suspension &amp; steering</option></select></label>
+  <label><span data-en="Details (optional)" data-es="Detalles (opcional)">Details (optional)</span><textarea name="d"></textarea></label>
+  <button class="btn solid" type="submit"><span data-en="Send request" data-es="Enviar solicitud">Send request</span></button></form></div></section>
+<section class="about" id="about"><div class="wrap ab"><div class="pic rv" style="background-image:url('https://sitiolisto.github.io/assets/img/taller-3.jpg')"></div>
+  <div><p class="kick rv"><span data-en="About" data-es="Nosotros">About</span></p><h2 class="rv"><span data-en="Trusted in Pearland" data-es="De confianza en Pearland">Trusted in Pearland</span></h2><p class="lead rv" data-en="Elliott&#x27;s Automotive is a local auto repair shop serving Pearland and nearby areas. 63 clients have rated us 4.5 stars on Google." data-es="Elliott&#x27;s Automotive es un taller mecánico local que atiende Pearland y alrededores. 63 clientes nos califican con 4.5 estrellas en Google.">Elliott&#x27;s Automotive is a local auto repair shop serving Pearland and nearby areas. 63 clients have rated us 4.5 stars on Google.</p>
+  <ul class="rv"><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Clear answers, no pressure" data-es="Respuestas claras, sin presión">Clear answers, no pressure</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Easy to reach by phone or message" data-es="Fácil de contactar por teléfono o mensaje">Easy to reach by phone or message</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Proudly serving Pearland" data-es="Orgullosamente en Pearland">Proudly serving Pearland</span></li></ul></div></div></section>
 
-<section id="services"><div class="wrap svc">
-  <div class="side"><p class="kick rv"><span data-en="What we do" data-es="Lo que hacemos">What we do</span></p><h2 class="d rv"><span data-en="Services" data-es="Servicios">Services</span></h2>
-    <p  data-en="Everything your car needs, done right by people who know Pearland." data-es="Todo lo que su carro necesita, bien hecho por gente que conoce Pearland.">Everything your car needs, done right by people who know Pearland.</p>
-    <a class="btn acc" href="#contact"><span data-en="Get a quote" data-es="Cotizar">Get a quote</span> →</a></div>
-  <ol class="rows"><li class="row rv"><span class="no">01</span><div><h3><span data-en="General repair" data-es="Mecánica general">General repair</span></h3><p  data-en="Engine, cooling, steering and everything in between." data-es="Motor, enfriamiento, dirección y todo lo demás.">Engine, cooling, steering and everything in between.</p></div><span class="arr">↗</span></li><li class="row rv"><span class="no">02</span><div><h3><span data-en="Brakes" data-es="Frenos">Brakes</span></h3><p  data-en="Pads, rotors and brake fluid inspected and replaced." data-es="Balatas, discos y líquido de frenos.">Pads, rotors and brake fluid inspected and replaced.</p></div><span class="arr">↗</span></li><li class="row rv"><span class="no">03</span><div><h3><span data-en="Oil change" data-es="Cambio de aceite">Oil change</span></h3><p  data-en="Oil and filter service to keep your engine healthy." data-es="Aceite y filtro para cuidar su motor.">Oil and filter service to keep your engine healthy.</p></div><span class="arr">↗</span></li><li class="row rv"><span class="no">04</span><div><h3><span data-en="Check engine light" data-es="Luz de check engine">Check engine light</span></h3><p  data-en="Computer diagnostics to find the real problem." data-es="Diagnóstico por computadora para encontrar la falla real.">Computer diagnostics to find the real problem.</p></div><span class="arr">↗</span></li><li class="row rv"><span class="no">05</span><div><h3><span data-en="A/C repair" data-es="Aire acondicionado">A/C repair</span></h3><p  data-en="Stay cool in the Texas heat." data-es="Manténgase fresco en el calor de Texas.">Stay cool in the Texas heat.</p></div><span class="arr">↗</span></li><li class="row rv"><span class="no">06</span><div><h3><span data-en="Suspension &amp; steering" data-es="Suspensión y dirección">Suspension &amp; steering</span></h3><p  data-en="Shocks, struts and steering for a smooth ride." data-es="Amortiguadores y dirección para un manejo suave.">Shocks, struts and steering for a smooth ride.</p></div><span class="arr">↗</span></li></ol>
+<section id="contact"><div class="wrap ct"><div><p class="kick rv"><span data-en="Contact" data-es="Contacto">Contact</span></p><h2 class="rv"><span data-en="Visit or call us" data-es="Visítenos o llámenos">Visit or call us</span></h2></div>
+  <div class="card rv"><div class="in"><p class="kick"><span data-en="Call" data-es="Teléfono">Call</span></p><a class="phone" href="tel:+12814850041">(281) 485-0041</a>
+    <p class="addr">4707 W Walnut St, Pearland, TX</p>
+    
+    <div class="ctas"><a class="btn acc sm" href="https://wa.me/12814850041" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a><a class="btn sm" href="https://www.google.com/maps/search/?api=1&amp;query=Elliott&#x27;s+Automotive+4707+W+Walnut+St+Pearland,+TX" target="_blank" rel="noopener"><span data-en="Directions" data-es="Cómo llegar">Directions</span> ↗</a></div></div><iframe title="Map" loading="lazy" src="https://maps.google.com/maps?q=Elliott&#x27;s+Automotive+4707+W+Walnut+St+Pearland,+TX&amp;output=embed"></iframe></div>
 </div></section>
-
-<section class="about" id="about"><div class="wrap ab">
-  <div class="duo rv"><div style="background-image:url('https://sitiolisto.github.io/assets/img/taller-1.jpg')"></div><div style="background-image:url('https://sitiolisto.github.io/assets/img/taller-2.jpg')"></div></div>
-  <div><p class="kick rv"><span data-en="About us" data-es="Nosotros">About us</span></p><h2 class="d rv"><span data-en="Local, trusted, right here in Pearland" data-es="Locales y de confianza, aquí en Pearland">Local, trusted, right here in Pearland</span></h2>
-    <p class="lead rv" data-en="Elliott&#x27;s Automotive is a local auto repair shop serving Pearland and nearby areas. 63 customers have rated us 4.5 stars on Google." data-es="Elliott&#x27;s Automotive es un taller mecánico local que atiende Pearland y alrededores. 63 clientes nos califican con 4.5 estrellas en Google.">Elliott&#x27;s Automotive is a local auto repair shop serving Pearland and nearby areas. 63 customers have rated us 4.5 stars on Google.</p>
-    <ul class="rv"><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Straight answers and clear quotes" data-es="Respuestas claras y cotizaciones sin rodeos">Straight answers and clear quotes</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Call, text or message, whatever is easier" data-es="Llamada, mensaje o WhatsApp, como le acomode">Call, text or message, whatever is easier</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Proudly serving Pearland" data-es="Orgullosamente en Pearland">Proudly serving Pearland</span></li></ul>
-  </div>
-</div></section>
-
-
-
-<section><div class="wrap">
-  <p class="kick rv"><span data-en="How it works" data-es="Cómo funciona">How it works</span></p><h2 class="d rv"><span data-en="Three steps. No surprises." data-es="Tres pasos. Sin sorpresas.">Three steps. No surprises.</span></h2>
-  <ol class="steps"><li class="rv"><span class="big">1</span><h3><span data-en="Call or message" data-es="Llame o escriba">Call or message</span></h3><p  data-en="Tell us what you need for your car." data-es="Cuéntenos qué necesita para su carro.">Tell us what you need for your car.</p></li><li class="rv"><span class="big">2</span><h3><span data-en="Get a clear quote" data-es="Reciba su cotización">Get a clear quote</span></h3><p  data-en="We take a look and tell you what it needs and what it costs." data-es="Lo revisamos y le decimos qué necesita y cuánto cuesta.">We take a look and tell you what it needs and what it costs.</p></li><li class="rv"><span class="big">3</span><h3><span data-en="Back on the road" data-es="De vuelta en el camino">Back on the road</span></h3><p  data-en="We get the job done so you can get on with your day." data-es="Hacemos el trabajo para que siga con su día.">We get the job done so you can get on with your day.</p></li></ol>
-</div></section>
-
-<section class="contact" id="contact"><div class="wrap ct">
-  <form id="quote" onsubmit="return enviar(event)">
-    <h3><span data-en="Tell us what you need" data-es="Cuéntenos qué necesita">Tell us what you need</span></h3>
-    <label><span data-en="Your name" data-es="Su nombre">Your name</span><input name="n" required autocomplete="name"></label>
-    <label><span data-en="Vehicle (year, make, model)" data-es="Vehículo (año, marca, modelo)">Vehicle (year, make, model)</span><input name="v"></label>
-    <label><span data-en="Service" data-es="Servicio">Service</span><select name="s"><option value="General repair">General repair</option><option value="Brakes">Brakes</option><option value="Oil change">Oil change</option><option value="Check engine light">Check engine light</option><option value="A/C repair">A/C repair</option><option value="Suspension &amp; steering">Suspension &amp; steering</option></select></label>
-    <label><span data-en="Details (optional)" data-es="Detalles (opcional)">Details (optional)</span><textarea name="d"></textarea></label>
-    <button class="btn solid" type="submit"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="Send on WhatsApp" data-es="Enviar por WhatsApp">Send on WhatsApp</span></button>
-  </form>
-  <div class="card">
-    <div class="in"><p class="kick"><span data-en="Call us" data-es="Llámenos">Call us</span></p><a class="phone" href="tel:+12814850041">(281) 485-0041</a>
-      <p class="addr">4707 W Walnut St, Pearland, TX</p>
-      
-      <div class="ctas" style="margin-top:22px"><a class="btn acc sm" href="https://wa.me/12814850041" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a><a class="btn line sm" href="https://www.google.com/maps/search/?api=1&amp;query=Elliott&#x27;s+Automotive+4707+W+Walnut+St+Pearland,+TX" target="_blank" rel="noopener"><span data-en="Directions" data-es="Cómo llegar">Directions</span> ↗</a></div>
-    </div>
-    <iframe title="Map" loading="lazy" src="https://maps.google.com/maps?q=Elliott&#x27;s+Automotive+4707+W+Walnut+St+Pearland,+TX&amp;output=embed"></iframe>
-  </div>
-</div></section>
-
-<section><div class="wrap faq">
-  <div><p class="kick rv">FAQ</p><h2 class="d rv"><span data-en="Good questions" data-es="Buenas preguntas">Good questions</span></h2></div>
-  <div><details class="rv"><summary><span data-en="How do I get a quote?" data-es="¿Cómo pido una cotización?">How do I get a quote?</span></summary><p  data-en="Call (281) 485-0041 or use the form on this page. Tell us what you need and we&#x27;ll get back to you." data-es="Llame al (281) 485-0041 o use el formulario de esta página. Díganos qué necesita y le respondemos.">Call (281) 485-0041 or use the form on this page. Tell us what you need and we&#x27;ll get back to you.</p></details><details class="rv"><summary><span data-en="What areas do you serve?" data-es="¿Qué zonas atienden?">What areas do you serve?</span></summary><p  data-en="We&#x27;re based in Pearland and work with customers from nearby areas too." data-es="Estamos en Pearland y también atendemos zonas cercanas.">We&#x27;re based in Pearland and work with customers from nearby areas too.</p></details><details class="rv"><summary><span data-en="Can I send photos?" data-es="¿Puedo mandar fotos?">Can I send photos?</span></summary><p  data-en="Yes. Message us and attach photos, it helps us give you a faster answer." data-es="Sí. Escríbanos y adjunte fotos; nos ayuda a responderle más rápido.">Yes. Message us and attach photos, it helps us give you a faster answer.</p></details></div>
-</div></section>
-
-<footer><div class="wrap">
-  <div class="giant">Elliott&#x27;s Automotive</div>
-  <div class="foot"><span><span data-en="Honest auto repair, close to home." data-es="Mecánica honesta, cerca de casa.">Honest auto repair, close to home.</span></span><span><a href="tel:+12814850041">(281) 485-0041</a> · <a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a> · <a href="#contact"><span data-en="Contact" data-es="Contacto">Contact</span></a></span></div>
+<section><div class="wrap faq"><div><p class="kick rv">FAQ</p><h2 class="rv"><span data-en="Questions" data-es="Preguntas">Questions</span></h2></div><div><details class="rv"><summary><span data-en="How do I get started?" data-es="¿Cómo empiezo?">How do I get started?</span></summary><p  data-en="Call (281) 485-0041 or use the form on this page and we&#x27;ll get back to you." data-es="Llame al (281) 485-0041 o use el formulario de esta página y le respondemos.">Call (281) 485-0041 or use the form on this page and we&#x27;ll get back to you.</p></details><details class="rv"><summary><span data-en="What areas do you serve?" data-es="¿Qué zonas atienden?">What areas do you serve?</span></summary><p  data-en="We&#x27;re based in Pearland and work with clients from nearby areas too." data-es="Estamos en Pearland y también atendemos zonas cercanas.">We&#x27;re based in Pearland and work with clients from nearby areas too.</p></details><details class="rv"><summary><span data-en="Do you speak Spanish?" data-es="¿Hablan español?">Do you speak Spanish?</span></summary><p  data-en="Use the Español button to read this site in Spanish, and ask us when you call." data-es="Use el botón English/Español para cambiar el idioma y pregúntenos al llamar.">Use the Español button to read this site in Spanish, and ask us when you call.</p></details></div></div></section>
+</main>
+<footer><div class="wrap"><div class="giant">Elliott&#x27;s Automotive</div>
+  <div class="foot"><span><span data-en="Honest auto repair, close to home." data-es="Mecánica honesta, cerca de casa.">Honest auto repair, close to home.</span></span><span><a href="tel:+12814850041">(281) 485-0041</a> · <a href="#contact"><span data-en="Contact" data-es="Contacto">Contact</span></a></span></div>
   <div class="foot"><span>© 2026 Elliott&#x27;s Automotive · Pearland, TX</span><span><span data-en="Website preview by Sitio Listo" data-es="Vista previa de Sitio Listo">Website preview by Sitio Listo</span></span></div>
 </div></footer>
 <div class="mbar"><a href="tel:+12814850041"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call" data-es="Llamar">Call</span></a><a href="https://wa.me/12814850041" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a></div>
-
+<div class="lb" aria-hidden="true"><img alt=""></div>
 <script>
 var es = false;
 function cambiarIdioma() {
-  es = !es;
-  document.documentElement.lang = es ? "es" : "en";
+  es = !es; document.documentElement.lang = es ? "es" : "en";
   document.querySelectorAll("[data-en]").forEach(function (n) { n.innerHTML = n.getAttribute(es ? "data-es" : "data-en"); });
-  document.querySelector(".lang").textContent = es ? "English" : "Español";
+  document.querySelectorAll(".lang").forEach(function (b) { b.textContent = es ? "English" : "Español"; });
+  estado();
 }
-function enviar(ev) {
-  ev.preventDefault();
-  var f = ev.target, txt = (es ? "Hola, quiero una cotización." : "Hi, I'd like a quote.") +
-    "\n" + (es ? "Nombre: " : "Name: ") + f.n.value + (f.v.value ? "\n" + f.v.value : "") +
-    "\n" + (es ? "Servicio: " : "Service: ") + f.s.value + (f.d.value ? "\n" + f.d.value : "");
-  window.open("https://wa.me/12814850041?text=" + encodeURIComponent(txt), "_blank");
+var CANAL = {"tipo": "wa", "url": "https://wa.me/12814850041"};
+function mandar(lineas) {
+  var txt = lineas.filter(Boolean).join("\n");
+  if (CANAL.tipo === "wa") window.open(CANAL.url + "?text=" + encodeURIComponent(txt), "_blank");
+  else if (CANAL.tipo === "mail") location.href = CANAL.url + "?subject=" + encodeURIComponent(es ? "Solicitud" : "Request") + "&body=" + encodeURIComponent(txt);
+  else location.href = CANAL.url;
   return false;
 }
+function val(f, n) { var x = f.querySelector("[name=" + n + "]"); return x ? x.value.trim() : ""; }
+function elegido(f, n) { var b = f.querySelector("[data-g=" + n + "] .on"); return b ? b.textContent : ""; }
+document.querySelectorAll(".chips[data-g]").forEach(function (g) {
+  g.querySelectorAll("button").forEach(function (b) { b.addEventListener("click", function (ev) { ev.preventDefault();
+    g.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); }); b.classList.add("on"); }); });
+});
+/* Abierto ahora, con el horario real en hora de Houston */
+var HORARIO = "";
+function estado() {
+  var el = document.querySelectorAll(".status"); if (!el.length || !HORARIO) return;
+  var dias = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  var p = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+  var g = function (t) { return (p.find(function (x) { return x.type === t; }) || {}).value; };
+  var hoy = dias.indexOf(g("weekday")), ahora = (parseInt(g("hour"), 10) % 24) * 60 + parseInt(g("minute"), 10);
+  var min = function (s) { var m = s.trim().match(/(\d+)(?::(\d+))?\s*(AM|PM)/i); if (!m) return null; var h = parseInt(m[1], 10) % 12 + (/pm/i.test(m[3]) ? 12 : 0); return h * 60 + parseInt(m[2] || "0", 10); };
+  var abierto = false, hasta = "";
+  HORARIO.split(" · ").forEach(function (seg) {
+    var m = seg.match(/^(\w{3})(?:\u2013(\w{3}))?\s+(.+)$/); if (!m) return;
+    var a = dias.indexOf(m[1]), b = m[2] ? dias.indexOf(m[2]) : a, dentro = a <= b ? (hoy >= a && hoy <= b) : (hoy >= a || hoy <= b);
+    if (!dentro) return;
+    if (/24 hours/i.test(m[3])) { abierto = true; hasta = "24h"; return; }
+    var r = m[3].split("\u2013"); if (r.length < 2) return;
+    var i = min(r[0].indexOf("M") < 0 ? r[0] + r[1].replace(/.*(AM|PM).*/i, " $1") : r[0]), f = min(r[1]);
+    if (i !== null && f !== null && ahora >= i && ahora < f) { abierto = true; hasta = r[1].trim(); }
+  });
+  el.forEach(function (s) { s.classList.toggle("open", abierto); s.querySelector("span").textContent = abierto ? (es ? "Abierto ahora" : "Open now") + (hasta && hasta !== "24h" ? (es ? " · hasta " : " · until ") + hasta : "") : (es ? "Cerrado ahora" : "Closed now"); });
+}
+estado();
+/* Reseñas que rotan */
 var qs = document.querySelectorAll(".q"), ds = document.querySelectorAll(".dots button"), qi = 0;
 function verCita(i) { qs.forEach(function (q, j) { q.classList.toggle("on", j === i); }); ds.forEach(function (d, j) { d.classList.toggle("on", j === i); }); qi = i; }
 ds.forEach(function (d, i) { d.addEventListener("click", function () { verCita(i); }); });
 if (qs.length > 1) setInterval(function () { verCita((qi + 1) % qs.length); }, 6500);
+/* Visor de fotos */
+var lb = document.querySelector(".lb");
+document.querySelectorAll("[data-full]").forEach(function (b) { b.addEventListener("click", function () { lb.querySelector("img").src = b.dataset.full; lb.classList.add("on"); }); });
+if (lb) lb.addEventListener("click", function () { lb.classList.remove("on"); });
+/* Calculadora de hipoteca */
+var calc = document.getElementById("calc");
+function hipoteca() {
+  if (!calc) return; var pr = +calc.precio.value || 0, en = +calc.enganche.value || 0, ta = (+calc.tasa.value || 0) / 1200, n = (+calc.plazo.value || 30) * 12;
+  var p = pr * (1 - en / 100), m = ta ? p * ta / (1 - Math.pow(1 + ta, -n)) : p / n;
+  document.getElementById("pago").textContent = "$" + Math.round(m).toLocaleString("en-US");
+}
+if (calc) { calc.addEventListener("input", hipoteca); hipoteca(); }
+document.querySelectorAll(".search .tabs button").forEach(function (b) { b.addEventListener("click", function () {
+  document.querySelectorAll(".search .tabs button").forEach(function (x) { x.classList.remove("on"); }); b.classList.add("on"); }); });
 if ("IntersectionObserver" in window) {
   var io = new IntersectionObserver(function (xs) { xs.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { threshold: .12 });
   document.querySelectorAll(".rv").forEach(function (n) { io.observe(n); });
 } else { document.documentElement.className = ""; }
 </script>
-</body>
-</html>
+</body></html>

@@ -176,7 +176,7 @@ details p { margin: 10px 0 0 58px; color: #3b3732; max-width: 640px; }
         <button data-k="arquitectura">Architecture</button><button data-k="ingenieria">Engineering</button><button data-k="taller">Auto</button>
       </div>
     </div>
-    <div class="cta"><a class="btn" href="mailto:vd561838@gmail.com?subject=Website%20preview%20request" id="go"><span data-en="Draw mine for free" data-es="Dibujen la mía gratis">Draw mine for free</span> →</a><a class="btn out" href="https://sitiolisto.github.io/muestra/" target="_blank" rel="noopener"><span data-en="Open a sample" data-es="Ver una muestra">Open a sample</span></a></div>
+    <div class="cta"><a class="btn" href="mailto:vd561838@gmail.com?subject=Website%20preview%20request" id="go"><span data-en="Draw mine for free" data-es="Dibujen la mía gratis">Draw mine for free</span> →</a><a class="btn out" id="sample" href="https://sitiolisto.github.io/muestra-dental/" target="_blank" rel="noopener"><span data-en="Open a full sample" data-es="Ver muestra completa">Open a full sample</span> ↗</a></div>
   </div>
   <div class="draw">
     <div class="dim-h lbl"><span>1440 px</span></div>
@@ -267,6 +267,7 @@ function draw() {
   document.getElementById("stag").textContent = es ? p[5] : p[4];
   document.getElementById("url").textContent = (slugify(name) || "yourbusiness") + ".com";
   document.getElementById("nm").placeholder = p[6];
+  document.getElementById("sample").href = "https://sitiolisto.github.io/muestra-" + k + "/";
   document.getElementById("go").href = "mailto:vd561838@gmail.com?subject=Website%20preview%20request&body=" + encodeURIComponent("Business: " + name + "\nType: " + p[2] + "\nCity: ");
 }
 document.getElementById("nm").addEventListener("input", function (ev) { typed = ev.target.value.trim(); draw(); });
