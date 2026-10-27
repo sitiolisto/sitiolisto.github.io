@@ -32,7 +32,8 @@ header { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, v
 nav { display: flex; gap: 26px; font-size: 14px; font-weight: 500; color: var(--mu); }
 nav a:hover { color: var(--ink); }
 .acts { display: flex; gap: 10px; align-items: center; flex: none; }
-.lang { border: 1px solid var(--line); background: none; color: var(--mu); border-radius: 99px; padding: 7px 13px; font: 600 12.5px Inter, sans-serif; cursor: pointer; }
+.lang, .tema { border: 1px solid var(--line); background: none; color: var(--mu); border-radius: 99px; padding: 7px 13px; font: 600 12.5px Inter, sans-serif; cursor: pointer; white-space: nowrap; }
+.tema:hover, .lang:hover { color: var(--ink); border-color: var(--ink); }
 .status { display: inline-flex; align-items: center; gap: 8px; font: 600 12.5px Inter, sans-serif; padding: 6px 12px; border-radius: 99px; background: color-mix(in srgb, var(--ink) 6%, transparent); }
 .status i { width: 8px; height: 8px; border-radius: 50%; background: #9ca3af; }
 .status.open i { background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.2); }
@@ -189,8 +190,20 @@ function cambiarIdioma() {
   es = !es; document.documentElement.lang = es ? "es" : "en";
   document.querySelectorAll("[data-en]").forEach(function (n) { n.innerHTML = n.getAttribute(es ? "data-es" : "data-en"); });
   document.querySelectorAll(".lang").forEach(function (b) { b.textContent = es ? "English" : "Español"; });
-  estado();
+  estado(); etiquetaTema();
 }
+function cambiarTema() {
+  var claro = document.documentElement.classList.toggle("claro");
+  try { localStorage.setItem("tema", claro ? "claro" : "oscuro"); } catch (x) {}
+  etiquetaTema();
+}
+function etiquetaTema() {
+  var b = document.querySelector(".tema"); if (!b) return;
+  var claro = document.documentElement.classList.contains("claro");
+  b.innerHTML = (claro ? "☾" : "☀") + " <span>" + (claro ? (es ? "Oscuro" : "Dark") : (es ? "Claro" : "Light")) + "</span>";
+}
+try { if (localStorage.getItem("tema") === "claro" && document.querySelector(".tema")) document.documentElement.classList.add("claro"); } catch (x) {}
+etiquetaTema();
 var CANAL = {"tipo": "wa", "url": "https://wa.me/17135550142"};
 function mandar(lineas) {
   var txt = lineas.filter(Boolean).join("\n");
