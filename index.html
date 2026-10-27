@@ -160,7 +160,7 @@ details p { margin: 10px 0 0 58px; color: #3b3732; max-width: 640px; }
 <header class="top"><div class="wrap">
   <a class="word" href="#">Sitio <em>Listo</em></a>
   <nav class="mid lbl"><a href="#specs"><span data-en="Specs" data-es="Especificaciones">Specs</span></a><a href="#process"><span data-en="Process" data-es="Proceso">Process</span></a><a href="#estimate"><span data-en="Estimate" data-es="Cotización">Estimate</span></a><a href="#faq">FAQ</a></nav>
-  <div class="act"><button class="lang" onclick="lang()">ES</button><a class="btn sm" href="mailto:vd561838@gmail.com?subject=Website%20preview%20request"><span data-en="Request a preview" data-es="Pedir vista previa">Request a preview</span> →</a></div>
+  <div class="act"><button class="lang" onclick="cambiarIdioma()">ES</button><a class="btn sm" href="mailto:vd561838@gmail.com?subject=Website%20preview%20request"><span data-en="Request a preview" data-es="Pedir vista previa">Request a preview</span> →</a></div>
 </div></header>
 
 <section class="hero"><div class="wrap">
@@ -275,7 +275,7 @@ document.querySelectorAll("#chips button").forEach(function (b) { b.addEventList
 document.querySelectorAll("#tabs button").forEach(function (b) { b.addEventListener("click", function () {
   document.querySelectorAll("#tabs button").forEach(function (x) { x.classList.remove("on"); }); b.classList.add("on");
   document.getElementById("price").textContent = "$" + b.dataset.p; }); });
-function lang() { es = !es; document.documentElement.lang = es ? "es" : "en";
+function cambiarIdioma() { es = !es; document.documentElement.lang = es ? "es" : "en";
   document.querySelectorAll("[data-en]").forEach(function (n) { n.innerHTML = n.getAttribute(es ? "data-es" : "data-en"); });
   document.querySelector(".lang").textContent = es ? "EN" : "ES"; draw(); }
 var xy = document.getElementById("xy");
