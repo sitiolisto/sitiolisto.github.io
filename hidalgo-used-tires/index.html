@@ -42,7 +42,7 @@ nav a { text-decoration: none; } nav a:hover { color: var(--d); }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 14px 22px; border-radius: 12px; font-weight: 700; font-size: 16px; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; transition: transform .15s, box-shadow .15s; }
 .btn:hover { transform: translateY(-1px); }
 .btn.pri { background: var(--a); color: var(--d); box-shadow: 0 8px 24px color-mix(in srgb, var(--a) 35%, transparent); }
-.btn.wa { background: #25d366; color: #fff; }
+.btn.wa { background: #ffffff; color: var(--d); }
 .btn.dark { background: var(--d); color: #fff; }
 .btn.ghost { background: transparent; color: var(--d); border: 2px solid var(--d); }
 .btn.sm { padding: 10px 16px; font-size: 14px; border-radius: 10px; }
@@ -172,7 +172,7 @@ details p { color: var(--m); margin-top: 10px; }
   .mbar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; box-shadow: 0 -6px 20px rgba(0,0,0,.15); }
   .mbar a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px; font-weight: 800; text-decoration: none; font-size: 16px; }
   .mbar a:first-child { background: var(--d); color: #fff; }
-  .mbar a:last-child { background: #25d366; color: #fff; }
+  .mbar a:last-child { background: var(--a); color: var(--d); }
 }
 </style>
 </head>
@@ -188,17 +188,17 @@ details p { color: var(--m); margin-top: 10px; }
     <span class="eyebrow"><span data-en="tire shop · Houston, TX" data-es="llantera · Houston, TX">tire shop · Houston, TX</span></span>
     <h1><span data-en="Tires for every budget, fast service" data-es="Llantas para todo presupuesto, servicio rápido">Tires for every budget, fast service</span></h1>
     <p class="sub"><span data-en="Hidalgo Used Tires takes care of your tires in Houston and nearby areas. Call or send us a WhatsApp and get a quote today." data-es="Hidalgo Used Tires cuida su llantas en Houston y alrededores. Llame o mande WhatsApp y reciba su cotización hoy.">Hidalgo Used Tires takes care of your tires in Houston and nearby areas. Call or send us a WhatsApp and get a quote today.</span></p>
-    <div class="ctas"><a class="btn pri" href="tel:+17138683916"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call now" data-es="Llamar ahora">Call now</span></a><a class="btn wa" href="https://wa.me/17138683916" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a></div>
+    <div class="ctas"><a class="btn pri" href="tel:+17138683916"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call now" data-es="Llamar ahora">Call now</span></a><a class="btn wa" href="tel:+17138683916" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="Call us" data-es="Llámenos">Call us</span></a></div>
     <a class="chip" href="https://www.google.com/maps/search/?api=1&amp;query=Hidalgo+Used+Tires+5346+Darling+St+Houston,+TX" target="_blank" rel="noopener"><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><b>4.8</b> <span data-en="from 439 Google reviews" data-es="de 439 reseñas en Google">from 439 Google reviews</span></a>
   </div>
   <form class="quote" id="quote" onsubmit="return enviar(event)">
     <h2><span data-en="Request a quote" data-es="Pida su cotización">Request a quote</span></h2>
-    <p  data-en="Send us the details and we&#x27;ll get back to you on WhatsApp." data-es="Mándenos los detalles y le respondemos por WhatsApp.">Send us the details and we&#x27;ll get back to you on WhatsApp.</p>
+    <p  data-en="Send us the details and we&#x27;ll get back to you." data-es="Mándenos los detalles y le respondemos.">Send us the details and we&#x27;ll get back to you.</p>
     <label><span class="lbl" data-en="Your name" data-es="Su nombre">Your name</span><input name="n" required autocomplete="name"></label>
     <label><span class="lbl" data-en="Vehicle (year, make, model)" data-es="Vehículo (año, marca, modelo)">Vehicle (year, make, model)</span><input name="v"></label>
     <label><span class="lbl" data-en="Service" data-es="Servicio">Service</span><select name="s"><option value="New &amp; used tires">New &amp; used tires</option><option value="Flat repair">Flat repair</option><option value="Mounting &amp; balancing">Mounting &amp; balancing</option><option value="Alignment">Alignment</option><option value="Rims &amp; wheels">Rims &amp; wheels</option><option value="Tire pressure &amp; valves">Tire pressure &amp; valves</option></select></label>
     <label><span class="lbl" data-en="Details (optional)" data-es="Detalles (opcional)">Details (optional)</span><textarea name="d"></textarea></label>
-    <button class="btn dark" type="submit"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="Send on WhatsApp" data-es="Enviar por WhatsApp">Send on WhatsApp</span></button>
+    <button class="btn dark" type="submit"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="Send request" data-es="Enviar solicitud">Send request</span></button>
     <small><span data-en="Prefer to talk? Call (713) 868-3916" data-es="¿Prefiere hablar? Llame al (713) 868-3916">Prefer to talk? Call (713) 868-3916</span></small>
   </form>
 </div></div>
@@ -206,7 +206,7 @@ details p { color: var(--m); margin-top: 10px; }
   <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><span data-en="4.8★ on Google" data-es="4.8★ en Google">4.8★ on Google</span></li>
   <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="439 customer reviews" data-es="439 reseñas de clientes">439 customer reviews</span></li>
   <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span data-en="Serving Houston" data-es="Atendemos Houston">Serving Houston</span></li>
-  <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call or WhatsApp" data-es="Llamada o WhatsApp">Call or WhatsApp</span></li>
+  <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call us today" data-es="Llámenos hoy">Call us today</span></li>
 </ul></div>
 <section id="services"><div class="wrap">
   <div class="head"><span class="eyebrow"><span data-en="What we do" data-es="Lo que hacemos">What we do</span></span><h2><span data-en="Services" data-es="Servicios">Services</span></h2><p  data-en="Everything your tires needs, in one place." data-es="Todo lo que su llantas necesita, en un solo lugar.">Everything your tires needs, in one place.</p></div>
@@ -243,8 +243,8 @@ details p { color: var(--m); margin-top: 10px; }
 <section id="contact" class="contact"><div class="wrap">
   <div class="head"><span class="eyebrow"><span data-en="Contact" data-es="Contacto">Contact</span></span><h2><span data-en="Come see us or give us a call" data-es="Visítenos o llámenos">Come see us or give us a call</span></h2></div>
   <div class="cgrid">
-    <div class="card"><h3>Hidalgo Used Tires</h3><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+17138683916">(713) 868-3916</a></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><a href="https://wa.me/17138683916" target="_blank" rel="noopener">WhatsApp</a></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Hidalgo+Used+Tires+5346+Darling+St+Houston,+TX" target="_blank" rel="noopener">5346 Darling St, Houston, TX</a></li></ul>
-      <div class="ctas"><a class="btn pri" href="tel:+17138683916"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call" data-es="Llamar">Call</span></a><a class="btn wa" href="https://wa.me/17138683916" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a></div></div>
+    <div class="card"><h3>Hidalgo Used Tires</h3><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+17138683916">(713) 868-3916</a></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Hidalgo+Used+Tires+5346+Darling+St+Houston,+TX" target="_blank" rel="noopener">5346 Darling St, Houston, TX</a></li></ul>
+      <div class="ctas"><a class="btn pri" href="tel:+17138683916"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call" data-es="Llamar">Call</span></a><a class="btn wa" href="tel:+17138683916" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="Call us" data-es="Llámenos">Call us</span></a></div></div>
     <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Hidalgo+Used+Tires+5346+Darling+St+Houston,+TX&amp;output=embed"></iframe>
   </div>
 </div></section>
@@ -252,12 +252,12 @@ details p { color: var(--m); margin-top: 10px; }
 <footer><div class="wrap">
   <div class="foot">
     <div><b>Hidalgo Used Tires</b><p  data-en="Tires for every budget, fast service. Serving Houston and nearby areas." data-es="Llantas para todo presupuesto, servicio rápido. Atendemos Houston y alrededores.">Tires for every budget, fast service. Serving Houston and nearby areas.</p></div>
-    <div><b><span data-en="Contact" data-es="Contacto">Contact</span></b><a href="tel:+17138683916">(713) 868-3916</a><a href="https://wa.me/17138683916" target="_blank" rel="noopener"><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a><a href="https://www.google.com/maps/search/?api=1&amp;query=Hidalgo+Used+Tires+5346+Darling+St+Houston,+TX" target="_blank" rel="noopener">Google Maps</a></div>
+    <div><b><span data-en="Contact" data-es="Contacto">Contact</span></b><a href="tel:+17138683916">(713) 868-3916</a><a href="tel:+17138683916" target="_blank" rel="noopener"><span data-en="Call us" data-es="Llámenos">Call us</span></a><a href="https://www.google.com/maps/search/?api=1&amp;query=Hidalgo+Used+Tires+5346+Darling+St+Houston,+TX" target="_blank" rel="noopener">Google Maps</a></div>
     <div><b><span data-en="Menu" data-es="Menú">Menu</span></b><a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a><a href="#about"><span data-en="About" data-es="Nosotros">About</span></a><a href="#contact"><span data-en="Contact" data-es="Contacto">Contact</span></a></div>
   </div>
   <div class="legal">© 2026 Hidalgo Used Tires · Houston, TX · <span data-en="Website preview by Sitio Listo · Stock photos from Unsplash" data-es="Vista previa de Sitio Listo · Fotos de Unsplash">Website preview by Sitio Listo · Stock photos from Unsplash</span></div>
 </div></footer>
-<div class="mbar"><a href="tel:+17138683916"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call" data-es="Llamar">Call</span></a><a href="https://wa.me/17138683916" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a></div>
+<div class="mbar"><a href="tel:+17138683916"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call" data-es="Llamar">Call</span></a><a href="tel:+17138683916" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="Call us" data-es="Llámenos">Call us</span></a></div>
 <script>
 var es = false;
 function lang() {
@@ -277,7 +277,7 @@ function enviar(ev) {
   var f = ev.target, txt = (es ? "Hola, quiero una cotización." : "Hi, I'd like a quote.") +
     "\n" + (es ? "Nombre: " : "Name: ") + f.n.value + (f.v.value ? "\n" + f.v.value : "") +
     "\n" + (es ? "Servicio: " : "Service: ") + f.s.value + (f.d.value ? "\n" + f.d.value : "");
-  window.open("https://wa.me/17138683916?text=" + encodeURIComponent(txt), "_blank");
+  location.href = "tel:+17138683916";
   return false;
 }
 </script>
