@@ -1,33 +1,95 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sitio Listo · Páginas web para negocios locales</title>
-<meta name="description" content="Su página web profesional, lista en 48 horas, por USD 297 pago único. Primero la ve, después paga.">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sitio Listo · Websites for local businesses</title>
+<meta name="description" content="Professional websites for local businesses, live in 48 hours. $297 setup + $39/month. See it first, pay after.">
+<meta property="og:title" content="Sitio Listo · Websites for local businesses">
+<meta property="og:description" content="Live in 48 hours. See it first, pay after.">
+<meta property="og:image" content="https://sitiolisto.github.io/assets/img/taller-0.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-* { box-sizing: border-box; margin: 0; }
-body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1c1c1c; background: #f7f5f2; line-height: 1.55; }
-.hero { background: #14213d; color: #fff; padding: 72px 20px; text-align: center; }
-h1 { font-size: clamp(30px, 7vw, 50px); line-height: 1.1; margin-bottom: 14px; }
-.hero p { font-size: 20px; opacity: .9; max-width: 620px; margin: 0 auto 26px; }
-.btn { display: inline-block; background: #25d366; color: #fff; padding: 15px 26px; border-radius: 40px; font-weight: 700; text-decoration: none; }
-.sub { margin-top: 10px; font-size: 15px; opacity: .8; }
-section { max-width: 960px; margin: 0 auto; padding: 56px 20px; }
-h2 { text-align: center; margin-bottom: 24px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px; }
-.grid div { background: #fff; border-radius: 14px; padding: 22px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
-.precio { font-size: 38px; font-weight: 800; color: #14213d; }
-footer { text-align: center; color: #666; font-size: 14px; padding: 30px 20px; }
+:root { --d: #0b1220; --a: #22c55e; --t: #1f2933; --m: #5b6573; --bg: #f6f7f9; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { overflow-x: hidden; }
+body { font-family: "Plus Jakarta Sans", -apple-system, Arial, sans-serif; color: var(--t); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+.ic { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+header { position: sticky; top: 0; z-index: 9; background: rgba(11,18,32,.9); backdrop-filter: blur(8px); }
+.bar { display: flex; justify-content: space-between; align-items: center; height: 64px; color: #fff; }
+.bar b { font-size: 19px; letter-spacing: -.3px; } .bar b span { color: var(--a); }
+.lang { border: 1px solid rgba(255,255,255,.3); background: transparent; color: #fff; border-radius: 99px; padding: 7px 12px; font: 600 13px inherit; cursor: pointer; }
+.hero { background: radial-gradient(1200px 500px at 80% -10%, rgba(34,197,94,.25), transparent), var(--d); color: #fff; padding: 96px 0 104px; }
+.hero h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.05; letter-spacing: -1.5px; max-width: 820px; margin-bottom: 20px; }
+.hero p { font-size: clamp(17px, 2.2vw, 21px); color: #cbd5e1; max-width: 640px; margin-bottom: 32px; }
+.btn { display: inline-flex; align-items: center; gap: 9px; padding: 15px 24px; border-radius: 12px; font-weight: 700; text-decoration: none; }
+.btn.pri { background: var(--a); color: #04130a; }
+.btn.ghost { border: 2px solid rgba(255,255,255,.35); color: #fff; }
+.ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+section { padding: 88px 0; }
+.eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: #16a34a; }
+h2 { font-size: clamp(28px, 3.6vw, 40px); letter-spacing: -.6px; line-height: 1.15; color: var(--d); margin: 8px 0 36px; max-width: 700px; }
+.svcs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+.svc { border: 1px solid #e9ecf0; border-radius: 16px; padding: 26px; }
+.svc .ic { width: 46px; height: 46px; padding: 11px; border-radius: 12px; background: #dcfce7; color: var(--d); margin-bottom: 16px; }
+.svc h3 { color: var(--d); font-size: 18px; margin-bottom: 4px; } .svc p { color: var(--m); font-size: 15px; }
+.alt { background: var(--bg); }
+.steps { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+.steps li { background: #fff; border-radius: 16px; padding: 28px; border: 1px solid #e9ecf0; }
+.steps b { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--d); color: var(--a); margin-bottom: 14px; }
+.steps h3 { color: var(--d); margin-bottom: 4px; } .steps p { color: var(--m); font-size: 15px; }
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; align-items: stretch; }
+.plan { position: relative; border: 1px solid #e3e7ec; border-radius: 20px; padding: 30px; background: #fff; }
+.plan.hot { border: 2px solid var(--a); box-shadow: 0 20px 50px rgba(34,197,94,.18); }
+.tag { position: absolute; top: -13px; left: 24px; background: var(--a); color: #04130a; font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 99px; }
+.plan h3 { color: var(--d); font-size: 19px; }
+.price { font-size: 44px; font-weight: 800; color: var(--d); letter-spacing: -1px; margin-top: 10px; }
+.price small, .plus small { font-size: 15px; font-weight: 600; color: var(--m); letter-spacing: 0; }
+.plus { font-size: 22px; font-weight: 800; color: #16a34a; margin-bottom: 18px; }
+.plan ul, .inc { list-style: none; display: grid; gap: 10px; }
+.plan li, .inc li { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; }
+.plan li .ic, .inc li .ic { color: #16a34a; width: 20px; height: 20px; margin-top: 2px; }
+.monthly { margin-top: 28px; background: var(--d); color: #fff; border-radius: 20px; padding: 30px; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.4fr); gap: 24px; align-items: center; }
+.monthly h3 { font-size: 22px; } .monthly p { color: #cbd5e1; }
+.inc { grid-template-columns: repeat(2, minmax(0,1fr)); }
+details { border-bottom: 1px solid #e6e9ee; padding: 18px 0; max-width: 760px; }
+summary { cursor: pointer; font-weight: 700; font-size: 17px; color: var(--d); }
+details p { color: var(--m); margin-top: 8px; }
+.cta { background: var(--d); color: #fff; text-align: center; }
+.cta h2 { color: #fff; margin: 0 auto 24px; }
+footer { background: #05080f; color: #8b95a3; font-size: 14px; padding: 32px 0; text-align: center; }
+@media (max-width: 900px) { .svcs, .steps, .plans { grid-template-columns: minmax(0,1fr); } .monthly, .inc { grid-template-columns: minmax(0,1fr); } section { padding: 64px 0; } }
 </style></head><body>
-<div class="hero"><h1>Su negocio merece una página web</h1>
-<p>Se la hacemos en 48 horas, en español e inglés, con botón de WhatsApp. Primero la ve terminada, después paga.</p></div>
-<section><h2>Cómo funciona</h2><div class="grid">
-<div><b>1. Le mostramos su página</b><p>Preparamos una vista previa con los datos públicos de su negocio.</p></div>
-<div><b>2. La ajustamos a su gusto</b><p>Fotos de sus trabajos, servicios, horario y colores.</p></div>
-<div><b>3. La publicamos con su dominio</b><p>Por ejemplo minegocio.com. El dominio queda a su nombre.</p></div>
+<header><div class="wrap bar"><b>Sitio<span>Listo</span></b><button class="lang" onclick="lang()">Español</button></div></header>
+<div class="hero"><div class="wrap">
+  <h1><span data-en="Websites that bring local businesses more calls." data-es="Páginas web que le traen más llamadas a su negocio.">Websites that bring local businesses more calls.</span></h1>
+  <p  data-en="We build a professional website for your business with your real Google reviews, a quote form and click-to-call. Live in 48 hours. You see it first and pay after." data-es="Le hacemos una página profesional con sus reseñas reales de Google, formulario de cotización y botón de llamar. Lista en 48 horas. Primero la ve y después paga.">We build a professional website for your business with your real Google reviews, a quote form and click-to-call. Live in 48 hours. You see it first and pay after.</p>
+  <div class="ctas"><a class="btn pri" href="mailto:vd561838@gmail.com?subject=Website%20for%20my%20business"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="Get my free preview" data-es="Quiero mi vista previa gratis">Get my free preview</span></a><a class="btn ghost" href="#pricing"><span data-en="See pricing" data-es="Ver precios">See pricing</span></a></div>
+</div></div>
+<section><div class="wrap"><span class="eyebrow"><span data-en="What&#x27;s included" data-es="Qué incluye">What&#x27;s included</span></span><h2><span data-en="Everything a local business needs to win the call" data-es="Todo lo que un negocio local necesita para ganar la llamada">Everything a local business needs to win the call</span></h2><div class="svcs"><article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><h3><span data-en="Your real Google reviews" data-es="Sus reseñas reales de Google">Your real Google reviews</span></h3><p  data-en="Your best reviews and rating, front and center." data-es="Sus mejores reseñas y calificación, a la vista.">Your best reviews and rating, front and center.</p></article><article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><h3><span data-en="Quote form to your phone" data-es="Formulario de cotización a su teléfono">Quote form to your phone</span></h3><p  data-en="Customer requests land on your WhatsApp or email." data-es="Las solicitudes llegan a su WhatsApp o correo.">Customer requests land on your WhatsApp or email.</p></article><article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><h3><span data-en="Click-to-call everywhere" data-es="Llamar con un toque">Click-to-call everywhere</span></h3><p  data-en="A call button that follows customers on mobile." data-es="Un botón de llamar siempre visible en el celular.">A call button that follows customers on mobile.</p></article><article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><h3><span data-en="Map, hours and directions" data-es="Mapa, horario y cómo llegar">Map, hours and directions</span></h3><p  data-en="Everything a customer needs to find you." data-es="Todo lo que el cliente necesita para llegar.">Everything a customer needs to find you.</p></article><article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><h3><span data-en="English &amp; Spanish" data-es="Inglés y español">English &amp; Spanish</span></h3><p  data-en="One tap to switch languages." data-es="Cambia de idioma con un toque.">One tap to switch languages.</p></article><article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3><span data-en="Fast, secure, mobile-first" data-es="Rápida, segura y para celular">Fast, secure, mobile-first</span></h3><p  data-en="SSL, fast loading and built for phones first." data-es="SSL, carga rápida y hecha primero para celular.">SSL, fast loading and built for phones first.</p></article></div></div></section>
+<section class="alt"><div class="wrap"><span class="eyebrow"><span data-en="How it works" data-es="Cómo funciona">How it works</span></span><h2><span data-en="See it first. Pay after." data-es="Primero la ve. Después paga.">See it first. Pay after.</span></h2>
+<ol class="steps"><li><b>1</b><h3><span data-en="We build your preview" data-es="Hacemos su vista previa">We build your preview</span></h3><p  data-en="With your name, services, photos and real Google reviews." data-es="Con su nombre, servicios, fotos y reseñas reales de Google.">With your name, services, photos and real Google reviews.</p></li>
+<li><b>2</b><h3><span data-en="You request changes" data-es="Usted pide cambios">You request changes</span></h3><p  data-en="Photos of your work, services, colors. We adjust it until you like it." data-es="Fotos de sus trabajos, servicios, colores. La ajustamos hasta que le guste.">Photos of your work, services, colors. We adjust it until you like it.</p></li>
+<li><b>3</b><h3><span data-en="We go live on your .com" data-es="La publicamos en su .com">We go live on your .com</span></h3><p  data-en="Within 48 hours, and we keep it running every month." data-es="En 48 horas, y la mantenemos funcionando cada mes.">Within 48 hours, and we keep it running every month.</p></li></ol></div></section>
+<section id="pricing"><div class="wrap"><span class="eyebrow"><span data-en="Pricing" data-es="Precios">Pricing</span></span><h2><span data-en="Simple, honest pricing" data-es="Precios claros">Simple, honest pricing</span></h2>
+<div class="plans">
+    <div class="plan"><h3><span data-en="New website" data-es="Página nueva">New website</span></h3><p class="price">$297 <small><span data-en="setup" data-es="instalación">setup</span></small></p>
+      <p class="plus">+ $39<small>/<span data-en="month" data-es="mes">month</span></small></p>
+      <ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Custom design with your info and reviews" data-es="Diseño con sus datos y reseñas">Custom design with your info and reviews</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Your own .com connected" data-es="Su propio .com conectado">Your own .com connected</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Live in 48 hours" data-es="Publicada en 48 horas">Live in 48 hours</span></li></ul></div>
+    <div class="plan hot"><span class="tag"><span data-en="Best value" data-es="Mejor opción">Best value</span></span><h3><span data-en="Pay yearly" data-es="Pago anual">Pay yearly</span></h3><p class="price">$297 <small><span data-en="setup" data-es="instalación">setup</span></small></p>
+      <p class="plus">+ $390<small>/<span data-en="year" data-es="año">year</span></small></p>
+      <ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="2 months free" data-es="2 meses gratis">2 months free</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Everything in the monthly plan" data-es="Todo lo del plan mensual">Everything in the monthly plan</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="One payment, no monthly bills" data-es="Un solo pago al año">One payment, no monthly bills</span></li></ul></div>
+    <div class="plan"><h3><span data-en="Website redesign" data-es="Rediseño">Website redesign</span></h3><p class="price">$497 <small><span data-en="setup" data-es="instalación">setup</span></small></p>
+      <p class="plus">+ $39<small>/<span data-en="month" data-es="mes">month</span></small></p>
+      <ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="We rebuild your current site" data-es="Rehacemos su página actual">We rebuild your current site</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Keep your same domain" data-es="Conserva su mismo dominio">Keep your same domain</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Mobile-first and secure" data-es="Para celular y segura">Mobile-first and secure</span></li></ul></div></div>
+<div class="monthly"><div><h3><span data-en="The monthly plan keeps your site working for you" data-es="El plan mensual mantiene su página trabajando para usted">The monthly plan keeps your site working for you</span></h3><p  data-en="Your website is never out of date and never down." data-es="Su página nunca se queda vieja ni fuera de línea.">Your website is never out of date and never down.</p></div><ul class="inc"><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Hosting &amp; SSL security" data-es="Hosting y seguridad SSL">Hosting &amp; SSL security</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Domain renewal included" data-es="Renovación del dominio incluida">Domain renewal included</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Unlimited small updates (prices, photos, hours)" data-es="Cambios pequeños ilimitados (precios, fotos, horario)">Unlimited small updates (prices, photos, hours)</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Monthly check that everything works" data-es="Revisión mensual de que todo funcione">Monthly check that everything works</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Cancel anytime" data-es="Cancele cuando quiera">Cancel anytime</span></li></ul></div>
 </div></section>
-<section><h2>Precio claro</h2><div class="grid">
-<div><p class="precio">USD 297</p><p>Pago único. Página publicada con su dominio y una ronda de cambios.</p></div>
-<div><p class="precio">USD 497</p><p>Lo anterior + perfil de Google Maps optimizado + código QR para pedir reseñas.</p></div>
-<div><p class="precio">USD 19/mes</p><p>Opcional. Cambios cuando los necesite y hosting incluido.</p></div>
-</div></section>
-<footer>© 2026 Sitio Listo</footer>
+<section class="alt"><div class="wrap"><span class="eyebrow">FAQ</span><h2><span data-en="Questions" data-es="Preguntas">Questions</span></h2><details><summary><span data-en="Do I pay before I see it?" data-es="¿Pago antes de verla?">Do I pay before I see it?</span></summary><p  data-en="No. We build a preview first. You only pay once you&#x27;ve seen your site finished and you like it." data-es="No. Primero hacemos una vista previa. Paga solo cuando la vea terminada y le guste.">No. We build a preview first. You only pay once you&#x27;ve seen your site finished and you like it.</p></details><details><summary><span data-en="What does the monthly plan cover?" data-es="¿Qué incluye el plan mensual?">What does the monthly plan cover?</span></summary><p  data-en="Hosting, security, your domain and unlimited small changes. You never have to touch code." data-es="Hosting, seguridad, su dominio y cambios pequeños ilimitados. Usted nunca toca código.">Hosting, security, your domain and unlimited small changes. You never have to touch code.</p></details><details><summary><span data-en="Can I cancel?" data-es="¿Puedo cancelar?">Can I cancel?</span></summary><p  data-en="Yes, anytime. No contracts." data-es="Sí, cuando quiera. Sin contratos.">Yes, anytime. No contracts.</p></details><details><summary><span data-en="How do I pay?" data-es="¿Cómo pago?">How do I pay?</span></summary><p  data-en="By PayPal or card through PayPal. You get a receipt by email." data-es="Por PayPal o con tarjeta a través de PayPal. Recibe su recibo por correo.">By PayPal or card through PayPal. You get a receipt by email.</p></details></div></section>
+<section class="cta"><div class="wrap"><h2><span data-en="Want to see your business online?" data-es="¿Quiere ver su negocio en línea?">Want to see your business online?</span></h2><a class="btn pri" href="mailto:vd561838@gmail.com?subject=Website%20for%20my%20business"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>vd561838@gmail.com</a></div></section>
+<footer>© 2026 Sitio Listo · <span data-en="Websites for local businesses" data-es="Páginas web para negocios locales">Websites for local businesses</span></footer>
+<script>
+var es = false;
+function lang() { es = !es; document.documentElement.lang = es ? "es" : "en";
+  document.querySelectorAll("[data-en]").forEach(function (n) { n.innerHTML = n.getAttribute(es ? "data-es" : "data-en"); });
+  document.querySelector(".lang").textContent = es ? "English" : "Español"; }
+</script>
 </body></html>

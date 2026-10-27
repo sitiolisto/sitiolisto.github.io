@@ -1,105 +1,285 @@
 <!doctype html>
-<html lang="es" data-ini="es">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Mecánico Carro Auto Service · Houston, TX</title>
-<meta name="description" content="Mecánico Carro Auto Service — Su carro en buenas manos. Houston. Tel. +1 832-329-2372">
+<title>Mecánico Carro Auto Service · Auto Repair Shop in Houston</title>
+<meta name="description" content="Mecánico Carro Auto Service · Honest auto repair, close to home in Houston. Call (832) 329-2372.">
+<meta property="og:title" content="Mecánico Carro Auto Service · Houston, TX">
+<meta property="og:description" content="Honest auto repair, close to home. 4.3★ on Google · Call (832) 329-2372.">
+<meta property="og:image" content="https://sitiolisto.github.io/assets/img/taller-0.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f172a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://sitiolisto.github.io/assets/img/taller-0.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoRepair", "name": "Mecánico Carro Auto Service", "telephone": "+18323292372", "areaServed": "Houston", "image": "https://sitiolisto.github.io/assets/img/taller-0.jpg", "address": {"@type": "PostalAddress", "streetAddress": "6102 Clarewood Dr", "addressLocality": "Houston", "addressRegion": "TX", "addressCountry": "US"}}</script>
+<script>document.documentElement.className = "js";</script>
 <style>
-:root { --c: #2b2d42; --a: #ef8354; --t: #1c1c1c; --f: #f7f5f2; }
-* { box-sizing: border-box; margin: 0; }
+:root { --d: #0f172a; --a: #f97316; --t: #1f2933; --m: #5b6573; --bg: #f6f7f9; --r: 16px; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 html, body { overflow-x: hidden; }
-body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--t); background: var(--f); line-height: 1.5; }
-.aviso { background: #111; color: #ddd; font-size: 13px; text-align: center; padding: 8px 16px; }
-.aviso b { color: #fff; }
-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; background: #fff; position: sticky; top: 0; z-index: 5; box-shadow: 0 1px 6px rgba(0,0,0,.08); }
-.logo { font-weight: 800; font-size: 18px; color: var(--c); }
-.lang { border: 1px solid #ccc; background: #fff; border-radius: 20px; padding: 6px 12px; font-size: 13px; cursor: pointer; }
-.hero { background: linear-gradient(135deg, var(--c), color-mix(in srgb, var(--c) 60%, #000)); color: #fff; padding: 64px 20px 72px; text-align: center; position: relative; overflow: hidden; }
-.hero svg.bg { position: absolute; right: -40px; bottom: -40px; width: 260px; height: 260px; stroke: rgba(255,255,255,.12); fill: none; stroke-width: 3; }
-.hero h1 { font-size: clamp(28px, 7vw, 52px); overflow-wrap: anywhere; line-height: 1.1; margin-bottom: 12px; }
-.hero p { font-size: clamp(17px, 3.5vw, 22px); opacity: .92; max-width: 640px; margin: 0 auto 26px; }
-.btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 15px 24px; border-radius: 40px; font-weight: 700; text-decoration: none; font-size: 17px; }
+body { font-family: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--t); background: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+.ic { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.st { width: 17px; height: 17px; fill: rgba(255,255,255,.25); stroke: none; }
+.st.on { fill: #fbbc04; }
+.preview { background: #0b0b0c; color: #c9ced6; font-size: 12.5px; text-align: center; padding: 7px 16px; }
+.preview b { color: #fff; }
+header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid #eceef1; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; min-width: 0; }
+.mark { width: 40px; height: 40px; border-radius: 10px; background: var(--d); color: var(--a); display: grid; place-items: center; font-weight: 800; font-size: 15px; letter-spacing: .5px; flex: none; }
+.logo { height: 44px; width: auto; max-width: 88px; border-radius: 8px; object-fit: cover; flex: none; }
+.brand b { font-size: 17px; font-weight: 800; color: var(--d); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+nav { display: flex; gap: 26px; font-size: 15px; font-weight: 600; color: var(--m); }
+nav a { text-decoration: none; } nav a:hover { color: var(--d); }
+.acts { display: flex; align-items: center; gap: 10px; flex: none; }
+.lang { border: 1px solid #d9dde3; background: #fff; border-radius: 99px; padding: 7px 12px; font: 600 13px inherit; cursor: pointer; color: var(--m); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 14px 22px; border-radius: 12px; font-weight: 700; font-size: 16px; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; transition: transform .15s, box-shadow .15s; }
+.btn:hover { transform: translateY(-1px); }
+.btn.pri { background: var(--a); color: var(--d); box-shadow: 0 8px 24px color-mix(in srgb, var(--a) 35%, transparent); }
 .btn.wa { background: #25d366; color: #fff; }
-.btn.tel { background: #fff; color: var(--c); }
-.rating { display: inline-block; margin-top: 22px; color: #fff; text-decoration: none; background: rgba(0,0,0,.2); padding: 6px 14px; border-radius: 20px; font-size: 15px; }
-.stars { color: var(--a); font-weight: 700; }
-section { padding: 56px 20px; max-width: 1040px; margin: 0 auto; }
-h2 { font-size: 28px; margin-bottom: 24px; text-align: center; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); gap: 16px; }
-.card { background: #fff; border-radius: 14px; padding: 24px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
-.card svg { width: 48px; height: 48px; stroke: var(--c); fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 10px; }
-.card h3 { font-size: 17px; }
-.why { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px; }
-.why div { border-left: 4px solid var(--a); background: #fff; padding: 18px; border-radius: 8px; }
-.contacto { background: #fff; border-radius: 16px; padding: 28px; display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
-.contacto iframe { width: 100%; height: 280px; border: 0; border-radius: 12px; }
-.contacto p { margin-bottom: 10px; }
-.contacto a { color: var(--c); font-weight: 600; }
-footer { text-align: center; padding: 28px 20px 96px; color: #666; font-size: 14px; }
-.flota { position: fixed; right: 16px; bottom: 16px; width: 60px; height: 60px; border-radius: 50%; background: #25d366; display: grid; place-items: center; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
-.flota svg { width: 32px; height: 32px; fill: #fff; }
+.btn.dark { background: var(--d); color: #fff; }
+.btn.ghost { background: transparent; color: var(--d); border: 2px solid var(--d); }
+.btn.sm { padding: 10px 16px; font-size: 14px; border-radius: 10px; }
+.hero { position: relative; color: #fff; background: var(--d) url("https://sitiolisto.github.io/assets/img/taller-0.jpg") center / cover no-repeat; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, color-mix(in srgb, var(--d) 94%, transparent) 0%, color-mix(in srgb, var(--d) 78%, transparent) 48%, color-mix(in srgb, var(--d) 30%, transparent) 100%); }
+.hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 48px; align-items: center; padding-top: 88px; padding-bottom: 96px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--a); margin-bottom: 18px; }
+.eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--a); }
+.hero h1 { font-size: clamp(34px, 5.4vw, 58px); line-height: 1.07; font-weight: 800; letter-spacing: -1px; margin-bottom: 18px; overflow-wrap: anywhere; }
+.hero .sub { font-size: clamp(17px, 2.2vw, 20px); color: #dfe3ea; max-width: 560px; margin-bottom: 30px; }
+.ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.chip { display: inline-flex; align-items: center; gap: 4px; margin-top: 28px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); padding: 9px 14px; border-radius: 99px; text-decoration: none; font-size: 14.5px; backdrop-filter: blur(6px); }
+.chip b { margin: 0 4px 0 6px; font-size: 16px; }
+.quote { background: #fff; color: var(--t); border-radius: 20px; padding: 28px; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+.quote h2 { font-size: 22px; margin-bottom: 4px; color: var(--d); }
+.quote > p { color: var(--m); font-size: 14.5px; margin-bottom: 18px; }
+.quote label { display: block; margin-bottom: 12px; }
+.lbl { display: block; font-size: 13px; font-weight: 700; color: var(--m); margin-bottom: 5px; }
+.quote input, .quote select, .quote textarea { width: 100%; min-width: 0; max-width: 100%; border: 1.5px solid #dfe3e8; border-radius: 10px; padding: 12px 13px; font: 500 15px inherit; color: var(--t); background: #fbfcfd; }
+.quote input:focus, .quote select:focus, .quote textarea:focus { outline: none; border-color: var(--a); background: #fff; }
+.quote textarea { resize: vertical; min-height: 72px; }
+.quote .btn { width: 100%; margin-top: 6px; }
+.quote small { display: block; text-align: center; color: var(--m); margin-top: 10px; font-size: 13px; }
+.strip { background: var(--d); color: #fff; }
+.strip ul { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); }
+.strip li { display: flex; align-items: center; gap: 12px; padding: 22px 18px; font-weight: 600; font-size: 15px; border-left: 1px solid rgba(255,255,255,.1); }
+.strip li:first-child { border-left: 0; }
+.strip .ic { color: var(--a); width: 26px; height: 26px; }
+section { padding: 96px 0; }
+.head { max-width: 640px; margin-bottom: 44px; }
+.head .eyebrow { color: color-mix(in srgb, var(--a) 70%, var(--d)); }
+h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; letter-spacing: -.6px; color: var(--d); font-weight: 800; }
+.head p { color: var(--m); font-size: 17px; margin-top: 12px; }
+.svcs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+.svc { background: #fff; border: 1px solid #e9ecf0; border-radius: var(--r); padding: 28px; transition: box-shadow .2s, transform .2s, border-color .2s; }
+.svc:hover { box-shadow: 0 18px 40px rgba(15,23,42,.08); transform: translateY(-3px); border-color: transparent; }
+.svc .ic { width: 48px; height: 48px; padding: 11px; border-radius: 12px; background: color-mix(in srgb, var(--a) 16%, #fff); color: var(--d); margin-bottom: 18px; }
+.svc h3 { font-size: 19px; color: var(--d); margin-bottom: 6px; }
+.svc p { color: var(--m); font-size: 15px; }
+.about { background: var(--bg); }
+.split { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 64px; align-items: center; }
+.pics { display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,1fr); grid-template-rows: minmax(0,1fr) minmax(0,1fr); gap: 14px; height: 460px; }
+.pics img { width: 100%; height: 100%; min-height: 0; object-fit: cover; border-radius: var(--r); }
+.pics img:first-child { grid-row: span 2; }
+.about p.lead { font-size: 18px; color: var(--t); margin: 18px 0 24px; }
+.about ul { list-style: none; display: grid; gap: 12px; margin-bottom: 30px; }
+.about li { display: flex; gap: 12px; align-items: center; font-weight: 600; }
+.about li .ic { width: 26px; height: 26px; padding: 5px; border-radius: 50%; background: var(--d); color: var(--a); }
+.steps { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; counter-reset: s; }
+.steps li { position: relative; padding: 30px; border-radius: var(--r); background: #fff; border: 1px solid #e9ecf0; }
+.steps .n { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--a); color: var(--d); font-weight: 800; font-size: 18px; margin-bottom: 16px; }
+.steps h3 { font-size: 19px; color: var(--d); margin-bottom: 6px; }
+.steps p { color: var(--m); font-size: 15px; }
+.reviews { background: var(--d); color: #fff; padding: 80px 0; }
+.rv { display: grid; grid-template-columns: 280px minmax(0,1fr); gap: 56px; align-items: center; }
+.score { text-align: center; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 32px 20px; }
+.score b { display: block; font-size: 72px; line-height: 1; font-weight: 800; }
+.score div { margin: 12px 0 8px; } .score .st { width: 24px; height: 24px; }
+.score p { color: #c7ced8; font-size: 14px; }
+.reviews h2 { color: #fff; margin-bottom: 12px; }
+.rvtext p { color: #c7ced8; font-size: 17px; margin-bottom: 26px; max-width: 560px; }
+.reviews .btn.ghost { color: #fff; border-color: rgba(255,255,255,.5); }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r); }
+.note { color: var(--m); font-size: 13px; margin-top: 12px; }
+.contact { background: var(--bg); }
+.cgrid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.2fr); gap: 28px; align-items: stretch; }
+.card { background: #fff; border-radius: 20px; padding: 34px; border: 1px solid #e9ecf0; }
+.card ul { list-style: none; display: grid; gap: 16px; margin: 22px 0 28px; }
+.card li { display: flex; gap: 14px; align-items: flex-start; font-size: 16.5px; font-weight: 600; }
+.card li .ic { color: var(--d); width: 40px; height: 40px; padding: 9px; border-radius: 10px; background: color-mix(in srgb, var(--a) 16%, #fff); }
+.card li a { text-decoration: none; }
+.card .ctas .btn { flex: 1; }
+.contact iframe { width: 100%; height: 100%; min-height: 360px; border: 0; border-radius: 20px; }
+.cta { background: var(--a); color: var(--d); padding: 64px 0; }
+.cta .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.cta h2 { color: var(--d); }
+footer { background: #0b0c0e; color: #9aa3ae; padding: 56px 0 120px; font-size: 14.5px; }
+.foot { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; }
+footer b { color: #fff; display: block; margin-bottom: 10px; font-size: 16px; }
+footer a { text-decoration: none; display: block; margin-bottom: 6px; }
+footer a:hover { color: #fff; }
+.legal { border-top: 1px solid #23262b; margin-top: 36px; padding-top: 22px; font-size: 13px; }
+.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px; }
+.q { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 18px; padding: 26px; }
+.q blockquote { font-size: 16px; color: #e6e9ee; margin: 12px 0 14px; line-height: 1.6; }
+.q figcaption { color: #9aa3ae; font-size: 14px; font-weight: 600; }
+.fq { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 56px; align-items: start; }
+details { border-bottom: 1px solid #e6e9ee; padding: 20px 0; }
+details:first-child { border-top: 1px solid #e6e9ee; }
+summary { cursor: pointer; font-weight: 700; font-size: 17.5px; color: var(--d); list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-size: 24px; line-height: 1; color: var(--a); transition: transform .2s; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { color: var(--m); margin-top: 10px; }
+.js .rise { opacity: 0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+.js .rise.in { opacity: 1; transform: none; }
+.hero h1, .hero .sub, .hero .ctas, .hero .chip, .quote { animation: up .8s cubic-bezier(.2,.7,.2,1) both; }
+.hero .sub { animation-delay: .08s; } .hero .ctas { animation-delay: .16s; } .hero .chip { animation-delay: .24s; } .quote { animation-delay: .2s; }
+@keyframes up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .js .rise { opacity: 1; transform: none; } }
+.mbar { display: none; }
+@media (max-width: 960px) {
+  nav { display: none; }
+  .hero .wrap { grid-template-columns: 1fr; padding-top: 56px; padding-bottom: 56px; gap: 36px; }
+  .strip ul { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .strip li:nth-child(3) { border-left: 0; }
+  .strip li { border-top: 1px solid rgba(255,255,255,.1); }
+  .svcs, .steps { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .split, .rv, .cgrid, .fq, .hero .wrap { grid-template-columns: minmax(0,1fr); gap: 36px; }
+  .quotes { grid-template-columns: 1fr; }
+  .pics { height: 340px; }
+  .foot { grid-template-columns: 1fr; }
+  section { padding: 68px 0; }
+}
+@media (max-width: 620px) {
+  .bar { height: 60px; }
+  .acts .call { display: none; }
+  .logo { height: 44px; width: auto; max-width: 88px; border-radius: 8px; object-fit: cover; flex: none; }
+.brand b { font-size: 15.5px; }
+  .svcs, .steps, .gallery { grid-template-columns: minmax(0,1fr); }
+  .strip li { padding: 16px 12px; font-size: 13.5px; gap: 8px; }
+  .ctas .btn { flex: 1 1 100%; }
+  .quote { padding: 22px; }
+  .pics { height: 260px; }
+  .score b { font-size: 60px; }
+  .mbar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; box-shadow: 0 -6px 20px rgba(0,0,0,.15); }
+  .mbar a { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px; font-weight: 800; text-decoration: none; font-size: 16px; }
+  .mbar a:first-child { background: var(--d); color: #fff; }
+  .mbar a:last-child { background: #25d366; color: #fff; }
+}
 </style>
 </head>
 <body>
-<div class="aviso" data-es="&lt;b&gt;Vista previa&lt;/b&gt; preparada por Sitio Listo para Mecánico Carro Auto Service. Aún no es el sitio oficial del negocio." data-en="&lt;b&gt;Preview&lt;/b&gt; prepared by Sitio Listo for Mecánico Carro Auto Service. Not yet the business's official site."><b>Vista previa</b> preparada por Sitio Listo para Mecánico Carro Auto Service. Aún no es el sitio oficial del negocio.</div>
-<header>
-  <div class="logo">Mecánico Carro Auto Service</div>
-  <button class="lang" onclick="cambiar()" aria-label="Cambiar idioma">English</button>
-</header>
-<div class="hero">
-  <svg class="bg" viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a14 14 0 0 0-13 19L9 45a5 5 0 0 0 7 7l18-18a14 14 0 0 0 19-13l-8 8-7-2-2-7z" /></svg>
-  <h1>Mecánico Carro Auto Service</h1>
-  <p data-es="Su carro en buenas manos en Houston." data-en="Your car in good hands in Houston.">Su carro en buenas manos en Houston.</p>
-  <div class="btns">
-    <a class="btn wa" href="https://wa.me/18323292372?text=Hola%20Mecánico%20Carro%20Auto%20Service,%20vi%20su%20página%20web%20y%20quiero%20una%20cotización." target="_blank" rel="noopener" data-es="Cotizar por WhatsApp" data-en="Get a quote on WhatsApp">Cotizar por WhatsApp</a>
-    <a class="btn tel" href="tel:+18323292372">☎ +1 832-329-2372</a>
+<div class="preview"><span data-en="&lt;b&gt;Website preview&lt;/b&gt; built by Sitio Listo for Mecánico Carro Auto Service. Not live yet · photos are illustrative." data-es="&lt;b&gt;Vista previa&lt;/b&gt; hecha por Sitio Listo para Mecánico Carro Auto Service. Aún no está publicada · fotos ilustrativas."><b>Website preview</b> built by Sitio Listo for Mecánico Carro Auto Service. Not live yet · photos are illustrative.</span></div>
+<header><div class="wrap bar">
+  <a class="brand" href="#top"><span class="mark">MC</span><b>Mecánico Carro Auto Service</b></a>
+  <nav><a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a><a href="#about"><span data-en="About" data-es="Nosotros">About</span></a><a href="#reviews"><span data-en="Reviews" data-es="Reseñas">Reviews</span></a><a href="#contact"><span data-en="Contact" data-es="Contacto">Contact</span></a></nav>
+  <div class="acts"><button class="lang" onclick="lang()">Español</button><a class="btn pri sm call" href="tel:+18323292372"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(832) 329-2372</a></div>
+</div></header>
+<div class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="eyebrow"><span data-en="auto repair shop · Houston, TX" data-es="taller mecánico · Houston, TX">auto repair shop · Houston, TX</span></span>
+    <h1><span data-en="Honest auto repair, close to home" data-es="Mecánica honesta, cerca de casa">Honest auto repair, close to home</span></h1>
+    <p class="sub"><span data-en="Mecánico Carro Auto Service takes care of your car in Houston and nearby areas. Call or send us a WhatsApp and get a quote today." data-es="Mecánico Carro Auto Service cuida su carro en Houston y alrededores. Llame o mande WhatsApp y reciba su cotización hoy.">Mecánico Carro Auto Service takes care of your car in Houston and nearby areas. Call or send us a WhatsApp and get a quote today.</span></p>
+    <div class="ctas"><a class="btn pri" href="tel:+18323292372"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call now" data-es="Llamar ahora">Call now</span></a><a class="btn wa" href="https://wa.me/18323292372" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a></div>
+    <a class="chip" href="https://www.google.com/maps/search/?api=1&amp;query=Mecánico+Carro+Auto+Service+6102+Clarewood+Dr+Houston,+TX" target="_blank" rel="noopener"><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><b>4.3</b> <span data-en="from 29 Google reviews" data-es="de 29 reseñas en Google">from 29 Google reviews</span></a>
   </div>
-  <a class="rating" href="https://www.google.com/maps/search/?api=1&amp;query=Mecánico+Carro+Auto+Service+6102+Clarewood+Dr+Houston,+TX" target="_blank" rel="noopener"><span class="stars">★ 4.3</span> <span data-es="en Google · 29 reseñas" data-en="on Google · 29 reviews">en Google · 29 reseñas</span></a>
-</div>
-<section>
-  <h2 data-es="Nuestros servicios" data-en="Our services">Nuestros servicios</h2>
-  <div class="grid">
-<div class="card"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a14 14 0 0 0-13 19L9 45a5 5 0 0 0 7 7l18-18a14 14 0 0 0 19-13l-8 8-7-2-2-7z" /></svg><h3 data-es="Mecánica general" data-en="General repair">Mecánica general</h3></div>
-<div class="card"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a14 14 0 0 0-13 19L9 45a5 5 0 0 0 7 7l18-18a14 14 0 0 0 19-13l-8 8-7-2-2-7z" /></svg><h3 data-es="Frenos y suspensión" data-en="Brakes &amp; suspension">Frenos y suspensión</h3></div>
-<div class="card"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a14 14 0 0 0-13 19L9 45a5 5 0 0 0 7 7l18-18a14 14 0 0 0 19-13l-8 8-7-2-2-7z" /></svg><h3 data-es="Cambio de aceite" data-en="Oil change">Cambio de aceite</h3></div>
-<div class="card"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M40 8a14 14 0 0 0-13 19L9 45a5 5 0 0 0 7 7l18-18a14 14 0 0 0 19-13l-8 8-7-2-2-7z" /></svg><h3 data-es="Diagnóstico por computadora" data-en="Computer diagnostics">Diagnóstico por computadora</h3></div>
+  <form class="quote" id="quote" onsubmit="return enviar(event)">
+    <h2><span data-en="Request a quote" data-es="Pida su cotización">Request a quote</span></h2>
+    <p  data-en="Send us the details and we&#x27;ll get back to you on WhatsApp." data-es="Mándenos los detalles y le respondemos por WhatsApp.">Send us the details and we&#x27;ll get back to you on WhatsApp.</p>
+    <label><span class="lbl" data-en="Your name" data-es="Su nombre">Your name</span><input name="n" required autocomplete="name"></label>
+    <label><span class="lbl" data-en="Vehicle (year, make, model)" data-es="Vehículo (año, marca, modelo)">Vehicle (year, make, model)</span><input name="v"></label>
+    <label><span class="lbl" data-en="Service" data-es="Servicio">Service</span><select name="s"><option value="General repair">General repair</option><option value="Brakes">Brakes</option><option value="Oil change">Oil change</option><option value="Check engine light">Check engine light</option><option value="A/C repair">A/C repair</option><option value="Suspension &amp; steering">Suspension &amp; steering</option></select></label>
+    <label><span class="lbl" data-en="Details (optional)" data-es="Detalles (opcional)">Details (optional)</span><textarea name="d"></textarea></label>
+    <button class="btn dark" type="submit"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="Send on WhatsApp" data-es="Enviar por WhatsApp">Send on WhatsApp</span></button>
+    <small><span data-en="Prefer to talk? Call (832) 329-2372" data-es="¿Prefiere hablar? Llame al (832) 329-2372">Prefer to talk? Call (832) 329-2372</span></small>
+  </form>
+</div></div>
+<div class="strip"><ul class="wrap">
+  <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><span data-en="4.3★ on Google" data-es="4.3★ en Google">4.3★ on Google</span></li>
+  <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="29 customer reviews" data-es="29 reseñas de clientes">29 customer reviews</span></li>
+  <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span data-en="Serving Houston" data-es="Atendemos Houston">Serving Houston</span></li>
+  <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call or WhatsApp" data-es="Llamada o WhatsApp">Call or WhatsApp</span></li>
+</ul></div>
+<section id="services"><div class="wrap">
+  <div class="head"><span class="eyebrow"><span data-en="What we do" data-es="Lo que hacemos">What we do</span></span><h2><span data-en="Services" data-es="Servicios">Services</span></h2><p  data-en="Everything your car needs, in one place." data-es="Todo lo que su carro necesita, en un solo lugar.">Everything your car needs, in one place.</p></div>
+  <div class="svcs">
+<article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L2 10l8-8z" transform="scale(.9) translate(1 1)"/></svg><h3><span data-en="General repair" data-es="Mecánica general">General repair</span></h3><p  data-en="Engine, cooling, steering and everything in between." data-es="Motor, enfriamiento, dirección y todo lo demás.">Engine, cooling, steering and everything in between.</p></article>
+<article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><h3><span data-en="Brakes" data-es="Frenos">Brakes</span></h3><p  data-en="Pads, rotors and brake fluid inspected and replaced." data-es="Balatas, discos y líquido de frenos.">Pads, rotors and brake fluid inspected and replaced.</p></article>
+<article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s7 7.5 7 12a7 7 0 0 1-14 0c0-4.5 7-12 7-12z"/></svg><h3><span data-en="Oil change" data-es="Cambio de aceite">Oil change</span></h3><p  data-en="Oil and filter service to keep your engine healthy." data-es="Aceite y filtro para cuidar su motor.">Oil and filter service to keep your engine healthy.</p></article>
+<article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"/><path d="m12 18 4-6"/><circle cx="12" cy="18" r="1.5"/></svg><h3><span data-en="Check engine light" data-es="Luz de check engine">Check engine light</span></h3><p  data-en="Computer diagnostics to find the real problem." data-es="Diagnóstico por computadora para encontrar la falla real.">Computer diagnostics to find the real problem.</p></article>
+<article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M4 7l16 10M4 17 20 7"/><path d="m9 3 3 3 3-3M9 21l3-3 3 3"/></svg><h3><span data-en="A/C repair" data-es="Aire acondicionado">A/C repair</span></h3><p  data-en="Stay cool in the Texas heat." data-es="Manténgase fresco en el calor de Texas.">Stay cool in the Texas heat.</p></article>
+<article class="svc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16v-4l2-5h14l2 5v4z"/><circle cx="7.5" cy="16.5" r="2"/><circle cx="16.5" cy="16.5" r="2"/><path d="M3 12h18"/></svg><h3><span data-en="Suspension &amp; steering" data-es="Suspensión y dirección">Suspension &amp; steering</span></h3><p  data-en="Shocks, struts and steering for a smooth ride." data-es="Amortiguadores y dirección para un manejo suave.">Shocks, struts and steering for a smooth ride.</p></article>
   </div>
-</section>
-<section>
-  <h2 data-es="¿Por qué elegirnos?" data-en="Why choose us?">¿Por qué elegirnos?</h2>
-  <div class="why">
-    <div><b data-es="4.3★ en Google" data-en="4.3★ on Google">4.3★ en Google</b><p data-es="29 clientes han dejado su reseña." data-en="29 customers have left a review.">29 clientes han dejado su reseña.</p></div>
-    <div><b data-es="Contacto directo" data-en="Direct contact">Contacto directo</b><p data-es="Llámenos o mándenos un WhatsApp con los detalles de lo que necesita." data-en="Call us or send a WhatsApp with the details of what you need.">Llámenos o mándenos un WhatsApp con los detalles de lo que necesita.</p></div>
-    <div><b data-es="Servimos su zona" data-en="We serve your area">Servimos su zona</b><p data-es="Houston y alrededores." data-en="Houston and surrounding areas.">Houston y alrededores.</p></div>
+</div></section>
+<section class="about" id="about"><div class="wrap split">
+  <div class="pics"><img src="https://sitiolisto.github.io/assets/img/taller-1.jpg" alt="" loading="lazy"><img src="https://sitiolisto.github.io/assets/img/taller-2.jpg" alt="" loading="lazy"><img src="https://sitiolisto.github.io/assets/img/taller-3.jpg" alt="" loading="lazy"></div>
+  <div><span class="eyebrow"><span data-en="About us" data-es="Nosotros">About us</span></span><h2><span data-en="Your local auto repair shop in Houston" data-es="Su taller mecánico de confianza en Houston">Your local auto repair shop in Houston</span></h2>
+  <p class="lead" data-en="Mecánico Carro Auto Service is a local auto repair shop serving Houston and nearby areas. With a 4.3-star rating from 29 customers on Google, our neighbors trust us with their car." data-es="Mecánico Carro Auto Service es un taller mecánico local que atiende Houston y alrededores. Con 4.3 estrellas de 29 clientes en Google, nuestros vecinos nos confían su carro.">Mecánico Carro Auto Service is a local auto repair shop serving Houston and nearby areas. With a 4.3-star rating from 29 customers on Google, our neighbors trust us with their car.</p>
+  <ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Straight answers and clear quotes" data-es="Respuestas claras y cotizaciones sin rodeos">Straight answers and clear quotes</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Call, text or WhatsApp, whatever is easier" data-es="Llamada, mensaje o WhatsApp, como le acomode">Call, text or WhatsApp, whatever is easier</span></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span data-en="Right here in Houston" data-es="Aquí mismo en Houston">Right here in Houston</span></li></ul>
+  <a class="btn dark" href="#quote"><span data-en="Get a quote" data-es="Pedir cotización">Get a quote</span></a></div>
+</div></section>
+<section><div class="wrap">
+  <div class="head"><span class="eyebrow"><span data-en="How it works" data-es="Cómo funciona">How it works</span></span><h2><span data-en="Simple from start to finish" data-es="Fácil de principio a fin">Simple from start to finish</span></h2></div>
+  <ol class="steps"><li><span class="n">1</span><h3><span data-en="Call or WhatsApp" data-es="Llame o mande WhatsApp">Call or WhatsApp</span></h3><p  data-en="Tell us what is going on with your car." data-es="Cuéntenos qué le pasa a su carro.">Tell us what is going on with your car.</p></li><li><span class="n">2</span><h3><span data-en="Get a quote" data-es="Reciba su cotización">Get a quote</span></h3><p  data-en="We take a look and tell you what it needs and what it costs." data-es="Lo revisamos y le decimos qué necesita y cuánto cuesta.">We take a look and tell you what it needs and what it costs.</p></li><li><span class="n">3</span><h3><span data-en="Back on the road" data-es="De vuelta en el camino">Back on the road</span></h3><p  data-en="We get the job done so you can get on with your day." data-es="Hacemos el trabajo para que siga con su día.">We get the job done so you can get on with your day.</p></li></ol>
+</div></section>
+<section class="reviews" id="reviews"><div class="wrap rv">
+  <div class="score"><b>4.3</b><div><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st on" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg><svg class="st" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></svg></div><p  data-en="Based on 29 Google reviews" data-es="Según 29 reseñas en Google">Based on 29 Google reviews</p></div>
+  <div class="rvtext"><h2><span data-en="What our customers say" data-es="Lo que dicen nuestros clientes">What our customers say</span></h2>
+  <p  data-en="29 people have reviewed Mecánico Carro Auto Service on Google. Read what they say before you call." data-es="29 personas han calificado a Mecánico Carro Auto Service en Google. Lea lo que dicen antes de llamar.">29 people have reviewed Mecánico Carro Auto Service on Google. Read what they say before you call.</p>
+  <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Mecánico+Carro+Auto+Service+6102+Clarewood+Dr+Houston,+TX" target="_blank" rel="noopener"><span data-en="Read our reviews on Google" data-es="Leer reseñas en Google">Read our reviews on Google</span> →</a></div>
+</div><div class="wrap"></div></section>
+<section class="faq"><div class="wrap fq">
+  <div class="head"><span class="eyebrow">FAQ</span><h2><span data-en="Questions? We have answers" data-es="Preguntas frecuentes">Questions? We have answers</span></h2><p  data-en="Still not sure? Give us a call, we are happy to help." data-es="¿Tiene otra duda? Llámenos, con gusto le ayudamos.">Still not sure? Give us a call, we are happy to help.</p></div>
+  <div><details><summary><span data-en="How do I get a quote?" data-es="¿Cómo pido una cotización?">How do I get a quote?</span></summary><p  data-en="Call (832) 329-2372, send us a WhatsApp or use the form at the top of this page. Tell us what you need and we will get back to you." data-es="Llame al (832) 329-2372, mande un WhatsApp o use el formulario de arriba. Díganos qué necesita y le respondemos.">Call (832) 329-2372, send us a WhatsApp or use the form at the top of this page. Tell us what you need and we will get back to you.</p></details><details><summary><span data-en="What areas do you serve?" data-es="¿Qué zonas atienden?">What areas do you serve?</span></summary><p  data-en="We are based in Houston and work with customers from Houston and nearby areas." data-es="Estamos en Houston y atendemos clientes de Houston y alrededores.">We are based in Houston and work with customers from Houston and nearby areas.</p></details><details><summary><span data-en="Can I message you on WhatsApp?" data-es="¿Les puedo escribir por WhatsApp?">Can I message you on WhatsApp?</span></summary><p  data-en="Yes. WhatsApp is often the fastest way to reach us. You can send photos too." data-es="Sí. WhatsApp suele ser la forma más rápida de contactarnos y puede mandar fotos.">Yes. WhatsApp is often the fastest way to reach us. You can send photos too.</p></details><details><summary><span data-en="Do you speak Spanish?" data-es="¿Hablan español?">Do you speak Spanish?</span></summary><p  data-en="Use the Español button at the top to read this page in Spanish, and ask us when you call." data-es="Use el botón English/Español de arriba para cambiar el idioma y pregúntenos cuando llame.">Use the Español button at the top to read this page in Spanish, and ask us when you call.</p></details></div>
+</div></section>
+<section id="contact" class="contact"><div class="wrap">
+  <div class="head"><span class="eyebrow"><span data-en="Contact" data-es="Contacto">Contact</span></span><h2><span data-en="Come see us or give us a call" data-es="Visítenos o llámenos">Come see us or give us a call</span></h2></div>
+  <div class="cgrid">
+    <div class="card"><h3>Mecánico Carro Auto Service</h3><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+18323292372">(832) 329-2372</a></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><a href="https://wa.me/18323292372" target="_blank" rel="noopener">WhatsApp</a></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.3-7-12a7 7 0 0 1 14 0c0 5.7-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=Mecánico+Carro+Auto+Service+6102+Clarewood+Dr+Houston,+TX" target="_blank" rel="noopener">6102 Clarewood Dr, Houston, TX</a></li></ul>
+      <div class="ctas"><a class="btn pri" href="tel:+18323292372"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call" data-es="Llamar">Call</span></a><a class="btn wa" href="https://wa.me/18323292372" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a></div></div>
+    <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Mecánico+Carro+Auto+Service+6102+Clarewood+Dr+Houston,+TX&amp;output=embed"></iframe>
   </div>
-</section>
-<section>
-  <h2 data-es="Contáctenos" data-en="Contact us">Contáctenos</h2>
-  <div class="contacto">
-    <div>
-      <p><b data-es="Llámenos o escríbanos" data-en="Call or text us">Llámenos o escríbanos</b></p>
-      <p>☎ <a href="tel:+18323292372">+1 832-329-2372</a></p>
-      <p>💬 <a href="https://wa.me/18323292372?text=Hola%20Mecánico%20Carro%20Auto%20Service,%20vi%20su%20página%20web%20y%20quiero%20una%20cotización." target="_blank" rel="noopener">WhatsApp</a></p>
-      <p>📍 6102 Clarewood Dr</p>
-      
-    </div>
-    <iframe title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Mecánico+Carro+Auto+Service+6102+Clarewood+Dr&output=embed"></iframe>
+</div></section>
+<div class="cta"><div class="wrap"><h2><span data-en="Need help with your car?" data-es="¿Necesita ayuda con su carro?">Need help with your car?</span></h2><a class="btn dark" href="tel:+18323292372"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>(832) 329-2372</a></div></div>
+<footer><div class="wrap">
+  <div class="foot">
+    <div><b>Mecánico Carro Auto Service</b><p  data-en="Honest auto repair, close to home. Serving Houston and nearby areas." data-es="Mecánica honesta, cerca de casa. Atendemos Houston y alrededores.">Honest auto repair, close to home. Serving Houston and nearby areas.</p></div>
+    <div><b><span data-en="Contact" data-es="Contacto">Contact</span></b><a href="tel:+18323292372">(832) 329-2372</a><a href="https://wa.me/18323292372" target="_blank" rel="noopener"><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a><a href="https://www.google.com/maps/search/?api=1&amp;query=Mecánico+Carro+Auto+Service+6102+Clarewood+Dr+Houston,+TX" target="_blank" rel="noopener">Google Maps</a></div>
+    <div><b><span data-en="Menu" data-es="Menú">Menu</span></b><a href="#services"><span data-en="Services" data-es="Servicios">Services</span></a><a href="#about"><span data-en="About" data-es="Nosotros">About</span></a><a href="#contact"><span data-en="Contact" data-es="Contacto">Contact</span></a></div>
   </div>
-</section>
-<footer>© 2026 Mecánico Carro Auto Service · Houston, TX</footer>
-<a class="flota" href="https://wa.me/18323292372?text=Hola%20Mecánico%20Carro%20Auto%20Service,%20vi%20su%20página%20web%20y%20quiero%20una%20cotización." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
+  <div class="legal">© 2026 Mecánico Carro Auto Service · Houston, TX · <span data-en="Website preview by Sitio Listo · Stock photos from Unsplash" data-es="Vista previa de Sitio Listo · Fotos de Unsplash">Website preview by Sitio Listo · Stock photos from Unsplash</span></div>
+</div></footer>
+<div class="mbar"><a href="tel:+18323292372"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span data-en="Call" data-es="Llamar">Call</span></a><a href="https://wa.me/18323292372" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><span data-en="WhatsApp" data-es="WhatsApp">WhatsApp</span></a></div>
 <script>
-var en = false;
-function cambiar() {
-  en = !en;
-  document.documentElement.lang = en ? "en" : "es";
-  document.querySelectorAll("[data-es]").forEach(function (n) { n.innerHTML = n.getAttribute(en ? "data-en" : "data-es"); });
-  document.querySelector(".lang").textContent = en ? "Español" : "English";
+var es = false;
+function lang() {
+  es = !es;
+  document.documentElement.lang = es ? "es" : "en";
+  document.querySelectorAll("[data-en]").forEach(function (n) { n.innerHTML = n.getAttribute(es ? "data-es" : "data-en"); });
+  document.querySelector(".lang").textContent = es ? "English" : "Español";
 }
-if (document.documentElement.dataset.ini === "en") cambiar();
+if ("IntersectionObserver" in window) {
+  var io = new IntersectionObserver(function (es_) { es_.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { threshold: .12 });
+  document.querySelectorAll(".svc, .steps li, .pics, .split > div:last-child, .score, .rvtext, .q, details, .card, .head, .gallery img").forEach(function (n, i) {
+    n.classList.add("rise"); n.style.transitionDelay = (i % 3) * 70 + "ms"; io.observe(n);
+  });
+} else { document.documentElement.className = ""; }
+function enviar(ev) {
+  ev.preventDefault();
+  var f = ev.target, txt = (es ? "Hola, quiero una cotización." : "Hi, I'd like a quote.") +
+    "\n" + (es ? "Nombre: " : "Name: ") + f.n.value + (f.v.value ? "\n" + f.v.value : "") +
+    "\n" + (es ? "Servicio: " : "Service: ") + f.s.value + (f.d.value ? "\n" + f.d.value : "");
+  window.open("https://wa.me/18323292372?text=" + encodeURIComponent(txt), "_blank");
+  return false;
+}
 </script>
 </body>
 </html>
