@@ -243,11 +243,11 @@ document.querySelectorAll(".chips[data-g]").forEach(function (g) {
     g.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); }); b.classList.add("on"); }); });
 });
 /* Abierto ahora, con el horario real en hora de Houston */
-var HORARIO = "Mon\u2013Sat 9 AM\u20136 PM \u00b7 Sun Closed";
+var HORARIO = "Mon\u2013Sat 9 AM\u20136 PM \u00b7 Sun Closed", TZ = "America/Chicago";
 function estado() {
   var el = document.querySelectorAll(".status"); if (!el.length || !HORARIO) return;
   var dias = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  var p = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
+  var p = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
   var g = function (t) { return (p.find(function (x) { return x.type === t; }) || {}).value; };
   var hoy = dias.indexOf(g("weekday")), ahora = (parseInt(g("hour"), 10) % 24) * 60 + parseInt(g("minute"), 10);
   var min = function (s) { var m = s.trim().match(/(\d+)(?::(\d+))?\s*(AM|PM)/i); if (!m) return null; var h = parseInt(m[1], 10) % 12 + (/pm/i.test(m[3]) ? 12 : 0); return h * 60 + parseInt(m[2] || "0", 10); };
@@ -257,9 +257,11 @@ function estado() {
     var a = dias.indexOf(m[1]), b = m[2] ? dias.indexOf(m[2]) : a, dentro = a <= b ? (hoy >= a && hoy <= b) : (hoy >= a || hoy <= b);
     if (!dentro) return;
     if (/24 hours/i.test(m[3])) { abierto = true; hasta = "24h"; return; }
-    var r = m[3].split("\u2013"); if (r.length < 2) return;
-    var i = min(r[0].indexOf("M") < 0 ? r[0] + r[1].replace(/.*(AM|PM).*/i, " $1") : r[0]), f = min(r[1]);
-    if (i !== null && f !== null && ahora >= i && ahora < f) { abierto = true; hasta = r[1].trim(); }
+    m[3].split(", ").forEach(function (turno) {
+      var r = turno.split("\u2013"); if (r.length < 2) return;
+      var i = min(r[0].indexOf("M") < 0 ? r[0] + r[1].replace(/.*(AM|PM).*/i, " $1") : r[0]), f = min(r[1]);
+      if (i !== null && f !== null && ahora >= i && ahora < f) { abierto = true; hasta = r[1].trim(); }
+    });
   });
   el.forEach(function (s) { s.classList.toggle("open", abierto); s.querySelector("span").textContent = abierto ? (es ? "Abierto ahora" : "Open now") + (hasta && hasta !== "24h" ? (es ? " · hasta " : " · until ") + hasta : "") : (es ? "Cerrado ahora" : "Closed now"); });
 }
