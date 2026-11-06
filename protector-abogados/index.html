@@ -240,7 +240,7 @@ function estado() {
       if (i !== null && f !== null && ahora >= i && ahora < f) { abierto = true; hasta = r[1].trim(); }
     });
   });
-  el.forEach(function (s) { s.classList.toggle("open", abierto); s.querySelector("span").textContent = abierto ? (es ? "Abierto ahora" : "Open now") + (hasta && hasta !== "24h" ? (es ? " · hasta " : " · until ") + hasta : "") : (es ? "Cerrado ahora" : "Closed now"); });
+  el.forEach(function (s) { s.classList.toggle("open", abierto); s.querySelector("span").textContent = abierto ? (es ? "Abierto ahora" : "Open now") + (hasta && hasta !== "24h" ? (es ? " · hasta " + hasta.replace(" AM", " a.m.").replace(" PM", " p.m.") : " · until " + hasta) : "") : (es ? "Cerrado ahora" : "Closed now"); });
 }
 estado();
 /* Reseñas que rotan */
