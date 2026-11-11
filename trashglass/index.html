@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>TrashGlass Co.® · Velas ecológicas hechas en Puebla</title>
-<meta name="description" content="Velas aromáticas de cera de soya hechas a mano en vasos de botellas de vidrio recicladas. Colección Navideña 2026. Hechas en Puebla, envíos a todo México.">
+<meta name="description" content="Velas aromáticas de cera de soya hechas a mano en vasos de botellas de vidrio recicladas. Colección Navideña 2026, hecha a mano en Puebla.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#BFCCDD">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TrashGlass Co.® · De botella a vaso, de vaso a vela">
-<meta property="og:description" content="Velas de cera de soya en vasos de botellas recicladas. Hechas a mano en Puebla. Envíos a todo México.">
+<meta property="og:description" content="Velas de cera de soya en vasos de botellas recicladas. Hechas a mano en Puebla.">
 <meta property="og:image" content="https://sitiolisto.github.io/trashglass/img/og.jpg">
 <meta property="og:url" content="https://sitiolisto.github.io/trashglass/">
 <link rel="icon" href="img/logo.jpg">
@@ -57,9 +57,8 @@ nav.bar{background:var(--peri);border-bottom:var(--b)}
 .bar ul a{display:block;padding:10px 16px;font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;border-left:var(--b)}
 .bar ul li:first-child a{border-left:0}
 .bar ul a:hover{background:var(--leaf)}
-.cartb{display:inline-flex;align-items:center;gap:10px;border:var(--b);background:var(--white);padding:10px 14px;box-shadow:3px 3px 0 var(--ink);font-family:var(--mono);font-size:12.5px;text-transform:uppercase}
-.cartb .n{background:var(--ink);color:#fff;min-width:24px;height:24px;display:grid;place-items:center;padding:0 6px;font-size:12px}
-.cartb.has .n{background:var(--leaf);color:var(--ink);outline:2px solid var(--ink)}
+.igb{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;text-decoration:underline;text-underline-offset:4px}
+.igb:hover{color:var(--sky-d)}
 @media(max-width:960px){.bar ul{display:none}}
 
 /* hero */
@@ -107,31 +106,40 @@ section{padding:100px 0}
 .sh .side{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
 @media(max-width:640px){.sh{grid-template-columns:1fr;gap:14px}.sh .idx{justify-self:start}}
 
-/* catálogo */
-.filters{display:flex;border:var(--b);background:var(--white);box-shadow:4px 4px 0 var(--ink)}
-.filters button{padding:12px 18px;font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-left:var(--b)}
-.filters button:first-child{border-left:0}
-.filters button.on{background:var(--ink);color:#fff}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.lbl{background:var(--white);border:var(--b);box-shadow:var(--sh);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-.lbl:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
-.lbl .im{position:relative;border-bottom:var(--b);aspect-ratio:1/1;overflow:hidden;background:var(--peri-2)}
-.lbl .im img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
-.lbl .flag{position:absolute;top:12px;left:12px;background:var(--leaf);border:var(--b);padding:5px 9px;font-family:var(--mono);font-size:11px;text-transform:uppercase}
-.lbl .flag.sky{background:var(--sky)}
-.lbl .bd{padding:18px 18px 0;text-align:center;flex:1}
-.lbl .brand{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em}
-.lbl h3{font-size:31px;margin:8px 0 8px}
-.lbl .notes{font-family:var(--mono);font-size:12.5px;color:var(--ink-2);min-height:38px}
-.lbl table{width:100%;border-collapse:collapse;margin:14px 0 18px;font-family:var(--mono);font-size:12px;text-transform:uppercase}
-.lbl td{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:7px 4px;width:50%}
-.lbl td+td{border-left:1.5px solid var(--ink)}
-.lbl .add{display:flex;justify-content:space-between;align-items:center;border-top:var(--b);padding:15px 18px;font-family:var(--mono);font-size:13.5px;text-transform:uppercase;letter-spacing:.05em;background:var(--white);transition:background .15s}
-.lbl .add:hover{background:var(--leaf)}
-.lbl .add b{font-family:var(--display);font-size:24px;line-height:1}
-.pnl{display:none}.pnl.on{display:block}
-@media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr);gap:22px}}
-@media(max-width:600px){.grid{grid-template-columns:1fr}}
+/* aromas: selector */
+.aromas{display:grid;grid-template-columns:1fr 1.05fr;border:var(--b);box-shadow:var(--sh);background:var(--white)}
+.names{list-style:none;border-right:var(--b)}
+.names li+li{border-top:1.5px solid var(--ink)}
+.names button{width:100%;display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:12px;padding:20px 22px;text-align:left;transition:background .15s}
+.names button .k{font-family:var(--mono);font-size:12.5px}
+.names button b{font-size:clamp(22px,2.4vw,32px);font-weight:800;letter-spacing:-.035em;line-height:1}
+.names button i{font-style:normal;font-family:var(--mono);font-size:18px;opacity:0;transform:translateX(-6px);transition:.2s}
+.names button:hover{background:var(--peri-2)}
+.names button.on{background:var(--ink);color:#fff}
+.names button.on i{opacity:1;transform:none;color:var(--leaf)}
+.show{position:relative;background:var(--peri-2);min-height:560px;overflow:hidden}
+.show img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;transition:opacity .35s}
+.show img.fade{opacity:0}
+.tagl{position:absolute;left:22px;right:22px;bottom:22px;background:#fff;border:var(--b);box-shadow:4px 4px 0 var(--ink);padding:16px 18px;text-align:center}
+.tagl .brand{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em}
+.tagl h3{font-size:30px;margin:6px 0}
+.tagl p{font-family:var(--mono);font-size:12.5px;color:var(--ink-2)}
+.tagl table{width:100%;border-collapse:collapse;margin-top:12px;font-family:var(--mono);font-size:11.5px;text-transform:uppercase}
+.tagl td{border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);padding:6px 4px;width:50%}
+.tagl td+td{border-left:1.5px solid var(--ink)}
+.aside-note{margin-top:26px;font-family:var(--mono);font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-2)}
+.aside-note a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:860px){
+  .aromas{grid-template-columns:1fr}
+  .names{border-right:0;border-bottom:var(--b);display:flex;overflow-x:auto;scrollbar-width:none}
+  .names::-webkit-scrollbar{display:none}
+  .names li{flex:none}
+  .names li+li{border-top:0;border-left:1.5px solid var(--ink)}
+  .names button{grid-template-columns:auto auto;padding:14px 16px;gap:8px}
+  .names button b{font-size:18px;white-space:nowrap}
+  .names button i{display:none}
+  .show{min-height:0;aspect-ratio:4/5}
+}
 
 /* proceso */
 .proc{background:var(--sky);border-top:var(--b);border-bottom:var(--b)}
@@ -188,17 +196,15 @@ section{padding:100px 0}
 .arrows button:hover{background:var(--leaf);color:var(--ink);border-color:var(--leaf)}
 @media(max-width:600px){.slide{flex-basis:76%}}
 
-/* recuerdos: cupón */
-.coupon{position:relative;display:grid;grid-template-columns:1.3fr .7fr;background:var(--leaf);border:var(--b);box-shadow:var(--sh)}
-.coupon::before,.coupon::after{content:"";position:absolute;left:calc(65% - 18px);width:36px;height:36px;border-radius:50%;background:var(--glass);border:var(--b)}
-.coupon::before{top:-20px}.coupon::after{bottom:-20px}
-.coupon .tx{padding:52px 50px;border-right:2px dashed var(--ink)}
-.coupon .tx p{margin:18px 0 24px;font-size:18px;max-width:560px}
+/* eventos */
+.ev{display:grid;grid-template-columns:1.3fr .7fr;background:var(--leaf);border:var(--b);box-shadow:var(--sh)}
+.ev .tx{padding:52px 50px;border-right:var(--b)}
+.ev .tx p{margin:18px 0 24px;font-size:18px;max-width:560px}
 .uses{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
 .uses span{border:var(--b);background:#fff;padding:6px 11px;font-family:var(--mono);font-size:12px;text-transform:uppercase}
-.coupon .im{padding:26px;display:grid;place-items:center}
-.coupon .im img{border:var(--b);background:#fff;padding:8px;transform:rotate(3deg);aspect-ratio:4/5;object-fit:cover;width:100%;max-width:300px}
-@media(max-width:880px){.coupon{grid-template-columns:1fr}.coupon .tx{border-right:0;border-bottom:2px dashed var(--ink);padding:40px 24px}.coupon::before,.coupon::after{display:none}}
+.ev .im{padding:26px;display:grid;place-items:center;background:var(--peri)}
+.ev .im img{border:var(--b);background:#fff;padding:8px;transform:rotate(3deg);aspect-ratio:4/5;object-fit:cover;width:100%;max-width:300px}
+@media(max-width:880px){.ev{grid-template-columns:1fr}.ev .tx{border-right:0;border-bottom:var(--b);padding:40px 24px}}
 
 /* cuidados */
 .care .sheet{background:#fff;border:var(--b);box-shadow:var(--sh)}
@@ -237,26 +243,24 @@ footer a:hover{color:#fff}
 footer nav{display:flex;gap:22px;flex-wrap:wrap}
 footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 
-.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,24px);background:var(--ink);color:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--leaf);padding:12px 18px;font-family:var(--mono);font-size:13px;z-index:100;opacity:0;transition:.25s;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
-.toast.on{opacity:1;transform:translate(-50%,0)}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
-<div class="top"><span class="mono">♻ Velas en vasos de botellas rescatadas · Envíos a todo México</span></div>
+<div class="top"><span class="mono">♻ Tus nuevas velas favoritas y eco · Hechas a mano en Puebla</span></div>
 
 <nav class="bar">
   <div class="wrap">
     <a href="#inicio" class="logo"><img src="img/logo.jpg" alt="Logo TrashGlass Co."><b>TrashGlass Co.<sup>®</sup></b></a>
     <ul>
-      <li><a href="#velas">Velas</a></li>
+      <li><a href="#velas">Aromas</a></li>
       <li><a href="#proceso">Proceso</a></li>
       <li><a href="#historia">Historia</a></li>
       <li><a href="#recuerdos">Recuerdos</a></li>
       <li><a href="#faq">Dudas</a></li>
     </ul>
-    <a class="cartb" href="#" data-msg="¡Hola TrashGlass! 👋 Vi su página y me gustaría información de sus velas.">Escríbenos <span class="n">→</span></a>
+    <a class="igb" href="https://www.instagram.com/trashglassco/" target="_blank" rel="noopener">@trashglassco ↗</a>
   </div>
 </nav>
 
@@ -267,8 +271,8 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
       <h1><span class="ln1">De botella <span class="arr">→</span></span> <span class="ln1">a <span class="mark-sky">vaso</span>.</span> <span class="ln1">De vaso <span class="arr">→</span></span> <span class="ln1">a <span class="mark">vela</span>.</span></h1>
       <p>Velas aromáticas de cera de soya, vertidas una por una en vasos que antes fueron botellas de vidrio. Iluminan tu casa y, cuando se acaban, el vaso se queda contigo.</p>
       <div class="ctas">
-        <a href="#velas" class="btn btn-leaf">Ver colección navideña ↓</a>
-        <a href="#" class="btn" data-msg="¡Hola TrashGlass! 👋 Vi su página y me gustaría información de sus velas.">Escríbenos</a>
+        <a href="#velas" class="btn btn-leaf">Conoce los aromas ↓</a>
+        <a href="#historia" class="btn">Nuestra historia</a>
       </div>
     </div>
     <div class="collage" aria-hidden="true">
@@ -285,24 +289,23 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
   <div><i></i><span class="mono">450 g de aroma</span></div>
   <div><i></i><span class="mono">100 % soya</span></div>
   <div><i></i><span class="mono">Hecha a mano</span></div>
-  <div><i></i><span class="mono">Envíos a todo MX</span></div>
+  <div><i></i><span class="mono">Hecha en Puebla</span></div>
 </div></div>
 
 <section id="velas">
   <div class="wrap">
     <div class="sh">
       <span class="idx">01</span>
-      <div class="side">
-        <div><h2>Colección <span class="mark">Navidad</span> 2026</h2>
-        <p>Seis velas, seis formas de vivir la temporada. ¿Te gustó alguna? Pregúntanos por ella y te contamos disponibilidad, precio y envío.</p></div>
-        <div class="filters" role="tablist">
-          <button class="on" data-f="navidad">Navidad</button>
-          <button data-f="otono">Otoño</button>
-        </div>
-      </div>
+      <div><h2>¿A qué huele <span class="mark">tu Navidad</span>?</h2>
+      <p>Nuestra colección navideña 2026: seis velas de cera de soya en vasos de botella rescatada, cada una con su propio aroma y sus figuras hechas a mano.</p></div>
     </div>
-    <div class="pnl on" id="f-navidad"><div class="grid" id="g-navidad"></div></div>
-    <div class="pnl" id="f-otono"><div class="grid" id="g-otono"></div></div>
+    <div class="aromas">
+      <ol class="names" id="names"></ol>
+      <figure class="show"><img id="showImg" src="img/v-bosque-navideno.jpg" alt="">
+        <figcaption class="tagl"><div class="brand">TRASHGLASS®</div><h3 id="showName"></h3><p id="showNotes"></p>
+        <table><tr><td>450 g</td><td>100 % soya</td></tr></table></figcaption></figure>
+    </div>
+    <p class="aside-note">¿Cuál sería la tuya? Cuéntanos en <a href="https://www.instagram.com/trashglassco/" target="_blank" rel="noopener">Instagram</a>.</p>
   </div>
 </section>
 
@@ -370,14 +373,14 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 <section id="recuerdos">
   <div class="wrap">
     <div class="sh"><span class="idx">05</span><div><h2>Recuerdos que <span class="mark-sky">sí se quedan</span></h2></div></div>
-    <div class="coupon">
+    <div class="ev">
       <div class="tx">
-        <span class="mono">Válido para bodas, eventos y empresas</span>
+        <span class="mono">Para bodas, eventos y empresas</span>
         <p>Velas como recuerdo para tu evento o como regalo de empresa. Después de encenderlas, el vaso se queda en casa de tus invitados y les recuerda ese día.</p>
         <div class="uses"><span>Bodas</span><span>Baby shower</span><span>XV años</span><span>Wellness</span><span>Corporativos</span><span>Intercambios</span></div>
-        <a href="#" class="btn btn-ink" data-msg="¡Hola TrashGlass! 👋 Me interesan velas como recuerdo para un evento. ¿Me pueden dar información?">Cotizar recuerdos →</a>
+        <a href="https://ig.me/m/trashglassco" target="_blank" rel="noopener" class="btn btn-ink">Platícanos de tu evento →</a>
       </div>
-      <div class="im"><img src="img/haunted-mocha-dos.jpg" alt="Velas TrashGlass para regalar" loading="lazy"></div>
+      <div class="im"><img src="img/haunted-mocha-dos.jpg" alt="Velas TrashGlass" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -401,12 +404,12 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
   <div class="wrap">
     <div class="sh"><span class="idx">07</span><div><h2>Dudas frecuentes</h2></div></div>
     <div class="faqg">
-      <details open><summary>¿Hacen envíos?</summary><p>Sí, a todo México. Escríbenos con las velas que te gustaron y tu ciudad, y te confirmamos costo y tiempo de entrega.</p></details>
+      <details open><summary>¿Dónde las consigo?</summary><p>Escríbenos por Instagram. Estamos en Puebla y hacemos envíos a todo México.</p></details>
       <details><summary>¿De qué están hechas?</summary><p>Cera 100 % de soya en vasos hechos con botellas de vidrio recicladas y rehabilitadas a mano. Cada vela de la colección pesa 450 g.</p></details>
       <details><summary>¿Puedo reutilizar el vaso?</summary><p>¡Esa es la idea! Retira la cera sobrante con agua caliente y úsalo como vaso, maceta o portalápices.</p></details>
-      <details><summary>¿Hacen pedidos para eventos?</summary><p>Sí: bodas, baby showers, eventos de bienestar y regalos corporativos. Escríbenos con la fecha y el número de piezas.</p></details>
+      <details><summary>¿Hacen velas para eventos?</summary><p>Sí: bodas, baby showers, eventos de bienestar y regalos corporativos. Escríbenos con la fecha y el número de piezas.</p></details>
       <details><summary>¿Las colecciones están siempre?</summary><p>No, son de temporada y en cantidades limitadas. Si una te encantó, apártala pronto.</p></details>
-      <details><summary>¿Cómo hago un pedido?</summary><p>Escríbenos por Instagram con la vela que te gustó. Te respondemos con disponibilidad, precio, formas de pago y envío.</p></details>
+      <details><summary>¿Las figuras son hechas a mano?</summary><p>Sí. Los ositos, arbolitos, estrellas y fantasmitas se hacen a mano, así que cada vela es un poquito distinta.</p></details>
     </div>
   </div>
 </section>
@@ -414,8 +417,8 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 <section class="end">
   <div class="wrap">
     <h2>Enciende algo que ya <span class="mark">tuvo otra vida</span>.</h2>
-    <p>Escríbenos y te respondemos personalmente.</p>
-    <div class="ctas"><a href="#" class="btn btn-ink" data-msg="¡Hola TrashGlass! 👋 Vi su página y me gustaría información de sus velas.">Escríbenos →</a><a href="https://www.instagram.com/trashglassco/" target="_blank" rel="noopener" class="btn">Instagram @trashglassco</a></div>
+    <p>Síguenos para conocer cada colección antes que nadie.</p>
+    <div class="ctas"><a href="https://www.instagram.com/trashglassco/" target="_blank" rel="noopener" class="btn btn-ink">Síguenos en Instagram →</a></div>
   </div>
   <div class="word" aria-hidden="true">TRASH<span>GLASS</span></div>
 </section>
@@ -428,52 +431,33 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
   </div>
 </footer>
 
-<div class="toast" id="toast"></div>
 
 <script>
-/* Con su número de WhatsApp (solo dígitos, ej. 5222XXXXXXXX) los mensajes llegan directo al chat; sin número se abren por Instagram. Sin carrito: aún no es tienda. */
-const WA = "";
-const IG = "trashglassco";
-
-const P = {
-  navidad: [
-    {id:"bosque", n:"Bosque Navideño", notes:"Pino, maderas y eucalipto", img:"img/v-bosque-navideno.jpg", f:"Nueva"},
-    {id:"fogata", n:"Fogata Navideña", notes:"Maderas, canela, clavo y cítricos", img:"img/v-fogata-navidena.jpg", f:"Nueva"},
-    {id:"white", n:"White Christmas", notes:"Chocolate, malvavisco y notas frescas", img:"img/v-white-christmas.jpg", f:"Nueva"},
-    {id:"tarta", n:"Tarta de Manzana", notes:"Manzana, pera, canela y galleta", img:"img/v-tarta-manzana.jpg", f:"Nueva"},
-    {id:"perfect", n:"The Perfect Christmas", notes:"Frutos de temporada, vainilla y crema", img:"img/v-perfect-christmas.jpg", f:"Nueva"},
-    {id:"deseos", n:"Doce Deseos", notes:"Uva, champagne y notas dulces", img:"img/v-doce-deseos.jpg", f:"Año Nuevo", sky:1}
-  ],
-  otono: [
-    {id:"mocha", n:"Haunted Mocha", notes:"Café tostado, chocolate oscuro y toque amaderado", img:"img/haunted-mocha-dos.jpg", t:["2 tamaños","Blanca o rosa"], f:"Últimas"},
-    {id:"psl", n:"Pumpkin Spice Latte", notes:"Calabaza, especias, café y vainilla", img:"img/pumpkin-spice.jpg", f:"Últimas"},
-    {id:"calavera", n:"Calaverita", notes:"Edición Día de Muertos con cempasúchil", img:"img/calavera.jpg", t:["Edición","Limitada"], f:"Pregunta", sky:1}
-  ]
-};
+const A = [
+  {n:"Bosque Navideño", notes:"Pino, maderas y eucalipto", img:"img/v-bosque-navideno.jpg"},
+  {n:"Fogata Navideña", notes:"Maderas, canela, clavo y cítricos", img:"img/v-fogata-navidena.jpg"},
+  {n:"White Christmas", notes:"Chocolate, malvavisco y notas frescas", img:"img/v-white-christmas.jpg"},
+  {n:"Tarta de Manzana", notes:"Manzana, pera, canela y galleta", img:"img/v-tarta-manzana.jpg"},
+  {n:"The Perfect Christmas", notes:"Frutos de temporada, vainilla y crema", img:"img/v-perfect-christmas.jpg"},
+  {n:"Doce Deseos", notes:"Uva, champagne y notas dulces", img:"img/v-doce-deseos.jpg"}
+];
 const $ = s => document.querySelector(s);
-const card = p => { const t = p.t || ["450 g","100 % soya"];
-  return `<article class="lbl"><div class="im"><img src="${p.img}" alt="Vela ${p.n}" loading="lazy">${p.f ? `<span class="flag ${p.sky ? "sky" : ""}">${p.f}</span>` : ""}</div>
-  <div class="bd"><div class="brand">TRASHGLASS®</div><h3>${p.n}</h3><p class="notes">${p.notes}</p>
-  <table><tr><td>${t[0]}</td><td>${t[1]}</td></tr></table></div>
-  <a href="#" class="add" data-msg="¡Hola TrashGlass! 👋 Me interesa la vela ${p.n}. ¿Está disponible y cuál es su precio?"><span>Pregunta por ella</span><b>→</b></a></article>`; };
-for (const k in P) document.getElementById("g-" + k).innerHTML = P[k].map(card).join("");
-
-function toast(t){ const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 3400); }
-async function enviar(texto){
-  if (WA) { window.open(`https://wa.me/${WA}?text=${encodeURIComponent(texto)}`, "_blank", "noopener"); return; }
-  try { await navigator.clipboard.writeText(texto); toast("Copiamos tu mensaje: pégalo en el chat de Instagram"); }
-  catch(e) { toast("Abrimos Instagram para que nos escribas"); }
-  setTimeout(() => window.open(`https://ig.me/m/${IG}`, "_blank", "noopener"), 700);
+A.forEach(a => { const i = new Image(); i.src = a.img; });
+$("#names").innerHTML = A.map((a,i) => `<li><button data-a="${i}"><span class="k">0${i+1}</span><b>${a.n}</b><i>→</i></button></li>`).join("");
+function show(i){
+  const a = A[i], img = $("#showImg");
+  document.querySelectorAll("[data-a]").forEach(b => b.classList.toggle("on", Number(b.dataset.a) === i));
+  img.classList.add("fade");
+  setTimeout(() => { img.src = a.img; img.alt = "Vela " + a.n; $("#showName").textContent = a.n; $("#showNotes").textContent = a.notes; img.classList.remove("fade"); }, 180);
 }
 document.addEventListener("click", e => {
-  const m = e.target.closest("[data-msg]");
-  if (m) { e.preventDefault(); enviar(m.dataset.msg); return; }
-  const f = e.target.closest("[data-f]");
-  if (f) { document.querySelectorAll("[data-f]").forEach(b => b.classList.toggle("on", b === f));
-    document.querySelectorAll(".pnl").forEach(p => p.classList.toggle("on", p.id === "f-" + f.dataset.f)); return; }
+  const b = e.target.closest("[data-a]");
+  if (b) { show(Number(b.dataset.a)); return; }
   const s = e.target.closest("[data-s]");
   if (s) $("#track").scrollBy({left: Number(s.dataset.s) * 322, behavior: "smooth"});
 });
+document.querySelectorAll("[data-a]").forEach(b => b.addEventListener("mouseenter", () => { if (matchMedia("(hover:hover)").matches) show(Number(b.dataset.a)); }));
+show(0);
 </script>
 </body>
 </html>
