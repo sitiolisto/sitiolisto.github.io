@@ -129,7 +129,6 @@ section{padding:100px 0}
 .lbl .add{display:flex;justify-content:space-between;align-items:center;border-top:var(--b);padding:15px 18px;font-family:var(--mono);font-size:13.5px;text-transform:uppercase;letter-spacing:.05em;background:var(--white);transition:background .15s}
 .lbl .add:hover{background:var(--leaf)}
 .lbl .add b{font-family:var(--display);font-size:24px;line-height:1}
-.lbl .add.done{background:var(--ink);color:#fff}
 .pnl{display:none}.pnl.on{display:block}
 @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr);gap:22px}}
 @media(max-width:600px){.grid{grid-template-columns:1fr}}
@@ -238,39 +237,8 @@ footer a:hover{color:#fff}
 footer nav{display:flex;gap:22px;flex-wrap:wrap}
 footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 
-/* ticket de pedido */
-.veil{position:fixed;inset:0;background:rgba(17,17,17,.45);z-index:80;opacity:0;pointer-events:none;transition:opacity .25s}
-.veil.on{opacity:1;pointer-events:auto}
-.ticket{position:fixed;top:14px;right:14px;bottom:14px;width:min(420px,calc(100% - 28px));background:#fff;border:var(--b);box-shadow:8px 8px 0 var(--ink);z-index:90;display:flex;flex-direction:column;font-family:var(--mono);transform:translateX(115%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-.ticket.on{transform:none}
-.ticket .th{padding:18px 20px;border-bottom:2px dashed var(--ink);display:flex;justify-content:space-between;align-items:start}
-.ticket .th b{font-family:var(--display);font-size:28px;letter-spacing:-.03em;display:block;line-height:1}
-.ticket .th small{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
-.ticket .x{width:38px;height:38px;border:var(--b);font-size:20px;line-height:1}
-.ticket .x:hover{background:var(--leaf)}
-.lines{flex:1;overflow:auto;padding:8px 20px}
-.ln{display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1.5px dotted var(--ink)}
-.ln img{width:52px;height:52px;object-fit:cover;border:1.5px solid var(--ink)}
-.ln b{display:block;font-family:var(--display);font-size:17px;letter-spacing:-.01em;line-height:1.15}
-.ln small{font-size:11px;color:var(--ink-2)}
-.q{display:flex;border:1.5px solid var(--ink)}
-.q button{width:28px;height:28px;font-size:15px}
-.q button:hover{background:var(--leaf)}
-.q span{min-width:28px;display:grid;place-items:center;border-left:1.5px solid var(--ink);border-right:1.5px solid var(--ink);font-size:13px}
-.nada{padding:36px 0;text-align:center;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
-.ticket form{padding:16px 20px 20px;border-top:2px dashed var(--ink);display:grid;gap:12px}
-.ticket .tot{display:flex;justify-content:space-between;font-size:13px;text-transform:uppercase}
-.ticket label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2);display:block;margin-bottom:3px}
-.ticket input,.ticket select,.ticket textarea{width:100%;font:inherit;font-size:14px;padding:9px 0;border:0;border-bottom:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:0}
-.ticket input:focus,.ticket select:focus,.ticket textarea:focus{outline:0;border-bottom-color:var(--sky-d)}
-.ticket textarea{resize:none;height:44px}
-.ticket .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.ticket .go{width:100%}
-.ticket .fine{font-size:11px;text-align:center;color:var(--ink-2);text-transform:uppercase;letter-spacing:.04em}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,24px);background:var(--ink);color:#fff;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--leaf);padding:12px 18px;font-family:var(--mono);font-size:13px;z-index:100;opacity:0;transition:.25s;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
 .toast.on{opacity:1;transform:translate(-50%,0)}
-.fab{position:fixed;right:16px;bottom:16px;z-index:60;display:none}
-.fab.on{display:inline-flex}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -288,7 +256,7 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
       <li><a href="#recuerdos">Recuerdos</a></li>
       <li><a href="#faq">Dudas</a></li>
     </ul>
-    <button class="cartb" id="cartb" data-open>Pedido <span class="n" id="cnt">0</span></button>
+    <a class="cartb" href="#" data-msg="¡Hola TrashGlass! 👋 Vi su página y me gustaría información de sus velas.">Escríbenos <span class="n">→</span></a>
   </div>
 </nav>
 
@@ -300,7 +268,7 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
       <p>Velas aromáticas de cera de soya, vertidas una por una en vasos que antes fueron botellas de vidrio. Iluminan tu casa y, cuando se acaban, el vaso se queda contigo.</p>
       <div class="ctas">
         <a href="#velas" class="btn btn-leaf">Ver colección navideña ↓</a>
-        <button class="btn" data-open>Armar mi pedido</button>
+        <a href="#" class="btn" data-msg="¡Hola TrashGlass! 👋 Vi su página y me gustaría información de sus velas.">Escríbenos</a>
       </div>
     </div>
     <div class="collage" aria-hidden="true">
@@ -326,7 +294,7 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
       <span class="idx">01</span>
       <div class="side">
         <div><h2>Colección <span class="mark">Navidad</span> 2026</h2>
-        <p>Seis velas, seis formas de vivir la temporada. Agrégalas a tu pedido y te confirmamos disponibilidad, precio y envío por mensaje.</p></div>
+        <p>Seis velas, seis formas de vivir la temporada. ¿Te gustó alguna? Pregúntanos por ella y te contamos disponibilidad, precio y envío.</p></div>
         <div class="filters" role="tablist">
           <button class="on" data-f="navidad">Navidad</button>
           <button data-f="otono">Otoño</button>
@@ -433,12 +401,12 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
   <div class="wrap">
     <div class="sh"><span class="idx">07</span><div><h2>Dudas frecuentes</h2></div></div>
     <div class="faqg">
-      <details open><summary>¿Hacen envíos?</summary><p>Sí, a todo México. Agrega tus velas al pedido, cuéntanos tu ciudad y te confirmamos costo y tiempo de entrega.</p></details>
+      <details open><summary>¿Hacen envíos?</summary><p>Sí, a todo México. Escríbenos con las velas que te gustaron y tu ciudad, y te confirmamos costo y tiempo de entrega.</p></details>
       <details><summary>¿De qué están hechas?</summary><p>Cera 100 % de soya en vasos hechos con botellas de vidrio recicladas y rehabilitadas a mano. Cada vela de la colección pesa 450 g.</p></details>
       <details><summary>¿Puedo reutilizar el vaso?</summary><p>¡Esa es la idea! Retira la cera sobrante con agua caliente y úsalo como vaso, maceta o portalápices.</p></details>
       <details><summary>¿Hacen pedidos para eventos?</summary><p>Sí: bodas, baby showers, eventos de bienestar y regalos corporativos. Escríbenos con la fecha y el número de piezas.</p></details>
       <details><summary>¿Las colecciones están siempre?</summary><p>No, son de temporada y en cantidades limitadas. Si una te encantó, apártala pronto.</p></details>
-      <details><summary>¿Cómo pago?</summary><p>Haz tu pedido aquí y te respondemos por mensaje con el total y las formas de pago disponibles.</p></details>
+      <details><summary>¿Cómo hago un pedido?</summary><p>Escríbenos por Instagram con la vela que te gustó. Te respondemos con disponibilidad, precio, formas de pago y envío.</p></details>
     </div>
   </div>
 </section>
@@ -446,8 +414,8 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 <section class="end">
   <div class="wrap">
     <h2>Enciende algo que ya <span class="mark">tuvo otra vida</span>.</h2>
-    <p>Arma tu pedido en un minuto y te respondemos personalmente.</p>
-    <div class="ctas"><button class="btn btn-ink" data-open>Ver mi pedido</button><a href="https://www.instagram.com/trashglassco/" target="_blank" rel="noopener" class="btn">Instagram @trashglassco</a></div>
+    <p>Escríbenos y te respondemos personalmente.</p>
+    <div class="ctas"><a href="#" class="btn btn-ink" data-msg="¡Hola TrashGlass! 👋 Vi su página y me gustaría información de sus velas.">Escríbenos →</a><a href="https://www.instagram.com/trashglassco/" target="_blank" rel="noopener" class="btn">Instagram @trashglassco</a></div>
   </div>
   <div class="word" aria-hidden="true">TRASH<span>GLASS</span></div>
 </section>
@@ -460,28 +428,10 @@ footer .firma a{color:#fff;text-decoration:underline;text-underline-offset:3px}
   </div>
 </footer>
 
-<button class="btn btn-leaf fab" id="fab" data-open>Pedido (<span id="fabn">0</span>)</button>
-
-<div class="veil" id="veil"></div>
-<aside class="ticket" id="ticket" aria-label="Ticket de pedido">
-  <div class="th"><div><b>Ticket de pedido</b><small>TrashGlass Co.® · Puebla</small></div><button class="x" id="x" aria-label="Cerrar">×</button></div>
-  <div class="lines" id="lines"></div>
-  <form id="form">
-    <div class="tot"><span>Piezas</span><span id="tot">0</span></div>
-    <div class="two">
-      <div><label for="fn">Nombre</label><input id="fn" required placeholder="Ana" autocomplete="given-name"></div>
-      <div><label for="fc">Ciudad</label><input id="fc" required placeholder="Puebla" autocomplete="address-level2"></div>
-    </div>
-    <div><label for="fw">Entrega</label><select id="fw"><option>Envío a domicilio</option><option>Entrega en Puebla</option></select></div>
-    <div><label for="fo">Nota (¿es regalo?)</label><textarea id="fo" placeholder="Opcional"></textarea></div>
-    <button class="btn btn-leaf go" type="submit" id="go">Enviar pedido</button>
-    <p class="fine">Te confirmamos disponibilidad, precio y envío. No pagas nada todavía.</p>
-  </form>
-</aside>
 <div class="toast" id="toast"></div>
 
 <script>
-/* Con su número de WhatsApp (solo dígitos, ej. 5222XXXXXXXX) los pedidos llegan directo al chat; sin número se envían por Instagram. */
+/* Con su número de WhatsApp (solo dígitos, ej. 5222XXXXXXXX) los mensajes llegan directo al chat; sin número se abren por Instagram. Sin carrito: aún no es tienda. */
 const WA = "";
 const IG = "trashglassco";
 
@@ -500,50 +450,22 @@ const P = {
     {id:"calavera", n:"Calaverita", notes:"Edición Día de Muertos con cempasúchil", img:"img/calavera.jpg", t:["Edición","Limitada"], f:"Pregunta", sky:1}
   ]
 };
-const ALL = Object.values(P).flat();
 const $ = s => document.querySelector(s);
-let cart = {};
-try { cart = JSON.parse(localStorage.getItem("tg_cart") || "{}") || {}; } catch(e) { cart = {}; }
-const save = () => { try { localStorage.setItem("tg_cart", JSON.stringify(cart)); } catch(e) {} };
-
 const card = p => { const t = p.t || ["450 g","100 % soya"];
   return `<article class="lbl"><div class="im"><img src="${p.img}" alt="Vela ${p.n}" loading="lazy">${p.f ? `<span class="flag ${p.sky ? "sky" : ""}">${p.f}</span>` : ""}</div>
   <div class="bd"><div class="brand">TRASHGLASS®</div><h3>${p.n}</h3><p class="notes">${p.notes}</p>
   <table><tr><td>${t[0]}</td><td>${t[1]}</td></tr></table></div>
-  <button class="add" data-add="${p.id}"><span>Agregar</span><b>+</b></button></article>`; };
+  <a href="#" class="add" data-msg="¡Hola TrashGlass! 👋 Me interesa la vela ${p.n}. ¿Está disponible y cuál es su precio?"><span>Pregunta por ella</span><b>→</b></a></article>`; };
 for (const k in P) document.getElementById("g-" + k).innerHTML = P[k].map(card).join("");
 
-const n = () => Object.values(cart).reduce((a,b) => a + b, 0);
-function render(){
-  const c = n();
-  $("#cnt").textContent = c; $("#cartb").classList.toggle("has", c > 0);
-  $("#fab").classList.toggle("on", c > 0); $("#fabn").textContent = c; $("#tot").textContent = c;
-  const ids = Object.keys(cart).filter(id => cart[id] > 0);
-  $("#lines").innerHTML = ids.length ? ids.map(id => { const p = ALL.find(x => x.id === id); if (!p) return "";
-    return `<div class="ln"><img src="${p.img}" alt=""><div><b>${p.n}</b><small>${p.notes}</small></div>
-    <div class="q"><button data-q="${id}" data-d="-1" aria-label="Quitar uno">−</button><span>${cart[id]}</span><button data-q="${id}" data-d="1" aria-label="Agregar uno">+</button></div></div>`; }).join("")
-    : `<div class="nada">Tu ticket está vacío.<br>Agrega tus velas favoritas.</div>`;
-  document.querySelectorAll("[data-add]").forEach(b => { const q = cart[b.dataset.add] || 0;
-    b.classList.toggle("done", q > 0); b.firstElementChild.textContent = q ? `En tu pedido · ${q}` : "Agregar"; });
-  $("#go").textContent = WA ? "Enviar pedido por WhatsApp" : "Enviar pedido por Instagram";
-}
-function toast(t){ const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 3200); }
-const openT = () => { $("#ticket").classList.add("on"); $("#veil").classList.add("on"); };
-const closeT = () => { $("#ticket").classList.remove("on"); $("#veil").classList.remove("on"); };
-
+function toast(t){ const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 3400); }
 async function enviar(texto){
   if (WA) { window.open(`https://wa.me/${WA}?text=${encodeURIComponent(texto)}`, "_blank", "noopener"); return; }
   try { await navigator.clipboard.writeText(texto); toast("Copiamos tu mensaje: pégalo en el chat de Instagram"); }
   catch(e) { toast("Abrimos Instagram para que nos escribas"); }
   setTimeout(() => window.open(`https://ig.me/m/${IG}`, "_blank", "noopener"), 700);
 }
-
 document.addEventListener("click", e => {
-  const a = e.target.closest("[data-add]");
-  if (a) { const id = a.dataset.add; cart[id] = (cart[id] || 0) + 1; save(); render(); toast(`+1 ${ALL.find(x => x.id === id).n}`); return; }
-  const q = e.target.closest("[data-q]");
-  if (q) { const id = q.dataset.q; cart[id] = Math.max(0, (cart[id] || 0) + Number(q.dataset.d)); if (!cart[id]) delete cart[id]; save(); render(); return; }
-  if (e.target.closest("[data-open]")) { openT(); return; }
   const m = e.target.closest("[data-msg]");
   if (m) { e.preventDefault(); enviar(m.dataset.msg); return; }
   const f = e.target.closest("[data-f]");
@@ -552,18 +474,6 @@ document.addEventListener("click", e => {
   const s = e.target.closest("[data-s]");
   if (s) $("#track").scrollBy({left: Number(s.dataset.s) * 322, behavior: "smooth"});
 });
-$("#x").onclick = closeT; $("#veil").onclick = closeT;
-document.addEventListener("keydown", e => { if (e.key === "Escape") closeT(); });
-
-$("#form").addEventListener("submit", e => {
-  e.preventDefault();
-  const ids = Object.keys(cart).filter(id => cart[id] > 0);
-  if (!ids.length) { toast("Primero agrega al menos una vela"); return; }
-  const lineas = ids.map(id => `• ${cart[id]} × ${ALL.find(x => x.id === id).n}`).join("\n");
-  const nota = $("#fo").value.trim();
-  enviar(`¡Hola TrashGlass! 👋 Soy ${$("#fn").value.trim()} y quiero hacer un pedido:\n\n${lineas}\n\nCiudad: ${$("#fc").value.trim()}\nEntrega: ${$("#fw").value}${nota ? `\nNota: ${nota}` : ""}\n\n¿Me confirman disponibilidad y precio? Gracias ✨`);
-});
-render();
 </script>
 </body>
 </html>
