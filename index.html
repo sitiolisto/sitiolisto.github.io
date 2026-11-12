@@ -142,7 +142,12 @@ details p { margin: 10px 0 0 58px; color: #3b3732; max-width: 640px; }
 .giant { font-family: "Instrument Serif", serif; font-size: clamp(80px, 17vw, 260px); line-height: .82; letter-spacing: -.03em; }
 .giant em { color: var(--or); }
 .fl { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--ink); margin-top: 40px; padding-top: 18px; }
-.xy { position: fixed; right: 16px; bottom: 14px; z-index: 50; font: 500 11px "JetBrains Mono", monospace; background: var(--ink); color: var(--paper); padding: 6px 10px; pointer-events: none; }
+.xy { position: fixed; left: 16px; bottom: 14px; z-index: 50; font: 500 11px "JetBrains Mono", monospace; background: var(--ink); color: var(--paper); padding: 6px 10px; pointer-events: none; }
+.wafab { position: fixed; right: 18px; bottom: 18px; z-index: 60; display: inline-flex; align-items: center; gap: 10px; background: #25d366; color: #0b2e1a; text-decoration: none; padding: 12px 18px 12px 14px; border-radius: 999px; font: 600 14px Inter, sans-serif; box-shadow: 0 10px 28px rgba(20,20,20,.22); transition: transform .2s, box-shadow .2s; }
+.wafab:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(20,20,20,.28); }
+.wafab svg { flex: none; }
+.btn.wa { background: #25d366; border-color: #25d366; color: #0b2e1a; } .btn.wa:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.btn.wa svg { width: 18px; height: 18px; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
 .reveal.in { opacity: 1; transform: none; }
 .nojs .reveal { opacity: 1; transform: none; }
@@ -212,7 +217,7 @@ html[lang=es] .qcard::before { content: "FIG. 06 — DIAGNÓSTICO"; }
   .site { height: 420px; } .xy { display: none; }
   section { padding: 80px 0; }
 }
-@media (max-width: 560px) { .act .sm { display: none; } .mk { position: absolute; z-index: 2; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--or); color: #fff; font: 500 11px "JetBrains Mono", monospace; box-shadow: 0 0 0 3px rgba(255,255,255,.85); }
+@media (max-width: 560px) { .act .sm { display: none; } .wafab { padding: 14px; right: 14px; bottom: 14px; } .wafab span { display: none; } .mk { position: absolute; z-index: 2; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--or); color: #fff; font: 500 11px "JetBrains Mono", monospace; box-shadow: 0 0 0 3px rgba(255,255,255,.85); }
 .m1 { top: 12px; left: 10px; } .m2 { top: 12px; right: 8px; } .m3 { bottom: 18px; left: 10px; }
 .legend { grid-template-columns: minmax(0,1fr); } .sname { font-size: 40px; } .builder input { font-size: 28px; } .doc { padding: 22px; } .tot .big { font-size: 48px; } }
 </style>
@@ -221,7 +226,7 @@ html[lang=es] .qcard::before { content: "FIG. 06 — DIAGNÓSTICO"; }
 <header class="top"><div class="wrap">
   <a class="word" href="#">Sitio <em>Listo</em></a>
   <nav class="mid lbl"><a href="#specs"><span data-en="Specs" data-es="Especificaciones">Specs</span></a><a href="#process"><span data-en="Process" data-es="Proceso">Process</span></a><a href="#estimate"><span data-en="Estimate" data-es="Cotización">Estimate</span></a><a href="#faq">FAQ</a><a href="#quiz"><span data-en="Diagnosis" data-es="Diagnóstico">Diagnosis</span></a></nav>
-  <div class="act"><button class="lang" onclick="cambiarIdioma()">ES</button><a class="btn sm" href="#quiz"><span data-en="Get yours free" data-es="Pedir la mía">Get yours free</span> →</a></div>
+  <div class="act"><button class="lang" onclick="cambiarIdioma()">ES</button><a class="btn sm out walink" href="https://wa.me/525664274135" target="_blank" rel="noopener">WhatsApp</a><a class="btn sm" href="#quiz"><span data-en="Get yours free" data-es="Pedir la mía">Get yours free</span> →</a></div>
 </div></header>
 
 <section class="hero"><div class="wrap">
@@ -324,9 +329,11 @@ html[lang=es] .qcard::before { content: "FIG. 06 — DIAGNÓSTICO"; }
 <section class="final"><div class="wrap">
   <span class="lbl"><b>END OF SHEET</b> — <span data-en="Ready when you are" data-es="Listos cuando usted diga">Ready when you are</span></span>
   <div class="giant">Sitio<br><em>Listo.</em></div>
-  <div class="fl lbl"><span>© 2026 Sitio Listo · <span data-en="Web studio" data-es="Estudio web">Web studio</span></span><span><a href="#quiz"><span data-en="Free diagnosis" data-es="Diagnóstico gratis">Free diagnosis</span> ↑</a></span></div>
+  <div class="cta"><a class="btn wa walink" href="https://wa.me/525664274135" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span data-en="Message us on WhatsApp" data-es="Escríbanos por WhatsApp">Message us on WhatsApp</span></a><a class="btn out" href="#quiz"><span data-en="Take the 1-minute diagnosis" data-es="Hacer el diagnóstico de 1 minuto">Take the 1-minute diagnosis</span> ↑</a></div>
+  <div class="fl lbl"><span>© 2026 Sitio Listo · <span data-en="Web studio" data-es="Estudio web">Web studio</span></span><span><a class="walink" href="https://wa.me/525664274135" target="_blank" rel="noopener">WhatsApp +52 56 6427 4135</a> · <a href="#quiz"><span data-en="Free diagnosis" data-es="Diagnóstico gratis">Free diagnosis</span> ↑</a></span></div>
 </div></section>
 <div class="xy" id="xy">X 0000 · Y 0000</div>
+<a class="wafab walink" href="https://wa.me/525664274135" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span><span data-en="Questions? WhatsApp us" data-es="¿Dudas? Escríbanos">Questions? WhatsApp us</span></span></a>
 
 <script>
 var P = {
@@ -358,7 +365,10 @@ document.querySelectorAll("#tabs button").forEach(function (b) { b.addEventListe
   document.getElementById("price").textContent = "$" + b.dataset.p; }); });
 function cambiarIdioma() { es = !es; document.documentElement.lang = es ? "es" : "en";
   document.querySelectorAll("[data-en]").forEach(function (n) { n.innerHTML = n.getAttribute(es ? "data-es" : "data-en"); });
-  document.querySelector(".lang").textContent = es ? "EN" : "ES"; draw(); if (window.qRender) qRender(); }
+  document.querySelector(".lang").textContent = es ? "EN" : "ES"; draw(); waUpd(); if (window.qRender) qRender(); }
+var WA = "525664274135";
+function waUpd() { document.querySelectorAll(".walink").forEach(function (a) { a.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(es ? "Hola, vi la página de Sitio Listo y quiero información para mi negocio." : "Hi! I saw the Sitio Listo website and I would like info for my business."); }); }
+waUpd();
 var xy = document.getElementById("xy");
 addEventListener("mousemove", function (ev) { var x = String(ev.pageX).padStart(4, "0"), y = String(Math.round(ev.pageY)).padStart(4, "0"); xy.textContent = "X " + x + " · Y " + y; });
 if ("IntersectionObserver" in window) {
@@ -367,7 +377,7 @@ if ("IntersectionObserver" in window) {
 } else { document.documentElement.className = "nojs"; }
 
 (function () {
-  var MAIL = "vd561838@gmail.com";
+  var MAIL = "vd561838@gmail.com", WA = "525664274135";
   var L = {
     en: {
       step: "Question", of: "of", back: "← Back", contactStep: "Last step", resultStep: "Your diagnosis",
@@ -409,7 +419,7 @@ if ("IntersectionObserver" in window) {
       errN: "Please write your name and your business.", errC: "Write a WhatsApp number or an email so we can send it to you.",
       rStamp: "DIAGNOSIS", rFor: "for", rPk: "Recommended package", rBuild: "What we'd build", rDiff: "What we'll do differently",
       rBlock: "About what's holding you back", rNext: "Next step",
-      sending: "Sending your answers…", sentOk: "✓ We got your answers. We'll contact you within 24 hours at ", sentFail: "We couldn't send it automatically. ", viaMail: "Send it by email →",
+      sending: "Sending your answers…", sentOk: "✓ We got your answers. We'll contact you within 24 hours at ", sentFail: "We couldn't send it automatically. ", viaMail: "Send it by email →", waQ: "Prefer to talk now?", waBtn: "Message us on WhatsApp →", waMsg: "Hi! I'm {n} from {b}. I just took the diagnosis on your website (package: {p}). Can you help me?",
       pk: { start: ["Starter", "Your website, free, with your Google reviews, photos and hours, on your own domain."],
             sell: ["Complete", "Your website plus what turns visits into customers: Google Maps listing ready, WhatsApp buttons per service and a QR for your shop."],
             grow: ["Custom", "A one-of-a-kind design for your brand, ready to add online booking or a full store."] },
@@ -471,7 +481,7 @@ if ("IntersectionObserver" in window) {
       errN: "Escriba su nombre y el de su negocio.", errC: "Escriba un WhatsApp o un correo para mandárselo.",
       rStamp: "DIAGNÓSTICO", rFor: "para", rPk: "Paquete recomendado", rBuild: "Lo que le haríamos", rDiff: "Lo que haremos distinto",
       rBlock: "Sobre lo que lo frena", rNext: "Siguiente paso",
-      sending: "Enviando sus respuestas…", sentOk: "✓ Recibimos sus respuestas. Lo contactamos en menos de 24 horas a ", sentFail: "No se pudo enviar automáticamente. ", viaMail: "Enviarlo por correo →",
+      sending: "Enviando sus respuestas…", sentOk: "✓ Recibimos sus respuestas. Lo contactamos en menos de 24 horas a ", sentFail: "No se pudo enviar automáticamente. ", viaMail: "Enviarlo por correo →", waQ: "¿Prefiere hablar ya?", waBtn: "Escríbanos por WhatsApp →", waMsg: "¡Hola! Soy {n} de {b}. Acabo de hacer el diagnóstico en su página (paquete: {p}). ¿Me pueden ayudar?",
       pk: { start: ["Arranque", "Su página gratis, con sus reseñas de Google, fotos y horario, en su propio dominio."],
             sell: ["Completo", "Su página más lo que convierte visitas en clientes: ficha de Google Maps lista, botones de WhatsApp por servicio y QR para su local."],
             grow: ["A la medida", "Un diseño único para su marca, listo para agregar agenda en línea o una tienda completa."] },
@@ -538,7 +548,7 @@ if ("IntersectionObserver" in window) {
       '<label class="lbl" for="qc">' + esc(d.fCon) + '</label><input id="qc" autocomplete="email" maxlength="80" value="' + esc(form.c) + '">' +
       '<label class="lbl" for="qx">' + esc(d.fNote) + '</label><textarea id="qx" maxlength="400" placeholder="' + esc(d.fNoteP) + '">' + esc(form.x) + '</textarea>' +
       '<input type="text" name="_honey" id="qh" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">' +
-      '<div class="err" id="qerr"></div><button class="btn" type="submit">' + esc(d.send) + '</button><p class="qfine">' + esc(d.fine) + "</p></form>";
+      '<div class="err" id="qerr"></div><button class="btn" type="submit">' + esc(d.send) + '</button><p class="qfine">' + esc(d.fine) + (WA ? ' ' + esc(d.waQ) + ' <a href="https://wa.me/' + WA + '" target="_blank" rel="noopener" style="color:var(--or)">WhatsApp</a>' : "") + "</p></form>";
     var f = document.getElementById("qform");
     ["qn", "qb", "qc", "qx"].forEach(function (id, i) { document.getElementById(id).addEventListener("input", function (ev) { form["nbcx"[i]] = ev.target.value; }); });
     f.addEventListener("submit", function (ev) {
@@ -610,7 +620,8 @@ if ("IntersectionObserver" in window) {
       '<div class="row"><b>' + esc(d.rDiff) + "</b><p>" + esc(d.diff[why]) + "</p></div>" +
       '<div class="row"><b>' + esc(d.rBlock) + "</b><p>" + esc(d.block[A.freno]) + "</p></div>" +
       '<div class="row"><b>' + esc(d.rNext) + "</b><p>" + esc(d.next[A.cuando]) + "</p></div>" +
-      '<p class="ok" id="qok"></p></div>';
+      '<p class="ok" id="qok"></p>' +
+      (WA ? '<div class="acts"><a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/' + WA + '?text=' + encodeURIComponent(d.waMsg.replace("{n}", form.n.trim()).replace("{b}", form.b.trim()).replace("{p}", p[0])) + '">' + esc(d.waBtn) + '</a></div>' : "") + '</div>';
     pintaEstado();
     if (!noAnim) anim();
   }
