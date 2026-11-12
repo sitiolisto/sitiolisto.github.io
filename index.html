@@ -429,7 +429,7 @@ if ("IntersectionObserver" in window) {
       next: { mes: "You're a priority: we'll contact you within 24 hours. Your site can be ready 48 hours after you approve it.",
               pronto: "We'll prepare your free preview so it's ready when you are.",
               viendo: "No rush. We'll send you your diagnosis and a free preview to look at calmly." },
-      subj: "My Sitio Listo diagnosis", urgent: "[THIS MONTH]", hello: "Hi! I took the diagnosis on your website."
+      lN: "Name", lB: "Business", lC: "Contact", lX: "Note", subj: "My Sitio Listo diagnosis", urgent: "[THIS MONTH]", hello: "Hi! I took the diagnosis on your website."
     },
     es: {
       step: "Pregunta", of: "de", back: "← Atrás", contactStep: "Último paso", resultStep: "Su diagnóstico",
@@ -492,7 +492,7 @@ if ("IntersectionObserver" in window) {
       next: { mes: "Es prioridad: lo contactamos en menos de 24 horas. Su página puede quedar lista 48 horas después de que la apruebe.",
               pronto: "Le preparamos su vista previa gratis para que esté lista cuando usted lo esté.",
               viendo: "Sin prisa. Le mandamos su diagnóstico y una vista previa gratis para que la vea con calma." },
-      subj: "Mi diagnóstico de Sitio Listo", urgent: "[ESTE MES]", hello: "¡Hola! Hice el diagnóstico en su página."
+      lN: "Nombre", lB: "Negocio", lC: "Contacto", lX: "Comentario", subj: "Mi diagnóstico de Sitio Listo", urgent: "[ESTE MES]", hello: "¡Hola! Hice el diagnóstico en su página."
     }
   };
   var A = {}, hist = [], cur = 0, form = { n: "", b: "", c: "", x: "" }, done = false;
@@ -554,13 +554,13 @@ if ("IntersectionObserver" in window) {
   function pkg() { return A.etapa || "start"; }
   function texto() {
     var d = D(), lines = [d.hello, "",
-      d.fName + ": " + form.n.trim(), d.fBiz + ": " + form.b.trim(), d.fCon + ": " + form.c.trim(), "",
+      d.lN + ": " + form.n.trim(), d.lB + ": " + form.b.trim(), d.lC + ": " + form.c.trim(), "",
       "1. " + d.q[0].t + " " + label(0, A.etapa),
       "2. " + d.q[1].t + " " + label(1, A.meta),
       "3. " + d.q[2].t + " " + label(2, A.intento)];
     if (A.intento !== "nada") lines.push("   " + d.q[3].t + " " + label(3, A.porque));
     lines.push("4. " + d.q[4].t + " " + label(4, A.freno), "5. " + d.q[5].t + " " + label(5, A.cuando));
-    if (form.x.trim()) lines.push("", d.fNote.replace(/\s*\(.*\)/, "") + ": " + form.x.trim());
+    if (form.x.trim()) lines.push("", d.lX + ": " + form.x.trim());
     lines.push("", "[SL-QUIZ etapa=" + A.etapa + " paquete=" + d.pk[pkg()][0] + " meta=" + A.meta + " intento=" + A.intento +
       " porque=" + (A.intento === "nada" ? "-" : A.porque) + " freno=" + A.freno + " cuando=" + A.cuando + " idioma=" + (es ? "es" : "en") + "]");
     return lines.join("\n");
