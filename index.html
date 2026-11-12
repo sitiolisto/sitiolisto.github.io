@@ -197,7 +197,8 @@ html[lang=es] .qcard::before { content: "FIG. 06 — DIAGNÓSTICO"; }
 .qres .row li::before { content: "—"; position: absolute; left: 0; color: var(--soft); }
 .qres .acts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
 .qres .acts .btn { cursor: pointer; }
-.qres .ok { font-size: 13px; color: var(--soft); margin-top: 10px; }
+.qres .ok { font-size: 14px; color: var(--ink); margin-top: 16px; padding: 12px 14px; background: #f7f4ec; border-left: 3px solid var(--or); }
+.qres .ok a { color: var(--or); font-weight: 600; }
 @media (max-width: 980px) { .qz { grid-template-columns: minmax(0,1fr); gap: 36px; } .qcard { min-height: 0; } .qz .pitch ul { display: none; } }
 @media (max-width: 560px) { .qtop, .qbody { padding-left: 18px; padding-right: 18px; } .qrule { padding: 0 18px; }
   .qopt .tt { font-size: 22px; } .qres .row { grid-template-columns: minmax(0,1fr); gap: 4px; } .qform input { font-size: 23px; } }
@@ -404,12 +405,11 @@ if ("IntersectionObserver" in window) {
       cT: "Where should we send your diagnosis?", cH: "We'll send you the full plan and a free preview of your website.",
       fName: "Your name", fBiz: "Business name", fCon: "WhatsApp or email", fNote: "Anything else? (optional)",
       fNoteP: "City, type of business, what you'd love your website to do…",
-      send: "Send & see my diagnosis →", fine: "This opens your email with your answers already written. Just hit send and we'll reply within 24 hours. No spam, no calls you didn't ask for.",
+      send: "Send & see my diagnosis →", fine: "Your answers reach us instantly and we'll contact you within 24 hours. No spam, no calls you didn't ask for.",
       errN: "Please write your name and your business.", errC: "Write a WhatsApp number or an email so we can send it to you.",
       rStamp: "DIAGNOSIS", rFor: "for", rPk: "Recommended package", rBuild: "What we'd build", rDiff: "What we'll do differently",
       rBlock: "About what's holding you back", rNext: "Next step",
-      resend: "Open my email again", copy: "Copy my answers", copied: "Copied. Paste it in an email to " ,
-      ok: "Didn't your email open? Write to us at ",
+      sending: "Sending your answers…", sentOk: "✓ We got your answers. We'll contact you within 24 hours at ", sentFail: "We couldn't send it automatically. ", viaMail: "Send it by email →",
       pk: { start: ["Starter", "Your website, free, with your Google reviews, photos and hours, on your own domain."],
             sell: ["Complete", "Your website plus what turns visits into customers: Google Maps listing ready, WhatsApp buttons per service and a QR for your shop."],
             grow: ["Custom", "A one-of-a-kind design for your brand, ready to add online booking or a full store."] },
@@ -467,12 +467,11 @@ if ("IntersectionObserver" in window) {
       cT: "¿A dónde le mandamos su diagnóstico?", cH: "Le enviamos el plan completo y una vista previa gratis de su página.",
       fName: "Su nombre", fBiz: "Nombre del negocio", fCon: "WhatsApp o correo", fNote: "¿Algo más? (opcional)",
       fNoteP: "Ciudad, giro, lo que le encantaría que hiciera su página…",
-      send: "Enviar y ver mi diagnóstico →", fine: "Se abre su correo con sus respuestas ya escritas. Solo dele enviar y le respondemos en menos de 24 horas. Sin spam ni llamadas que no pidió.",
+      send: "Enviar y ver mi diagnóstico →", fine: "Sus respuestas nos llegan al instante y lo contactamos en menos de 24 horas. Sin spam ni llamadas que no pidió.",
       errN: "Escriba su nombre y el de su negocio.", errC: "Escriba un WhatsApp o un correo para mandárselo.",
       rStamp: "DIAGNÓSTICO", rFor: "para", rPk: "Paquete recomendado", rBuild: "Lo que le haríamos", rDiff: "Lo que haremos distinto",
       rBlock: "Sobre lo que lo frena", rNext: "Siguiente paso",
-      resend: "Abrir mi correo otra vez", copy: "Copiar mis respuestas", copied: "Copiado. Péguelo en un correo a ",
-      ok: "¿No se abrió su correo? Escríbanos a ",
+      sending: "Enviando sus respuestas…", sentOk: "✓ Recibimos sus respuestas. Lo contactamos en menos de 24 horas a ", sentFail: "No se pudo enviar automáticamente. ", viaMail: "Enviarlo por correo →",
       pk: { start: ["Arranque", "Su página gratis, con sus reseñas de Google, fotos y horario, en su propio dominio."],
             sell: ["Completo", "Su página más lo que convierte visitas en clientes: ficha de Google Maps lista, botones de WhatsApp por servicio y QR para su local."],
             grow: ["A la medida", "Un diseño único para su marca, listo para agregar agenda en línea o una tienda completa."] },
@@ -495,7 +494,7 @@ if ("IntersectionObserver" in window) {
       lN: "Nombre", lB: "Negocio", lC: "Contacto", lX: "Comentario", subj: "Mi diagnóstico de Sitio Listo", urgent: "[ESTE MES]", hello: "¡Hola! Hice el diagnóstico en su página."
     }
   };
-  var A = {}, hist = [], cur = 0, form = { n: "", b: "", c: "", x: "" }, done = false;
+  var A = {}, hist = [], cur = 0, form = { n: "", b: "", c: "", x: "" }, done = false, hp = "", estado = "", enviado = "";
   var body = document.getElementById("qbody"), back = document.getElementById("qback"),
       stepL = document.getElementById("qstep"), rule = document.querySelectorAll("#qrule i");
   function D() { return L[(typeof es !== "undefined" && es) ? "es" : "en"]; }
@@ -538,6 +537,7 @@ if ("IntersectionObserver" in window) {
       '<label class="lbl" for="qb">' + esc(d.fBiz) + '</label><input id="qb" autocomplete="organization" maxlength="60" value="' + esc(form.b) + '">' +
       '<label class="lbl" for="qc">' + esc(d.fCon) + '</label><input id="qc" autocomplete="email" maxlength="80" value="' + esc(form.c) + '">' +
       '<label class="lbl" for="qx">' + esc(d.fNote) + '</label><textarea id="qx" maxlength="400" placeholder="' + esc(d.fNoteP) + '">' + esc(form.x) + '</textarea>' +
+      '<input type="text" name="_honey" id="qh" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">' +
       '<div class="err" id="qerr"></div><button class="btn" type="submit">' + esc(d.send) + '</button><p class="qfine">' + esc(d.fine) + "</p></form>";
     var f = document.getElementById("qform");
     ["qn", "qb", "qc", "qx"].forEach(function (id, i) { document.getElementById(id).addEventListener("input", function (ev) { form["nbcx"[i]] = ev.target.value; }); });
@@ -547,7 +547,7 @@ if ("IntersectionObserver" in window) {
       if (!form.n.trim() || !form.b.trim()) { err.textContent = d.errN; return; }
       var c = form.c.trim();
       if (!(/@.+\./.test(c) || c.replace(/\D/g, "").length >= 8)) { err.textContent = d.errC; return; }
-      hist.push(6); done = true; render(); send();
+      hp = document.getElementById("qh").value; hist.push(6); done = true; render(); send();
     });
     if (!noAnim) anim();
   }
@@ -569,7 +569,37 @@ if ("IntersectionObserver" in window) {
     var d = D(), s = (A.cuando === "mes" ? d.urgent + " " : "") + d.subj + " · " + form.b.trim();
     return "mailto:" + MAIL + "?subject=" + encodeURIComponent(s) + "&body=" + encodeURIComponent(texto());
   }
-  function send() { location.href = mailto(); }
+  function lab(qi, code) { var q = L.es.q[qi]; for (var j = 0; j < q.o.length; j++) if (q.o[j][0] === code) return q.o[j][1]; return "—"; }
+  function codigos() { return "[SL-QUIZ etapa=" + A.etapa + " paquete=" + L.es.pk[pkg()][0] + " meta=" + A.meta + " intento=" + A.intento +
+      " porque=" + (A.intento === "nada" ? "-" : A.porque) + " freno=" + A.freno + " cuando=" + A.cuando + " idioma=" + (es ? "es" : "en") + "]"; }
+  function datos() {
+    var c = form.c.trim(), x = {
+      _subject: (A.cuando === "mes" ? "[ESTE MES] " : "") + "Diagnóstico Sitio Listo · " + form.b.trim() + " · " + L.es.pk[pkg()][0],
+      _template: "table", _captcha: "false", _honey: hp,
+      "Nombre": form.n.trim(), "Negocio": form.b.trim(), "Contacto (WhatsApp o correo)": c,
+      "1. Etapa": lab(0, A.etapa), "Paquete a ofrecer": L.es.pk[pkg()][0],
+      "2. Meta (adaptar el producto)": lab(1, A.meta),
+      "3. Ha intentado": lab(2, A.intento), "3b. Por qué no funcionó (no prometer)": A.intento === "nada" ? "—" : lab(3, A.porque),
+      "4. Lo que lo frena (objeción a contestar)": lab(4, A.freno), "5. Para cuándo": lab(5, A.cuando),
+      "Comentario": form.x.trim() || "—", "Idioma del visitante": es ? "español" : "inglés", "Códigos": codigos() };
+    if (/@.+\./.test(c)) x._replyto = c;
+    return x;
+  }
+  function pintaEstado() {
+    var ok = document.getElementById("qok"); if (!ok) return; var d = D();
+    if (estado === "ok") ok.innerHTML = esc(d.sentOk) + "<b>" + esc(form.c.trim()) + "</b>.";
+    else if (estado === "fail") ok.innerHTML = esc(d.sentFail) + '<a href="' + esc(mailto()) + '">' + esc(d.viaMail) + "</a>";
+    else ok.textContent = d.sending;
+  }
+  function send() {
+    var clave = JSON.stringify([A, form]);
+    if (clave === enviado && estado === "ok") { pintaEstado(); return; }
+    estado = "pend"; pintaEstado();
+    fetch("https://formsubmit.co/ajax/" + MAIL, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(datos()) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) { estado = (j && (j.success === true || j.success === "true")) ? "ok" : "fail"; if (estado === "ok") enviado = clave; pintaEstado(); })
+      .catch(function () { estado = "fail"; pintaEstado(); });
+  }
   function result(noAnim) {
     var d = D(), p = d.pk[pkg()], why = A.intento === "nada" ? "nada" : (A.porque || "nada");
     stepL.textContent = d.resultStep; setRule(6);
@@ -580,13 +610,8 @@ if ("IntersectionObserver" in window) {
       '<div class="row"><b>' + esc(d.rDiff) + "</b><p>" + esc(d.diff[why]) + "</p></div>" +
       '<div class="row"><b>' + esc(d.rBlock) + "</b><p>" + esc(d.block[A.freno]) + "</p></div>" +
       '<div class="row"><b>' + esc(d.rNext) + "</b><p>" + esc(d.next[A.cuando]) + "</p></div>" +
-      '<div class="acts"><a class="btn" id="qre" href="' + esc(mailto()) + '">' + esc(d.resend) + ' →</a><button class="btn out" type="button" id="qcp">' + esc(d.copy) + "</button></div>" +
-      '<p class="ok" id="qok">' + esc(d.ok) + '<a href="mailto:' + MAIL + '">' + MAIL + "</a></p></div>";
-    document.getElementById("qcp").addEventListener("click", function () {
-      var t = texto(), ok = document.getElementById("qok");
-      function fin() { ok.innerHTML = esc(d.copied) + '<a href="mailto:' + MAIL + '">' + MAIL + "</a>"; }
-      if (navigator.clipboard) navigator.clipboard.writeText(t).then(fin, fin); else fin();
-    });
+      '<p class="ok" id="qok"></p></div>';
+    pintaEstado();
     if (!noAnim) anim();
   }
   back.addEventListener("click", function () {
