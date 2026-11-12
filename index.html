@@ -147,6 +147,61 @@ details p { margin: 10px 0 0 58px; color: #3b3732; max-width: 640px; }
 .reveal.in { opacity: 1; transform: none; }
 .nojs .reveal { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .tape .row { animation: none; } .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* quiz */
+#quiz { background: var(--paper); }
+.qz { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); gap: 56px; align-items: start; }
+.qz .pitch p { color: #3b3732; font-size: 17px; max-width: 430px; margin-top: 22px; }
+.qz .pitch ul { list-style: none; margin-top: 28px; border-top: 1px solid var(--ink); max-width: 430px; }
+.qz .pitch li { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; color: #2e2b27; }
+.qz .pitch li b { font: 500 11px "JetBrains Mono", monospace; color: var(--or); min-width: 34px; padding-top: 3px; }
+.qcard { background: #fff; border: 1px solid var(--ink); box-shadow: 14px 14px 0 rgba(20,20,20,.08); position: relative; min-height: 520px; display: flex; flex-direction: column; }
+.qcard::before { content: "FIG. 06 — DIAGNOSIS"; position: absolute; top: -9px; left: 16px; background: var(--paper); padding: 0 8px; font: 500 11px "JetBrains Mono", monospace; letter-spacing: .08em; color: var(--or); }
+html[lang=es] .qcard::before { content: "FIG. 06 — DIAGNÓSTICO"; }
+.qtop { display: flex; justify-content: space-between; align-items: center; padding: 18px 26px; border-bottom: 1px solid var(--ink); }
+.qback { font: 500 11.5px "JetBrains Mono", monospace; letter-spacing: .05em; text-transform: uppercase; background: none; border: 0; cursor: pointer; color: var(--soft); padding: 4px 0; }
+.qback:hover { color: var(--or); } .qback[hidden] { visibility: hidden; display: inline; }
+.qrule { display: flex; gap: 4px; padding: 0 26px; margin-top: 18px; }
+.qrule i { flex: 1; height: 6px; border: 1px solid var(--ink); background: transparent; transition: background .3s; }
+.qrule i.on { background: var(--or); border-color: var(--or); }
+.qbody { padding: 26px 26px 30px; flex: 1; display: flex; flex-direction: column; }
+.qbody.anim { animation: qin .45s ease; }
+@keyframes qin { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+.qq { font-family: "Instrument Serif", serif; font-size: clamp(32px, 3.6vw, 46px); line-height: 1; letter-spacing: -.01em; margin: 8px 0 22px; }
+.qhint { color: var(--soft); font-size: 14px; margin: -10px 0 18px; }
+.qopts { border-top: 1px solid var(--ink); }
+.qopt { width: 100%; display: grid; grid-template-columns: 30px minmax(0,1fr) auto; gap: 14px; align-items: center; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 15px 8px 15px 0; cursor: pointer; color: var(--ink); font: inherit; transition: background .15s, padding .15s; }
+.qopt:hover, .qopt:focus-visible { background: #f7f4ec; padding-left: 8px; outline: none; }
+.qopt .k { display: grid; place-items: center; width: 26px; height: 26px; border: 1px solid var(--ink); border-radius: 50%; font: 500 11px "JetBrains Mono", monospace; }
+.qopt:hover .k, .qopt.sel .k { background: var(--or); border-color: var(--or); color: #fff; }
+.qopt .tt { font-family: "Instrument Serif", serif; font-size: 25px; line-height: 1.1; display: block; }
+.qopt .ss { display: block; font-size: 13.5px; color: var(--soft); margin-top: 2px; }
+.qopt .ar { font: 500 13px "JetBrains Mono", monospace; color: var(--or); opacity: 0; transition: opacity .15s; }
+.qopt:hover .ar, .qopt.sel .ar { opacity: 1; }
+.qopt.sel { background: #f7f4ec; }
+.qform label { display: block; margin: 0 0 4px; }
+.qform input, .qform textarea { width: 100%; border: 0; border-bottom: 2px solid var(--ink); background: transparent; font: 400 26px "Instrument Serif", serif; padding: 4px 0 6px; outline: none; color: var(--ink); margin-bottom: 18px; border-radius: 0; }
+.qform textarea { font: 400 16px Inter, sans-serif; resize: vertical; min-height: 54px; border: 1px solid var(--line); padding: 10px; }
+.qform input::placeholder, .qform textarea::placeholder { color: #b3aca0; }
+.qform input:focus { border-bottom-color: var(--or); }
+.qform .err { color: #c62d00; font-size: 13px; margin: -10px 0 14px; min-height: 18px; }
+.qform .btn { width: 100%; justify-content: center; cursor: pointer; }
+.qfine { font-size: 12.5px; color: var(--soft); margin-top: 12px; }
+.qres .stamp2 { display: inline-block; border: 2px solid var(--or); color: var(--or); padding: 6px 10px; font: 500 11.5px "JetBrains Mono", monospace; letter-spacing: .1em; transform: rotate(-4deg); margin-bottom: 14px; }
+.qres h3 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: clamp(34px, 3.8vw, 48px); line-height: 1; margin-bottom: 6px; }
+.qres h3 em { color: var(--or); }
+.qres .pk { color: #3b3732; margin-bottom: 18px; }
+.qres .row { border-top: 1px solid var(--line); padding: 14px 0; display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 16px; }
+.qres .row > b { font: 500 11px "JetBrains Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--or); padding-top: 3px; }
+.qres .row ul { list-style: none; } .qres .row li { padding: 2px 0 2px 16px; position: relative; }
+.qres .row li::before { content: "—"; position: absolute; left: 0; color: var(--soft); }
+.qres .acts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.qres .acts .btn { cursor: pointer; }
+.qres .ok { font-size: 13px; color: var(--soft); margin-top: 10px; }
+@media (max-width: 980px) { .qz { grid-template-columns: minmax(0,1fr); gap: 36px; } .qcard { min-height: 0; } }
+@media (max-width: 560px) { .qtop, .qbody { padding-left: 18px; padding-right: 18px; } .qrule { padding: 0 18px; }
+  .qopt .tt { font-size: 22px; } .qres .row { grid-template-columns: minmax(0,1fr); gap: 4px; } .qform input { font-size: 23px; } }
+
 @media (max-width: 980px) {
   .mid { display: none; } .top .wrap { grid-template-columns: 1fr auto; }
   .hero .wrap, .est, .shead { grid-template-columns: minmax(0,1fr); gap: 36px; }
@@ -164,8 +219,8 @@ details p { margin: 10px 0 0 58px; color: #3b3732; max-width: 640px; }
 </head><body>
 <header class="top"><div class="wrap">
   <a class="word" href="#">Sitio <em>Listo</em></a>
-  <nav class="mid lbl"><a href="#specs"><span data-en="Specs" data-es="Especificaciones">Specs</span></a><a href="#process"><span data-en="Process" data-es="Proceso">Process</span></a><a href="#estimate"><span data-en="Estimate" data-es="Cotización">Estimate</span></a><a href="#faq">FAQ</a></nav>
-  <div class="act"><button class="lang" onclick="cambiarIdioma()">ES</button><a class="btn sm" href="mailto:vd561838@gmail.com?subject=Website%20preview%20request"><span data-en="Get yours free" data-es="Pedir la mía">Get yours free</span> →</a></div>
+  <nav class="mid lbl"><a href="#specs"><span data-en="Specs" data-es="Especificaciones">Specs</span></a><a href="#process"><span data-en="Process" data-es="Proceso">Process</span></a><a href="#estimate"><span data-en="Estimate" data-es="Cotización">Estimate</span></a><a href="#faq">FAQ</a><a href="#quiz"><span data-en="Diagnosis" data-es="Diagnóstico">Diagnosis</span></a></nav>
+  <div class="act"><button class="lang" onclick="cambiarIdioma()">ES</button><a class="btn sm" href="#quiz"><span data-en="Get yours free" data-es="Pedir la mía">Get yours free</span> →</a></div>
 </div></header>
 
 <section class="hero"><div class="wrap">
@@ -181,7 +236,7 @@ details p { margin: 10px 0 0 58px; color: #3b3732; max-width: 640px; }
         <button data-k="arquitectura">Architecture</button><button data-k="ingenieria">Engineering</button><button data-k="taller">Auto</button>
       </div>
     </div>
-    <div class="cta"><a class="btn" href="mailto:vd561838@gmail.com?subject=Website%20preview%20request" id="go"><span data-en="Draw mine for free" data-es="Dibujen la mía gratis">Draw mine for free</span> →</a><a class="btn out" id="sample" href="https://sitiolisto.github.io/muestra-dental/" target="_blank" rel="noopener"><span data-en="Open a full sample" data-es="Ver muestra completa">Open a full sample</span> ↗</a></div>
+    <div class="cta"><a class="btn" href="#quiz" id="go"><span data-en="Draw mine for free" data-es="Dibujen la mía gratis">Draw mine for free</span> →</a><a class="btn out" id="sample" href="https://sitiolisto.github.io/muestra-dental/" target="_blank" rel="noopener"><span data-en="Open a full sample" data-es="Ver muestra completa">Open a full sample</span> ↗</a></div>
   </div>
   <div class="draw">
     <div class="dim-h lbl"><span>1440 px</span></div>
@@ -225,7 +280,7 @@ details p { margin: 10px 0 0 58px; color: #3b3732; max-width: 640px; }
 <section id="estimate"><div class="wrap est">
   <div><span class="lbl reveal"><b>FIG. 04</b> — <span data-en="Estimate" data-es="Cotización">Estimate</span></span><h2 class="reveal" style="margin-top:18px"><span data-en="Your website. &lt;em&gt;Zero&lt;/em&gt; to pay." data-es="Su página. &lt;em&gt;Cero&lt;/em&gt; por pagar.">Your website. <em>Zero</em> to pay.</span></h2>
     <p class="custom reveal" data-en="No contracts, no monthly fee. You only pay for extras you ask for, with a clear quote first." data-es="Sin contratos ni mensualidad. Solo paga los extras que pida, con cotización clara antes.">No contracts, no monthly fee. You only pay for extras you ask for, with a clear quote first.</p>
-    <p class="custom reveal"><span data-en="Need something entirely custom? &lt;a href=&quot;mailto:vd561838@gmail.com?subject=Website%20preview%20request&quot;&gt;Let&amp;#39;s talk.&lt;/a&gt;" data-es="¿Necesita algo totalmente a la medida? &lt;a href=&quot;mailto:vd561838@gmail.com?subject=Website%20preview%20request&quot;&gt;Hablemos.&lt;/a&gt;">Need something entirely custom? <a href="mailto:vd561838@gmail.com?subject=Website%20preview%20request">Let&#39;s talk.</a></span></p></div>
+    <p class="custom reveal"><span data-en="Need something entirely custom? &lt;a href=&quot;#quiz&quot;&gt;Take the 1-minute diagnosis.&lt;/a&gt;" data-es="¿Necesita algo totalmente a la medida? &lt;a href=&quot;#quiz&quot;&gt;Haga el diagnóstico de 1 minuto.&lt;/a&gt;">Need something entirely custom? <a href="#quiz">Take the 1-minute diagnosis.</a></span></p></div>
   <div class="doc reveal">
     <div class="dh"><span class="serif" style="font-size:30px"><span data-en="Estimate" data-es="Cotización">Estimate</span></span><span class="lbl">No. 0001 · 2026</span></div>
     <div class="li"><span id="item"><span data-en="Website design &amp; build" data-es="Diseño y construcción">Website design &amp; build</span></span><span class="dots"></span><span class="p" id="price"><span data-en="free" data-es="gratis">free</span></span></div>
@@ -245,11 +300,30 @@ details p { margin: 10px 0 0 58px; color: #3b3732; max-width: 640px; }
   <div class="reveal"><details><summary><i>Q.01</i><span data-en="Is the website really free?" data-es="¿De verdad la página es gratis?">Is the website really free?</span></summary><p  data-en="Yes. We draw it, publish it and host it at no cost. You only buy your own domain (about $12 a year, wherever you like) and we connect it." data-es="Sí. La dibujamos, la publicamos y la hospedamos sin costo. Usted solo compra su dominio (cuesta poco al año y lo compra donde quiera) y nosotros lo conectamos.">Yes. We draw it, publish it and host it at no cost. You only buy your own domain (about $12 a year, wherever you like) and we connect it.</p></details><details><summary><i>Q.02</i><span data-en="Why is it free?" data-es="¿Por qué es gratis?">Why is it free?</span></summary><p  data-en="Every site carries a small “by Sitio Listo” at the bottom. That is how other businesses find us." data-es="Cada página lleva abajo un pequeño “by Sitio Listo”. Así nos conocen otros negocios.">Every site carries a small “by Sitio Listo” at the bottom. That is how other businesses find us.</p></details><details><summary><i>Q.03</i><span data-en="What do you charge for?" data-es="¿Qué se cobra?">What do you charge for?</span></summary><p  data-en="Only extras: online booking, a catalog or store, setting up your Google Maps listing, and edits after launch. You get a clear quote first." data-es="Solo lo extra: agenda de citas en línea, catálogo o tienda, dejar lista su ficha de Google Maps y los cambios después de publicarla. Primero recibe una cotización clara.">Only extras: online booking, a catalog or store, setting up your Google Maps listing, and edits after launch. You get a clear quote first.</p></details><details><summary><i>Q.04</i><span data-en="Who owns the domain?" data-es="¿De quién es el dominio?">Who owns the domain?</span></summary><p  data-en="You do. You buy it in your name." data-es="Suyo. Lo compra a su nombre.">You do. You buy it in your name.</p></details></div>
 </div></section>
 
+<section id="quiz"><div class="wrap qz">
+  <div class="pitch">
+    <span class="lbl reveal"><b>FIG. 06</b> — <span data-en="Diagnosis" data-es="Diagnóstico">Diagnosis</span></span>
+    <h2 class="reveal" style="margin-top:18px"><span data-en="What is your business &lt;em&gt;missing&lt;/em&gt; online?" data-es="¿Qué le &lt;em&gt;falta&lt;/em&gt; a su negocio en internet?">What is your business <em>missing</em> online?</span></h2>
+    <p class="reveal" data-en="Five quick questions, one minute. You get a diagnosis made for your business: what fits you, what we would build and what to avoid." data-es="Cinco preguntas rápidas, un minuto. Recibe un diagnóstico hecho para su negocio: qué le conviene, qué le haríamos y qué evitar.">Five quick questions, one minute. You get a diagnosis made for your business: what fits you, what we would build and what to avoid.</p>
+    <ul class="reveal">
+      <li><b>01</b><span data-en="Where your business is today" data-es="En qué etapa está su negocio">Where your business is today</span></li>
+      <li><b>02</b><span data-en="What you want to achieve" data-es="Qué quiere lograr">What you want to achieve</span></li>
+      <li><b>03</b><span data-en="What you have tried before" data-es="Qué ha intentado antes">What you have tried before</span></li>
+      <li><b>04</b><span data-en="What is holding you back" data-es="Qué lo frena hoy">What is holding you back</span></li>
+      <li><b>05</b><span data-en="When you want it" data-es="Para cuándo lo quiere">When you want it</span></li>
+    </ul>
+  </div>
+  <div class="qcard reveal" id="qcard" aria-live="polite">
+    <div class="qtop"><button class="qback" id="qback" type="button" hidden></button><span class="lbl" id="qstep"></span></div>
+    <div class="qrule" id="qrule"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="qbody" id="qbody"></div>
+  </div>
+</div></section>
+
 <section class="final"><div class="wrap">
   <span class="lbl"><b>END OF SHEET</b> — <span data-en="Ready when you are" data-es="Listos cuando usted diga">Ready when you are</span></span>
   <div class="giant">Sitio<br><em>Listo.</em></div>
-  <div class="cta"><a class="btn" href="mailto:vd561838@gmail.com?subject=Website%20preview%20request"><span data-en="Get your free website" data-es="Pida su página gratis">Get your free website</span> →</a></div>
-  <div class="fl lbl"><span>© 2026 Sitio Listo · <span data-en="Web studio" data-es="Estudio web">Web studio</span></span><span><a href="mailto:vd561838@gmail.com?subject=Website%20preview%20request">vd561838@gmail.com</a></span></div>
+  <div class="fl lbl"><span>© 2026 Sitio Listo · <span data-en="Web studio" data-es="Estudio web">Web studio</span></span><span><a href="#quiz"><span data-en="Free diagnosis" data-es="Diagnóstico gratis">Free diagnosis</span> ↑</a></span></div>
 </div></section>
 <div class="xy" id="xy">X 0000 · Y 0000</div>
 
@@ -273,8 +347,8 @@ function draw() {
   document.getElementById("url").textContent = (slugify(name) || "yourbusiness") + ".com";
   document.getElementById("nm").placeholder = p[6];
   document.getElementById("sample").href = "https://sitiolisto.github.io/muestra-" + k + "/";
-  document.getElementById("go").href = "mailto:vd561838@gmail.com?subject=Website%20preview%20request&body=" + encodeURIComponent("Business: " + name + "\nType: " + p[2] + "\nCity: ");
 }
+document.getElementById("go").addEventListener("click", function () { if (window.qPrefill) qPrefill(typed); });
 document.getElementById("nm").addEventListener("input", function (ev) { typed = ev.target.value.trim(); draw(); });
 document.querySelectorAll("#chips button").forEach(function (b) { b.addEventListener("click", function () {
   document.querySelectorAll("#chips button").forEach(function (x) { x.classList.remove("on"); }); b.classList.add("on"); k = b.dataset.k; draw(); }); });
@@ -283,13 +357,247 @@ document.querySelectorAll("#tabs button").forEach(function (b) { b.addEventListe
   document.getElementById("price").textContent = "$" + b.dataset.p; }); });
 function cambiarIdioma() { es = !es; document.documentElement.lang = es ? "es" : "en";
   document.querySelectorAll("[data-en]").forEach(function (n) { n.innerHTML = n.getAttribute(es ? "data-es" : "data-en"); });
-  document.querySelector(".lang").textContent = es ? "EN" : "ES"; draw(); }
+  document.querySelector(".lang").textContent = es ? "EN" : "ES"; draw(); if (window.qRender) qRender(); }
 var xy = document.getElementById("xy");
 addEventListener("mousemove", function (ev) { var x = String(ev.pageX).padStart(4, "0"), y = String(Math.round(ev.pageY)).padStart(4, "0"); xy.textContent = "X " + x + " · Y " + y; });
 if ("IntersectionObserver" in window) {
   var io = new IntersectionObserver(function (xs) { xs.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { threshold: .12 });
   document.querySelectorAll(".reveal").forEach(function (n) { io.observe(n); });
 } else { document.documentElement.className = "nojs"; }
+
+(function () {
+  var MAIL = "vd561838@gmail.com";
+  var L = {
+    en: {
+      step: "Question", of: "of", back: "← Back", contactStep: "Last step", resultStep: "Your diagnosis",
+      q: [
+        { id: "etapa", t: "Where is your business today?", o: [
+          ["start", "Starting", "Just opened, or still looking for steady customers."],
+          ["sell", "Selling", "I have customers. I want more of them, more often."],
+          ["grow", "Growing", "Business is good. I want to scale: team, branches, online sales."]] },
+        { id: "meta", t: "What would you like to achieve first?", o: [
+          ["google", "Get found on Google", "When someone searches for what I do, they find me."],
+          ["wa", "More bookings or orders on WhatsApp", "Fewer questions, more people ready to buy."],
+          ["store", "Sell online", "A catalog or store customers can order from."],
+          ["pro", "Look more professional", "An image that matches the quality of my work."]] },
+        { id: "intento", t: "What have you tried before?", o: [
+          ["nada", "Nothing yet", "This would be my first step online."],
+          ["redes", "Social media only", "Facebook, Instagram or TikTok."],
+          ["web", "A website", "Made by me or by someone else."],
+          ["ads", "Paid ads", "Facebook, Google, flyers…"],
+          ["agencia", "An agency or freelancer", "Someone I hired to handle it."]] },
+        { id: "porque", t: "And why didn't it work?", h: "Be honest: it helps us know what not to promise you.", o: [
+          ["clientes", "It didn't bring customers", ""],
+          ["caro", "It was too expensive", ""],
+          ["desaparecio", "It took forever, or they disappeared", ""],
+          ["actualizar", "I couldn't update it myself", ""],
+          ["sirve", "It works, but I want something better", ""]] },
+        { id: "freno", t: "What's holding you back today?", o: [
+          ["tiempo", "Time", "I don't have hours to spend on this."],
+          ["dinero", "Money", "I can't spend much right now."],
+          ["miedo", "Fear", "That it won't work, or that I won't know how to use it."]] },
+        { id: "cuando", t: "When would you like it?", o: [
+          ["mes", "This month", "The sooner the better."],
+          ["pronto", "In the next 1–3 months", "I'm planning it."],
+          ["viendo", "I'm just looking", "Curious to see what's possible."]] }
+      ],
+      cT: "Where should we send your diagnosis?", cH: "We'll send you the full plan and a free preview of your website.",
+      fName: "Your name", fBiz: "Business name", fCon: "WhatsApp or email", fNote: "Anything else? (optional)",
+      fNoteP: "City, type of business, what you'd love your website to do…",
+      send: "Send & see my diagnosis →", fine: "This opens your email with your answers already written. Just hit send and we'll reply within 24 hours. No spam, no calls you didn't ask for.",
+      errN: "Please write your name and your business.", errC: "Write a WhatsApp number or an email so we can send it to you.",
+      rStamp: "DIAGNOSIS", rFor: "for", rPk: "Recommended package", rBuild: "What we'd build", rDiff: "What we'll do differently",
+      rBlock: "About what's holding you back", rNext: "Next step",
+      resend: "Open my email again", copy: "Copy my answers", copied: "Copied. Paste it in an email to " ,
+      ok: "Didn't your email open? Write to us at ",
+      pk: { start: ["Starter", "Your website, free, with your Google reviews, photos and hours, on your own domain."],
+            sell: ["Complete", "Your website plus what turns visits into customers: Google Maps listing ready, WhatsApp buttons per service and a QR for your shop."],
+            grow: ["Custom", "A one-of-a-kind design for your brand, ready to add online booking or a full store."] },
+      build: { google: ["Your Google Maps listing set up: phone, hours, photos and link", "A website that tells Google your city and your services", "Your best reviews where people decide"],
+               wa: ["A WhatsApp button on every service, with the message already written", "A booking request form that lands in your WhatsApp", "Answers to the usual questions, so chats are about buying"],
+               store: ["A catalog with photos and prices", "Orders sent straight to your WhatsApp", "Ready to grow into a full online store"],
+               pro: ["A design made for your brand: your colors, your photos", "Your real Google reviews, word for word", "Your own domain: yourbusiness.com"] },
+      diff: { nada: "Starting from zero is an advantage: we do it right the first time, with what already works for businesses like yours.",
+              clientes: "We won't promise you customers overnight. We put you where people already search and make it easy to reach you.",
+              caro: "The base website is free. You only pay for extras if you decide you want them.",
+              desaparecio: "You see your website finished before deciding anything, and you can reach us on WhatsApp or email.",
+              actualizar: "You don't touch anything technical: you ask for changes and we make them.",
+              sirve: "We keep what already works for you and improve the rest." },
+      block: { tiempo: "You don't have to do anything technical. We build it with what's already on your Google profile; you only review it.",
+               dinero: "Your website is free. You only buy your domain, and every extra is optional.",
+               miedo: "You see it finished before you decide. If you don't like it, nothing happens and you owe nothing." },
+      next: { mes: "You're a priority: we'll contact you within 24 hours. Your site can be ready 48 hours after you approve it.",
+              pronto: "We'll prepare your free preview so it's ready when you are.",
+              viendo: "No rush. We'll send you your diagnosis and a free preview to look at calmly." },
+      subj: "My Sitio Listo diagnosis", urgent: "[THIS MONTH]", hello: "Hi! I took the diagnosis on your website."
+    },
+    es: {
+      step: "Pregunta", of: "de", back: "← Atrás", contactStep: "Último paso", resultStep: "Su diagnóstico",
+      q: [
+        { id: "etapa", t: "¿En qué etapa está su negocio?", o: [
+          ["start", "Empezando", "Recién abrí o todavía busco clientes fijos."],
+          ["sell", "Vendiendo", "Ya tengo clientes. Quiero más y más seguido."],
+          ["grow", "Creciendo", "Me va bien. Quiero crecer: equipo, sucursales, ventas en línea."]] },
+        { id: "meta", t: "¿Qué le gustaría lograr primero?", o: [
+          ["google", "Que me encuentren en Google", "Que quien busque lo que hago, me encuentre a mí."],
+          ["wa", "Más citas o pedidos por WhatsApp", "Menos preguntas, más gente lista para comprar."],
+          ["store", "Vender en línea", "Un catálogo o tienda donde me pidan directo."],
+          ["pro", "Verme más profesional", "Una imagen a la altura de la calidad de mi trabajo."]] },
+        { id: "intento", t: "¿Qué ha intentado antes?", o: [
+          ["nada", "Nada todavía", "Sería mi primer paso en internet."],
+          ["redes", "Solo redes sociales", "Facebook, Instagram o TikTok."],
+          ["web", "Una página web", "La hice yo o me la hizo alguien."],
+          ["ads", "Anuncios pagados", "Facebook, Google, volantes…"],
+          ["agencia", "Una agencia o freelance", "Contraté a alguien para que se encargara."]] },
+        { id: "porque", t: "¿Y por qué no le funcionó?", h: "Con confianza: nos ayuda a saber qué no prometerle.", o: [
+          ["clientes", "No me trajo clientes", ""],
+          ["caro", "Me salió muy caro", ""],
+          ["desaparecio", "Tardaron mucho o desaparecieron", ""],
+          ["actualizar", "No podía actualizarla yo", ""],
+          ["sirve", "Sí funciona, pero quiero algo mejor", ""]] },
+        { id: "freno", t: "¿Qué lo frena hoy?", o: [
+          ["tiempo", "El tiempo", "No tengo horas para dedicarle a esto."],
+          ["dinero", "El dinero", "Ahora no puedo gastar mucho."],
+          ["miedo", "El miedo", "A que no funcione o a no saber usarla."]] },
+        { id: "cuando", t: "¿Para cuándo lo quiere?", o: [
+          ["mes", "Para este mes", "Entre más pronto, mejor."],
+          ["pronto", "En 1 a 3 meses", "Lo estoy planeando."],
+          ["viendo", "Solo estoy viendo", "Tengo curiosidad de ver qué se puede."]] }
+      ],
+      cT: "¿A dónde le mandamos su diagnóstico?", cH: "Le enviamos el plan completo y una vista previa gratis de su página.",
+      fName: "Su nombre", fBiz: "Nombre del negocio", fCon: "WhatsApp o correo", fNote: "¿Algo más? (opcional)",
+      fNoteP: "Ciudad, giro, lo que le encantaría que hiciera su página…",
+      send: "Enviar y ver mi diagnóstico →", fine: "Se abre su correo con sus respuestas ya escritas. Solo dele enviar y le respondemos en menos de 24 horas. Sin spam ni llamadas que no pidió.",
+      errN: "Escriba su nombre y el de su negocio.", errC: "Escriba un WhatsApp o un correo para mandárselo.",
+      rStamp: "DIAGNÓSTICO", rFor: "para", rPk: "Paquete recomendado", rBuild: "Lo que le haríamos", rDiff: "Lo que haremos distinto",
+      rBlock: "Sobre lo que lo frena", rNext: "Siguiente paso",
+      resend: "Abrir mi correo otra vez", copy: "Copiar mis respuestas", copied: "Copiado. Péguelo en un correo a ",
+      ok: "¿No se abrió su correo? Escríbanos a ",
+      pk: { start: ["Arranque", "Su página gratis, con sus reseñas de Google, fotos y horario, en su propio dominio."],
+            sell: ["Completo", "Su página más lo que convierte visitas en clientes: ficha de Google Maps lista, botones de WhatsApp por servicio y QR para su local."],
+            grow: ["A la medida", "Un diseño único para su marca, listo para agregar agenda en línea o una tienda completa."] },
+      build: { google: ["Su ficha de Google Maps lista: teléfono, horario, fotos y enlace", "Una página que le dice a Google su ciudad y sus servicios", "Sus mejores reseñas justo donde la gente decide"],
+               wa: ["Un botón de WhatsApp en cada servicio, con el mensaje ya escrito", "Un formulario de citas que llega a su WhatsApp", "Respuestas a las preguntas de siempre, para que los chats sean de venta"],
+               store: ["Un catálogo con fotos y precios", "Pedidos directo a su WhatsApp", "Lista para crecer a una tienda en línea completa"],
+               pro: ["Un diseño hecho para su marca: sus colores, sus fotos", "Sus reseñas reales de Google, textuales", "Su propio dominio: sunegocio.com"] },
+      diff: { nada: "Empezar de cero es una ventaja: lo hacemos bien a la primera, con lo que ya les funciona a negocios como el suyo.",
+              clientes: "No le vamos a prometer clientes de la noche a la mañana. Lo ponemos donde la gente ya busca y le facilitamos que lo contacten.",
+              caro: "La página base es gratis. Solo paga extras si usted decide que los quiere.",
+              desaparecio: "Ve su página terminada antes de decidir nada, y nos encuentra por WhatsApp o correo.",
+              actualizar: "Usted no toca nada técnico: nos pide los cambios y nosotros los hacemos.",
+              sirve: "Conservamos lo que ya le funciona y mejoramos lo demás." },
+      block: { tiempo: "Usted no tiene que hacer nada técnico. La armamos con lo que ya está en su perfil de Google; usted solo la revisa.",
+               dinero: "Su página es gratis. Solo compra su dominio, y cada extra es opcional.",
+               miedo: "La ve terminada antes de decidir. Si no le gusta, no pasa nada y no debe nada." },
+      next: { mes: "Es prioridad: lo contactamos en menos de 24 horas. Su página puede quedar lista 48 horas después de que la apruebe.",
+              pronto: "Le preparamos su vista previa gratis para que esté lista cuando usted lo esté.",
+              viendo: "Sin prisa. Le mandamos su diagnóstico y una vista previa gratis para que la vea con calma." },
+      subj: "Mi diagnóstico de Sitio Listo", urgent: "[ESTE MES]", hello: "¡Hola! Hice el diagnóstico en su página."
+    }
+  };
+  var A = {}, hist = [], cur = 0, form = { n: "", b: "", c: "", x: "" }, done = false;
+  var body = document.getElementById("qbody"), back = document.getElementById("qback"),
+      stepL = document.getElementById("qstep"), rule = document.querySelectorAll("#qrule i");
+  function D() { return L[(typeof es !== "undefined" && es) ? "es" : "en"]; }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function num(i) { return i <= 2 ? i + 1 : (i === 3 ? 3 : i); }      // "porqué" comparte el n.º 3
+  function label(qi, code) { var q = D().q[qi]; for (var j = 0; j < q.o.length; j++) if (q.o[j][0] === code) return q.o[j][1]; return "—"; }
+  function setRule(n) { rule.forEach(function (r, i) { r.classList.toggle("on", i < n); }); }
+  function anim() { body.classList.remove("anim"); void body.offsetWidth; body.classList.add("anim"); }
+
+  function render(noAnim) {
+    var d = D();
+    back.textContent = d.back; back.hidden = hist.length === 0 && !done;
+    if (done) return result(noAnim);
+    if (cur === 6) return contact(noAnim);
+    var q = d.q[cur], n = num(cur);
+    stepL.textContent = d.step + " " + String(n).padStart(2, "0") + " " + d.of + " 05";
+    setRule(n - 1);
+    var h = '<div class="lbl"><b>Q.0' + n + (cur === 3 ? "b" : "") + "</b></div>" + '<div class="qq">' + esc(q.t) + "</div>" + (q.h ? '<p class="qhint">' + esc(q.h) + "</p>" : "") + '<div class="qopts">';
+    q.o.forEach(function (o, j) {
+      h += '<button type="button" class="qopt' + (A[q.id] === o[0] ? " sel" : "") + '" data-v="' + o[0] + '"><span class="k">' + "ABCDE"[j] + '</span><span><span class="tt">' + esc(o[1]) + "</span>" + (o[2] ? '<span class="ss">' + esc(o[2]) + "</span>" : "") + '</span><span class="ar">→</span></button>';
+    });
+    body.innerHTML = h + "</div>";
+    body.querySelectorAll(".qopt").forEach(function (b) { b.addEventListener("click", function () { pick(q.id, b.dataset.v, b); }); });
+    if (!noAnim) anim();
+  }
+  function pick(id, v, b) {
+    A[id] = v; b.classList.add("sel");
+    setTimeout(function () {
+      hist.push(cur);
+      cur = (cur === 2 && v === "nada") ? 4 : cur + 1;   // si no ha intentado nada, no se pregunta por qué
+      render();
+      if (window.innerWidth < 980) document.getElementById("qcard").scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 220);
+  }
+  function contact(noAnim) {
+    var d = D(); stepL.textContent = d.contactStep; setRule(5);
+    body.innerHTML = '<div class="lbl"><b>Q.06</b></div><div class="qq">' + esc(d.cT) + '</div><p class="qhint">' + esc(d.cH) + '</p>' +
+      '<form class="qform" id="qform" novalidate>' +
+      '<label class="lbl" for="qn">' + esc(d.fName) + '</label><input id="qn" autocomplete="name" maxlength="60" value="' + esc(form.n) + '">' +
+      '<label class="lbl" for="qb">' + esc(d.fBiz) + '</label><input id="qb" autocomplete="organization" maxlength="60" value="' + esc(form.b) + '">' +
+      '<label class="lbl" for="qc">' + esc(d.fCon) + '</label><input id="qc" autocomplete="email" maxlength="80" value="' + esc(form.c) + '">' +
+      '<label class="lbl" for="qx">' + esc(d.fNote) + '</label><textarea id="qx" maxlength="400" placeholder="' + esc(d.fNoteP) + '">' + esc(form.x) + '</textarea>' +
+      '<div class="err" id="qerr"></div><button class="btn" type="submit">' + esc(d.send) + '</button><p class="qfine">' + esc(d.fine) + "</p></form>";
+    var f = document.getElementById("qform");
+    ["qn", "qb", "qc", "qx"].forEach(function (id, i) { document.getElementById(id).addEventListener("input", function (ev) { form["nbcx"[i]] = ev.target.value; }); });
+    f.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var err = document.getElementById("qerr");
+      if (!form.n.trim() || !form.b.trim()) { err.textContent = d.errN; return; }
+      var c = form.c.trim();
+      if (!(/@.+\./.test(c) || c.replace(/\D/g, "").length >= 8)) { err.textContent = d.errC; return; }
+      hist.push(6); done = true; render(); send();
+    });
+    if (!noAnim) anim();
+  }
+  function pkg() { return A.etapa || "start"; }
+  function texto() {
+    var d = D(), lines = [d.hello, "",
+      d.fName + ": " + form.n.trim(), d.fBiz + ": " + form.b.trim(), d.fCon + ": " + form.c.trim(), "",
+      "1. " + d.q[0].t + " " + label(0, A.etapa),
+      "2. " + d.q[1].t + " " + label(1, A.meta),
+      "3. " + d.q[2].t + " " + label(2, A.intento)];
+    if (A.intento !== "nada") lines.push("   " + d.q[3].t + " " + label(3, A.porque));
+    lines.push("4. " + d.q[4].t + " " + label(4, A.freno), "5. " + d.q[5].t + " " + label(5, A.cuando));
+    if (form.x.trim()) lines.push("", d.fNote.replace(/\s*\(.*\)/, "") + ": " + form.x.trim());
+    lines.push("", "[SL-QUIZ etapa=" + A.etapa + " paquete=" + d.pk[pkg()][0] + " meta=" + A.meta + " intento=" + A.intento +
+      " porque=" + (A.intento === "nada" ? "-" : A.porque) + " freno=" + A.freno + " cuando=" + A.cuando + " idioma=" + (es ? "es" : "en") + "]");
+    return lines.join("\n");
+  }
+  function mailto() {
+    var d = D(), s = (A.cuando === "mes" ? d.urgent + " " : "") + d.subj + " · " + form.b.trim();
+    return "mailto:" + MAIL + "?subject=" + encodeURIComponent(s) + "&body=" + encodeURIComponent(texto());
+  }
+  function send() { location.href = mailto(); }
+  function result(noAnim) {
+    var d = D(), p = d.pk[pkg()], why = A.intento === "nada" ? "nada" : (A.porque || "nada");
+    stepL.textContent = d.resultStep; setRule(6);
+    var li = (d.build[A.meta] || d.build.pro).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
+    body.innerHTML = '<div class="qres"><span class="stamp2">' + d.rStamp + " · " + esc(form.b.trim()).toUpperCase() + '</span>' +
+      "<h3>" + esc(d.rPk) + ": <em>" + esc(p[0]) + "</em></h3><p class=\"pk\">" + esc(p[1]) + "</p>" +
+      '<div class="row"><b>' + esc(d.rBuild) + "</b><ul>" + li + "</ul></div>" +
+      '<div class="row"><b>' + esc(d.rDiff) + "</b><p>" + esc(d.diff[why]) + "</p></div>" +
+      '<div class="row"><b>' + esc(d.rBlock) + "</b><p>" + esc(d.block[A.freno]) + "</p></div>" +
+      '<div class="row"><b>' + esc(d.rNext) + "</b><p>" + esc(d.next[A.cuando]) + "</p></div>" +
+      '<div class="acts"><a class="btn" id="qre" href="' + esc(mailto()) + '">' + esc(d.resend) + ' →</a><button class="btn out" type="button" id="qcp">' + esc(d.copy) + "</button></div>" +
+      '<p class="ok" id="qok">' + esc(d.ok) + '<a href="mailto:' + MAIL + '">' + MAIL + "</a></p></div>";
+    document.getElementById("qcp").addEventListener("click", function () {
+      var t = texto(), ok = document.getElementById("qok");
+      function fin() { ok.innerHTML = esc(d.copied) + '<a href="mailto:' + MAIL + '">' + MAIL + "</a>"; }
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(fin, fin); else fin();
+    });
+    if (!noAnim) anim();
+  }
+  back.addEventListener("click", function () {
+    if (done) { done = false; cur = 6; hist.pop(); render(); return; }
+    if (hist.length) { cur = hist.pop(); render(); }
+  });
+  window.qRender = function () { render(true); };
+  window.qPrefill = function (biz) { if (biz && !form.b) form.b = biz; };
+  render(true);
+})();
+
 draw();
 if (/^es/i.test(navigator.language || "") || /[?&]lang=es/.test(location.search)) cambiarIdioma();
 </script>
