@@ -101,6 +101,7 @@ footer.pie a{text-decoration:underline}
 </style><script>if(location.search.indexOf('captura')>-1)document.write('<style>.concepto{display:none}</style>')</script>
 </head>
 <body>
+<script>try{var slc=sessionStorage.getItem('sl-cortina');if(slc&&/^#[0-9A-Fa-f]{6}$/.test(slc)){sessionStorage.removeItem('sl-cortina');document.write('<div id="slc" style="position:fixed;inset:0;z-index:9999;pointer-events:none;background:'+slc+';transform-origin:top;transition:transform .9s cubic-bezier(.65,0,.35,1)"></div>');setTimeout(function(){var e=document.getElementById('slc');e.style.transform='scaleY(0)';setTimeout(function(){e.remove()},1000)},120)}}catch(e){}</script>
 <div class="concepto">Proyecto de concepto de <a href="../../">Sitio Listo</a> · taller ficticio, fotos ilustrativas</div>
 <header class="hero">
  <img src="../../assets/img/taller-0.jpg" alt="Coche elevado en el taller">
