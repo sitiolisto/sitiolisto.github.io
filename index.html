@@ -740,7 +740,7 @@ section{position:relative}
  })();
 
  /* ── Portada: la página se arma (boceto → diseño) y el scroll mueve la escena ── */
- var hxTop=$('#hxTop'),hxDev=$('#hxDev'),hx3d=$('#hx3d'),hxPh=$('#hxPh'),hxPills=$('#hxPills'),hxFin=$('#hxFin'),hxBaja=$('#hxBaja'),hxHalo=$('#hxHalo'),hxScr=$('#hxScr'),hxPscr=$('#hxPscr'),hxUrl=$('#hxUrl'),hxEst=$('#hxEst');
+ var hxBr=$('.hx-br'),hxTop=$('#hxTop'),hxDev=$('#hxDev'),hx3d=$('#hx3d'),hxPh=$('#hxPh'),hxPills=$('#hxPills'),hxFin=$('#hxFin'),hxBaja=$('#hxBaja'),hxHalo=$('#hxHalo'),hxScr=$('#hxScr'),hxPscr=$('#hxPscr'),hxUrl=$('#hxUrl'),hxEst=$('#hxEst');
  var dImgs=$$('img',hxScr),mImgs=$$('img',hxPscr),pills=$$('button',hxPills);
  var HP=[["clinicadentalalba.mx","rgba(20,184,155,.30)"],["riosventura.mx","rgba(184,149,90,.34)"],["talleribarra.es","rgba(245,197,24,.40)"]],hxI=0;
  var cine=!quieto;
@@ -763,7 +763,10 @@ section{position:relative}
   hx3d.style.transform='perspective(1800px) rotateX('+((1-A)*16).toFixed(2)+'deg)';
   hxTop.style.opacity=(1-A*1.5).toFixed(3);hxTop.style.transform='translateY('+(-A*70).toFixed(1)+'px)';hxTop.style.pointerEvents=A>.5?'none':'';
   hxBaja.style.opacity=(1-A*4).toFixed(3);
-  hxPh.style.opacity=B.toFixed(3);hxPh.style.transform='translateX('+((1-B)*vw*.45).toFixed(1)+'px) rotate('+((1-B)*10).toFixed(2)+'deg)';
+  hxPh.style.opacity=B.toFixed(3);
+  if(movil){var dxp=hxDev.offsetWidth/2-(hxPh.offsetLeft+hxPh.offsetWidth/2),dyp=hxDev.offsetHeight/2-(hxPh.offsetTop+hxPh.offsetHeight/2)-8,ms=Math.max(1,vh*.58/(hxPh.offsetHeight*sc));
+   hxPh.style.transform='translate('+((1-B)*vw*.45+B*dxp).toFixed(1)+'px,'+(B*dyp).toFixed(1)+'px) rotate('+((1-B)*10).toFixed(2)+'deg) scale('+(1+B*(ms-1)).toFixed(3)+')';hxBr.style.opacity=(1-B*.6).toFixed(3);hxBr.style.transform='scale('+(1-B*.06).toFixed(3)+')'}
+  else{hxPh.style.transform='translateX('+((1-B)*vw*.45).toFixed(1)+'px) rotate('+((1-B)*10).toFixed(2)+'deg)';hxBr.style.opacity='';hxBr.style.transform=''}
   hxPills.style.opacity=lim(B*1.4-D*1.4).toFixed(3);hxPills.style.pointerEvents=B>.6&&D<.5?'':'none';
   hxFin.style.opacity=D.toFixed(3);hxFin.style.transform='translateY('+((1-D)*20).toFixed(1)+'px)';
   var i=p<.46?0:Math.min(2,Math.floor(C*3)),loc=p<.46?0:C*3-i;ponI(i);
