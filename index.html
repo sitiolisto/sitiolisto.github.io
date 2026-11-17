@@ -522,7 +522,9 @@ section.s{padding:150px 0}
  $$('.item svg *, .marca-si svg *').forEach(function(p){p.setAttribute('pathLength','1')});
  function cuenta(el){var fin=+el.dataset.n,t0=null;el.textContent='0';function paso(t){t0=t0||t;var p=Math.min((t-t0)/1500,1);el.textContent=Math.round(fin*(p===1?1:1-Math.pow(2,-10*p)));if(p<1)requestAnimationFrame(paso)}requestAnimationFrame(paso)}
  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;var t=en.target;t.classList.add('in');if(!quieto)$$('[data-n]',t).forEach(cuenta);io.unobserve(t)})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
- $$('[data-r], .h2, .contacto h2, .gigante').forEach(function(el){io.observe(el)});
+ $$('[data-r], .h2, .contacto h2').forEach(function(el){io.observe(el)});
+ /* El logotipo gigante sube cuando aparece la línea del pie (él mismo empieza recortado y no se detecta) */
+ var gig=$('.gigante'),io4=new IntersectionObserver(function(es){if(es[0].isIntersecting){gig.classList.add('in');io4.disconnect()}});io4.observe($('.pie'));
 
  /* (01) Trabajo: la sección adopta la identidad del proyecto que está al centro de la pantalla */
  var work=$('#trabajo');
