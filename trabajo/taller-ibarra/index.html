@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taller Ibarra · Mecánica en Valencia</title>
+<meta name="description" content="Proyecto de concepto de Sitio Listo: página para un taller mecánico ficticio en Valencia.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5C518'/%3E%3Ctext x='16' y='24' font-size='20' font-weight='900' text-anchor='middle' fill='%2316181B' font-family='Arial'%3EI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16181B;--ink2:#202328;--paper:#F2F0EB;--yel:#F5C518;--soft:#62656B;--line:#D9D5CC}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:16px/1.6 Barlow,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.w{max-width:1240px;margin:0 auto;padding:0 24px}
+.concepto{background:var(--yel);font-size:12.5px;text-align:center;padding:7px 16px;font-weight:600}
+.concepto a{text-decoration:underline;text-underline-offset:3px}
+h1,h2,h3,.cond{font-family:"Barlow Condensed",Impact,sans-serif;text-transform:uppercase;line-height:.92;letter-spacing:-.005em}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--yel);color:var(--ink);padding:17px 28px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:19px;text-transform:uppercase;letter-spacing:.04em;transition:.2s}
+.btn:hover{background:#fff}
+.btn.osc{background:var(--ink);color:#fff}.btn.osc:hover{background:#000}
+/* hero */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero>img{position:absolute;right:0;top:0;width:62%;height:100%;object-fit:cover;opacity:.75}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 38%,rgba(22,24,27,.2) 75%,rgba(22,24,27,.5));z-index:1}
+.hero .w{position:relative;z-index:2}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:28px;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.logo i{background:var(--yel);color:var(--ink);font-style:normal;width:36px;height:36px;display:grid;place-items:center}
+nav ul{display:flex;gap:30px;list-style:none;font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:#c8cace}
+nav ul a:hover{color:var(--yel)}
+.tel{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;color:var(--yel)}
+.hero .cuerpo{padding:90px 0 110px;max-width:640px}
+.sello{display:inline-flex;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.25);padding:7px 14px;font-size:14px;font-weight:500;margin-bottom:26px}
+.sello b{color:var(--yel)}
+.hero h1{font-size:clamp(60px,9vw,128px);font-weight:800}
+.hero h1 span{color:var(--yel)}
+.hero p{font-size:19px;color:#c8cace;margin:26px 0 36px;max-width:31em}
+.hero .acc{display:flex;gap:14px;flex-wrap:wrap}
+.hero .btn.ln{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+.hero .btn.ln:hover{border-color:var(--yel);color:var(--yel)}
+/* barra */
+.barra{background:var(--yel)}
+.barra .w{display:grid;grid-template-columns:repeat(4,1fr)}
+.barra div{padding:26px 20px 24px 0;font-weight:600;font-size:15px;line-height:1.3}
+.barra b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:40px;font-weight:800;line-height:1}
+section{padding:100px 0}
+.cab{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:46px;flex-wrap:wrap}
+.cab h2{font-size:clamp(46px,6vw,84px);font-weight:800}
+.cab p{max-width:24em;color:var(--soft);font-size:17px}
+/* servicios */
+.serv{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--ink);border:2px solid var(--ink)}
+.sv{background:var(--paper);padding:34px 30px;display:flex;flex-direction:column;gap:12px;transition:.2s}
+.sv:hover{background:#fff}
+.sv .top{display:flex;justify-content:space-between;align-items:baseline}
+.sv h3{font-size:34px;font-weight:800}
+.sv .pr{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:18px;background:var(--ink);color:var(--yel);padding:2px 10px;white-space:nowrap}
+.sv p{color:var(--soft)}
+/* proceso */
+.proc{background:var(--ink);color:#fff}
+.proc .w{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.proc img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.proc h2{font-size:clamp(46px,5.6vw,78px);font-weight:800;margin-bottom:36px}
+.proc h2 span{color:var(--yel)}
+.p{display:grid;grid-template-columns:70px 1fr;padding:22px 0;border-top:1px solid #33373e}
+.p .n{font-family:"Barlow Condensed",sans-serif;font-size:44px;font-weight:800;color:var(--yel);line-height:1}
+.p b{font-size:19px;display:block;margin-bottom:2px}
+.p span{color:#a9adb4}
+/* reseñas */
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.r{background:#fff;padding:32px;border-top:6px solid var(--yel)}
+.r .st{color:#E0A800;letter-spacing:3px;font-size:18px}
+.r q{display:block;font-size:18px;font-weight:500;margin:14px 0 20px;quotes:"«" "»"}
+.r footer{font-family:"Barlow Condensed",sans-serif;font-size:18px;font-weight:700;text-transform:uppercase}
+.r footer span{display:block;font-family:Barlow,sans-serif;text-transform:none;font-weight:400;font-size:14px;color:var(--soft)}
+.nota{font-size:13.5px;color:var(--soft);margin-top:16px}
+/* cita */
+.cita{display:grid;grid-template-columns:1.3fr 1fr;border:2px solid var(--ink)}
+.cita .a{background:var(--yel);padding:60px}
+.cita h2{font-size:clamp(48px,6vw,82px);font-weight:800;margin-bottom:22px}
+.cita .a p{font-size:18px;margin-bottom:30px;max-width:26em}
+.cita .b{padding:50px;background:#fff}
+.cita dl{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;font-size:16px}
+.cita dt{font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;font-size:18px}
+.cita h3{font-size:30px;font-weight:800;margin-bottom:18px}
+.cita .b div+div{margin-top:32px;padding-top:28px;border-top:2px solid var(--paper)}
+footer.pie{padding:34px 0 46px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--soft)}
+footer.pie a{text-decoration:underline}
+@media (max-width:900px){
+ nav ul,.tel{display:none}
+ .hero>img{width:100%;opacity:.35}
+ .hero:before{background:linear-gradient(180deg,rgba(22,24,27,.55),var(--ink) 92%)}
+ .hero .cuerpo{padding:50px 0 70px}
+ .barra .w{grid-template-columns:1fr 1fr}
+ .serv,.res,.proc .w,.cita{grid-template-columns:1fr}
+ section{padding:72px 0}
+ .proc .w{gap:40px}
+ .cita .a,.cita .b{padding:36px 26px}
+}
+</style><script>if(location.search.indexOf('captura')>-1)document.write('<style>.concepto{display:none}</style>')</script>
+</head>
+<body>
+<div class="concepto">Proyecto de concepto de <a href="../../">Sitio Listo</a> · taller ficticio, fotos ilustrativas</div>
+<header class="hero">
+ <img src="../../assets/img/taller-0.jpg" alt="Coche elevado en el taller">
+ <div class="w">
+  <nav><a class="logo" href="#"><i>I</i>Taller Ibarra</a><ul><li><a href="#servicios">Servicios</a></li><li><a href="#como">Cómo trabajamos</a></li><li><a href="#opiniones">Opiniones</a></li></ul><span class="tel">96 000 00 00</span></nav>
+  <div class="cuerpo">
+   <span class="sello"><b>★ 4,9</b> 340 reseñas en Google · desde 1998</span>
+   <h1>Tu coche, en manos que <span>lo conocen.</span></h1>
+   <p>Mecánica general, diagnosis y pre-ITV en Benimaclet. Te damos el precio cerrado antes de tocar nada y te enseñamos la pieza que cambiamos.</p>
+   <div class="acc"><a class="btn" href="#cita">Pedir cita por WhatsApp</a><a class="btn ln" href="#servicios">Ver precios</a></div>
+  </div>
+ </div>
+</header>
+<div class="barra"><div class="w">
+ <div><b>Precio cerrado</b>antes de empezar</div>
+ <div><b>24 h</b>para la mayoría de reparaciones</div>
+ <div><b>1 año</b>de garantía en mano de obra</div>
+ <div><b>Coche</b>de cortesía si tarda más</div>
+</div></div>
+
+<section id="servicios"><div class="w">
+ <div class="cab"><h2>Servicios<br>y precios</h2><p>Precios orientativos con IVA. El precio final te lo damos por escrito tras revisar tu coche, sin compromiso.</p></div>
+ <div class="serv">
+  <div class="sv"><div class="top"><h3>Revisión</h3><span class="pr">desde 79 €</span></div><p>Aceite, filtros y 30 puntos de control. Te lo enseñamos todo.</p></div>
+  <div class="sv"><div class="top"><h3>Pre-ITV</h3><span class="pr">29 €</span></div><p>La pasamos antes que tú. Si hay algo, lo sabrás con tiempo.</p></div>
+  <div class="sv"><div class="top"><h3>Frenos</h3><span class="pr">desde 95 €</span></div><p>Pastillas y discos de primeras marcas, montados en el día.</p></div>
+  <div class="sv"><div class="top"><h3>Diagnosis</h3><span class="pr">35 €</span></div><p>Lectura electrónica y explicación clara de lo que pasa y lo que no.</p></div>
+  <div class="sv"><div class="top"><h3>Embrague</h3><span class="pr">a presupuesto</span></div><p>Kit completo y volante bimasa. Coche de cortesía incluido.</p></div>
+  <div class="sv"><div class="top"><h3>Aire acond.</h3><span class="pr">desde 59 €</span></div><p>Carga de gas y revisión de fugas antes del verano.</p></div>
+ </div>
+</div></section>
+
+<div class="proc" id="como"><section><div class="w">
+ <img src="../../assets/img/taller-3.jpg" alt="Mecánico revisando un coche en el elevador">
+ <div><h2>Sin sorpresas<br><span>en la factura.</span></h2>
+  <div class="p"><span class="n">01</span><div><b>Nos escribes por WhatsApp</b><span>Te damos hora el mismo día, normalmente para esa misma semana.</span></div></div>
+  <div class="p"><span class="n">02</span><div><b>Revisamos y te mandamos el precio</b><span>Con fotos de lo que encontramos. Nada se toca sin tu OK.</span></div></div>
+  <div class="p"><span class="n">03</span><div><b>Recoges tu coche</b><span>Con las piezas viejas en el maletero, por si las quieres ver.</span></div></div>
+ </div>
+</div></section></div>
+
+<section id="opiniones"><div class="w">
+ <div class="cab"><h2>Lo que dicen<br>los clientes</h2><p>★ 4,9 de 5 en Google con 340 reseñas. Estas son tres de ellas.</p></div>
+ <div class="res">
+  <div class="r"><div class="st">★★★★★</div><q>Me dijeron que no hacía falta cambiar el embrague, que en otro sitio me querían cobrar 900 €. Honrados de verdad.</q><footer>Carlos M.<span>Seat León</span></footer></div>
+  <div class="r"><div class="st">★★★★★</div><q>Precio cerrado y cumplido al céntimo. Me mandaron fotos de todo por WhatsApp.</q><footer>Lucía P.<span>Toyota Yaris</span></footer></div>
+  <div class="r"><div class="st">★★★★★</div><q>Llevo veinte años viniendo. El padre y ahora los hijos: el mismo trato.</q><footer>Vicente A.<span>Cliente desde 2004</span></footer></div>
+ </div>
+ <p class="nota">Reseñas de ejemplo para este concepto.</p>
+</div></section>
+
+<section id="cita" style="padding-top:0"><div class="w">
+ <div class="cita">
+  <div class="a"><h2>¿Qué le pasa<br>a tu coche?</h2><p>Escríbenos por WhatsApp con una foto o una nota de voz. Te contestamos en menos de una hora en horario de taller.</p><a class="btn osc" href="#cita">Escribir por WhatsApp →</a></div>
+  <div class="b">
+   <div><h3>Horario</h3><dl><dt>Lun – Vie</dt><dd>8:00 – 14:00 · 15:30 – 19:00</dd><dt>Sábado</dt><dd>9:00 – 13:00</dd></dl></div>
+   <div><h3>Dónde</h3><p>Calle del Ejemplo 00, 46020 Valencia<br>A 3 min del metro Benimaclet</p></div>
+  </div>
+ </div>
+ <footer class="pie"><span>© 2026 Taller Ibarra · negocio ficticio</span><span>Diseño: <a href="../../">Sitio Listo, estudio web</a></span></footer>
+</div></section>
+</body></html>

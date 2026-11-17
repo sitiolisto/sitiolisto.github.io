@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ríos Ventura Abogados · Guadalajara</title>
+<meta name="description" content="Proyecto de concepto de Sitio Listo: página para un despacho ficticio de abogados en Guadalajara.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E1013'/%3E%3Ctext x='16' y='22' font-size='15' text-anchor='middle' fill='%23B8955A' font-family='Georgia'%3ERV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0E1013;--panel:#15181D;--line:#262A31;--txt:#ECE7DD;--soft:#9A958B;--brass:#B8955A}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font:15.5px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.w{max-width:1200px;margin:0 auto;padding:0 28px}
+.concepto{background:var(--brass);color:#0E1013;font-size:12.5px;text-align:center;padding:7px 16px;font-weight:500}
+.concepto a{text-decoration:underline;text-underline-offset:3px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.01em}
+.eti{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+.btn{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--brass);color:var(--txt);padding:16px 28px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;transition:.25s}
+.btn:hover,.btn.full{background:var(--brass);color:#0E1013}
+.btn.full:hover{background:#cfae76}
+/* hero */
+.hero{position:relative;min-height:min(92vh,880px);display:flex;flex-direction:column}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,19,.65) 0%,rgba(14,16,19,.25) 40%,var(--bg) 100%)}
+.hero>*{position:relative;z-index:1}
+nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-bottom:1px solid rgba(236,231,221,.14)}
+.logo{font-family:"Cormorant Garamond",serif;font-size:25px;letter-spacing:.02em}
+.logo span{color:var(--brass);font-style:italic}
+nav ul{display:flex;gap:36px;list-style:none;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#c9c3b8}
+nav ul a:hover{color:var(--brass)}
+.hero .cuerpo{width:100%;margin-top:auto;padding:80px 28px 90px;display:grid;grid-template-columns:1.5fr 1fr;gap:60px;align-items:end}
+.hero h1{font-size:clamp(50px,7.4vw,104px)}
+.hero h1 em{color:var(--brass)}
+.hero p{color:#c9c3b8;font-size:17px;margin-bottom:32px;max-width:27em}
+.datos{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.datos div{padding:34px 28px 30px 0}
+.datos div+div{padding-left:28px;border-left:1px solid var(--line)}
+.datos b{font-family:"Cormorant Garamond",serif;font-size:46px;font-weight:500;display:block;line-height:1;color:var(--txt)}
+.datos span{font-size:13.5px;color:var(--soft)}
+section{padding:120px 0}
+.cab{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;margin-bottom:60px}
+.cab h2{font-size:clamp(38px,5vw,64px)}
+.cab p{color:var(--soft);font-size:17px;align-self:end}
+/* áreas */
+.area{display:grid;grid-template-columns:90px 1.1fr 1.4fr 40px;gap:30px;align-items:baseline;padding:34px 0;border-top:1px solid var(--line);transition:.3s}
+.area:last-child{border-bottom:1px solid var(--line)}
+.area .n{font-family:"Cormorant Garamond",serif;color:var(--brass);font-size:20px}
+.area h3{font-size:34px}
+.area p{color:var(--soft)}
+.area .fl{color:var(--brass);font-size:22px;transition:.3s}
+.area:hover{background:var(--panel);padding-left:18px;padding-right:18px}
+.area:hover .fl{transform:translateX(6px)}
+/* compromiso */
+.comp{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.comp .w{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.comp img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(.3) contrast(1.05)}
+.comp h2{font-size:clamp(38px,4.6vw,58px);margin:18px 0 40px}
+.c{padding:24px 0;border-top:1px solid var(--line)}
+.c b{display:block;font-family:"Cormorant Garamond",serif;font-size:25px;font-weight:600;margin-bottom:4px}
+.c p{color:var(--soft)}
+/* socios */
+.socios{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.s{border:1px solid var(--line);padding:44px}
+.s .mono{width:72px;height:72px;border:1px solid var(--brass);display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--brass);margin-bottom:30px}
+.s h3{font-size:36px}
+.s small{display:block;color:var(--brass);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin:6px 0 18px}
+.s p{color:var(--soft)}
+/* testimonios */
+.test{text-align:center;max-width:900px;margin:0 auto}
+.test q{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(30px,3.8vw,46px);line-height:1.25;quotes:"“" "”"}
+.test footer{margin-top:30px;color:var(--soft);font-size:14px;letter-spacing:.06em}
+.otras{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:80px}
+.otras blockquote{border-top:1px solid var(--line);padding-top:26px}
+.otras q{font-family:"Cormorant Garamond",serif;font-size:23px;line-height:1.4;quotes:"“" "”"}
+.otras footer{margin-top:14px;color:var(--soft);font-size:13.5px}
+.nota{color:#6f6b63;font-size:13px;margin-top:40px;text-align:center}
+/* consulta */
+.consulta{border:1px solid var(--brass);padding:80px;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
+.consulta h2{font-size:clamp(38px,5vw,62px);margin-top:16px}
+.consulta p{color:#c9c3b8;margin-bottom:30px}
+.consulta dl{margin-top:30px;display:grid;grid-template-columns:auto 1fr;gap:6px 22px;font-size:14px;color:var(--soft)}
+.consulta dt{color:var(--txt)}
+footer.pie{border-top:1px solid var(--line);margin-top:120px;padding:34px 0 46px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--soft)}
+footer.pie a{color:var(--brass)}
+@media (max-width:900px){
+ nav ul{display:none}
+ .hero{min-height:auto}
+ .hero .cuerpo,.cab,.comp .w,.socios,.otras,.consulta{grid-template-columns:1fr}
+ .hero .cuerpo{padding:110px 28px 60px;gap:30px}
+ .datos{grid-template-columns:1fr}
+ .datos div,.datos div+div{padding:22px 0;border-left:0;border-top:1px solid var(--line)}
+ .datos div:first-child{border-top:0}
+ section{padding:80px 0}
+ .cab{gap:18px;margin-bottom:36px}
+ .area{grid-template-columns:44px 1fr;gap:6px 16px}
+ .area p{grid-column:2}.area .fl{display:none}
+ .area h3{font-size:28px}
+ .comp .w{gap:40px}
+ .s,.consulta{padding:34px 26px}
+}
+</style><script>if(location.search.indexOf('captura')>-1)document.write('<style>.concepto{display:none}</style>')</script>
+</head>
+<body>
+<div class="concepto">Proyecto de concepto de <a href="../../">Sitio Listo</a> · despacho ficticio, fotos ilustrativas</div>
+<header class="hero">
+ <img src="../../assets/img/legal-4.jpg" alt="">
+ <div class="w" style="width:100%"><nav><a class="logo" href="#">Ríos <span>&amp;</span> Ventura</a>
+  <ul><li><a href="#areas">Áreas</a></li><li><a href="#compromiso">Cómo trabajamos</a></li><li><a href="#socios">Socios</a></li><li><a href="#consulta">Consulta</a></li></ul></nav></div>
+ <div class="w cuerpo">
+  <div><span class="eti">Abogados · Guadalajara, Jal.</span><h1 style="margin-top:22px">Defendemos lo que usted <em>construyó.</em></h1></div>
+  <div><p>Derecho familiar, civil y mercantil. Le decimos con franqueza si su caso se puede ganar, cuánto cuesta y cuánto puede tardar, antes de firmar nada.</p><a class="btn full" href="#consulta">Agendar consulta →</a></div>
+ </div>
+</header>
+
+<div class="w"><div class="datos">
+ <div><b>18 años</b><span>de práctica en tribunales de Jalisco</span></div>
+ <div><b>5.0 ★</b><span>con 140 opiniones en Google</span></div>
+ <div><b>24 h</b><span>para responder a cada cliente, siempre</span></div>
+</div></div>
+
+<section id="areas"><div class="w">
+ <div class="cab"><div><span class="eti">Áreas de práctica</span><h2 style="margin-top:16px">Pocas áreas, muy bien llevadas.</h2></div><p>No tomamos todos los casos. Tomamos los que sabemos ganar, y se lo decimos desde la primera consulta.</p></div>
+ <a class="area" href="#consulta"><span class="n">I.</span><h3>Familiar</h3><p>Divorcios, pensión alimenticia, guarda y custodia. Con el cuidado que piden los temas de familia.</p><span class="fl">→</span></a>
+ <a class="area" href="#consulta"><span class="n">II.</span><h3>Civil</h3><p>Contratos, arrendamientos, desalojos y cobranza. Soluciones que se cumplen.</p><span class="fl">→</span></a>
+ <a class="area" href="#consulta"><span class="n">III.</span><h3>Mercantil</h3><p>Sociedades, conflictos entre socios y defensa de su negocio frente a incumplimientos.</p><span class="fl">→</span></a>
+ <a class="area" href="#consulta"><span class="n">IV.</span><h3>Sucesiones</h3><p>Testamentos e intestados, para que su patrimonio llegue a quien usted decidió.</p><span class="fl">→</span></a>
+</div></section>
+
+<div class="comp" id="compromiso"><section><div class="w">
+ <img src="../../assets/img/legal-1.jpg" alt="Firma de documentos">
+ <div><span class="eti">Cómo trabajamos</span><h2>Lo que nuestros clientes más valoran no es el despacho. Es saber en qué va su caso.</h2>
+  <div class="c"><b>Le respondemos en menos de 24 horas</b><p>Por WhatsApp, llamada o correo. Siempre contesta el abogado que lleva su asunto.</p></div>
+  <div class="c"><b>Un reporte cada semana</b><p>Qué se hizo, qué sigue y qué necesitamos de usted. Por escrito.</p></div>
+  <div class="c"><b>Honorarios claros desde el día uno</b><p>Un presupuesto firmado, sin cobros que aparezcan a mitad del camino.</p></div>
+ </div>
+</div></section></div>
+
+<section id="socios"><div class="w">
+ <div class="cab"><div><span class="eti">Socios</span><h2 style="margin-top:16px">Quién lleva su caso.</h2></div><p>Cada asunto lo dirige personalmente uno de los socios, de la primera audiencia a la sentencia.</p></div>
+ <div class="socios">
+  <div class="s"><div class="mono">MR</div><h3>Lic. Mariana Ríos</h3><small>Familiar y sucesiones</small><p>Mediadora certificada. Busca acuerdos cuando conviene y litiga a fondo cuando no hay otra salida.</p></div>
+  <div class="s"><div class="mono">AV</div><h3>Lic. Andrés Ventura</h3><small>Civil y mercantil</small><p>Maestría en Derecho Corporativo. Defiende a empresas familiares y a sus fundadores.</p></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w">
+ <div class="test"><span class="eti">Opiniones</span><q style="margin-top:26px">Otros abogados me cobraron durante años sin avanzar. Aquí, en ocho meses, se resolvió. Y siempre supe en qué iba.</q><footer>— Patricia G., juicio de custodia</footer></div>
+ <div class="otras">
+  <blockquote><q>Me explicaron con honestidad que no valía la pena demandar y me ahorraron mucho dinero.</q><footer>Ricardo S. · asunto mercantil</footer></blockquote>
+  <blockquote><q>Profesionales, puntuales y humanos. La licenciada contestaba hasta en domingo.</q><footer>Elena V. · sucesión</footer></blockquote>
+ </div>
+ <p class="nota">Opiniones de ejemplo para este concepto.</p>
+</div></section>
+
+<section id="consulta" style="padding-top:0"><div class="w">
+ <div class="consulta">
+  <div><span class="eti">Primera consulta</span><h2>Cuéntenos su caso. En 30 minutos sabrá dónde está parado.</h2></div>
+  <div><p>Consulta inicial presencial o por videollamada. Confidencial desde el primer mensaje.</p><a class="btn full" href="#consulta">Escribir por WhatsApp →</a>
+   <dl><dt>Horario</dt><dd>Lunes a viernes, 9:00 – 18:00</dd><dt>Despacho</dt><dd>Av. Chapultepec 000, piso 6, Guadalajara</dd></dl></div>
+ </div>
+ <footer class="pie"><span>© 2026 Ríos &amp; Ventura Abogados · despacho ficticio</span><span>Diseño: <a href="../../">Sitio Listo, estudio web</a></span></footer>
+</div></section>
+</body></html>

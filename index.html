@@ -1,640 +1,347 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sitio Listo · Web studio for businesses that care how they look</title>
-<meta name="description" content="We draw your website before you ask for it. Premium sites built with your real Google reviews, Your website is free: you only buy your domain.">
-<meta property="og:title" content="Sitio Listo · We draw your website before you ask for it">
-<meta property="og:description" content="Premium websites, Your website is free: you only buy your domain.">
-<meta property="og:image" content="https://sitiolisto.github.io/assets/img/og-sitiolisto.jpg?v=1">
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sitio Listo · Estudio de diseño web</title>
+<meta name="description" content="Estudio de diseño web para consultorios, despachos y talleres con buena reputación. Páginas a medida, con su dominio propio. Le mostramos su página terminada antes de cobrarle.">
+<meta property="og:title" content="Sitio Listo · Estudio de diseño web">
+<meta property="og:description" content="Páginas web a medida para negocios que ya tienen buena reputación. Le mostramos la suya antes de cobrarle.">
+<meta property="og:image" content="https://sitiolisto.github.io/assets/og-estudio.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Sitio Listo · We draw your website before you ask for it">
 <meta property="og:url" content="https://sitiolisto.github.io/"><meta property="og:type" content="website"><meta property="og:site_name" content="Sitio Listo">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://sitiolisto.github.io/assets/img/og-sitiolisto.jpg?v=1">
-<meta name="twitter:title" content="Sitio Listo · We draw your website before you ask for it">
-<meta name="theme-color" content="#f3efe6">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3F0E9">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111110'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23F3F0E9' font-family='Georgia' font-style='italic'%3Es%3C/text%3E%3Ccircle cx='24' cy='22' r='2.4' fill='%23D4471F'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root { --paper: #f3efe6; --ink: #141414; --soft: #5f5a52; --line: rgba(20,20,20,.14); --hair: rgba(20,20,20,.07); --or: #ff4f00; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-html, body { overflow-x: hidden; }
-body { background: var(--paper); color: var(--ink); font-family: Inter, -apple-system, Arial, sans-serif; line-height: 1.55; -webkit-font-smoothing: antialiased;
-  background-image: linear-gradient(var(--hair) 1px, transparent 1px), linear-gradient(90deg, var(--hair) 1px, transparent 1px), linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 24px 24px, 24px 24px, 120px 120px, 120px 120px; }
-.serif { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; letter-spacing: -.01em; }
-.mono, .lbl { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; }
-.lbl { color: var(--soft); }
-.lbl b { color: var(--or); font-weight: 500; }
-a { color: inherit; }
-.wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
-/* top */
-.top { position: sticky; top: 0; z-index: 40; background: rgba(243,239,230,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--ink); }
-.top .wrap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 58px; gap: 16px; }
-.word { font-family: "Instrument Serif", serif; font-size: 27px; text-decoration: none; }
-.word em { color: var(--or); }
-.mid { display: flex; gap: 28px; }
-.mid a { text-decoration: none; } .mid a:hover { color: var(--or); }
-.act { display: flex; justify-content: flex-end; gap: 10px; align-items: center; }
-.lang { font-family: "JetBrains Mono", monospace; font-size: 11.5px; border: 1px solid var(--ink); background: none; padding: 6px 10px; cursor: pointer; }
-.btn { display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: var(--paper); text-decoration: none; padding: 14px 20px; font: 500 14px Inter, sans-serif; border: 1px solid var(--ink); transition: background .2s, color .2s; }
-.btn:hover { background: var(--or); border-color: var(--or); color: #fff; }
-.btn.out { background: transparent; color: var(--ink); }
-.btn.sm { padding: 9px 14px; font-size: 13px; }
+:root{--bg:#F3F0E9;--bg2:#EAE5DA;--ink:#111110;--soft:#67635B;--line:#D9D3C6;--acc:#D4471F;--dark:#111110;--dtxt:#EDE9E0;--dsoft:#9C978D;--dline:#2A2926}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.w{max-width:1280px;margin:0 auto;padding:0 32px}
+.serif,h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1}
+em{font-style:italic}
+.eti{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+.eti:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acc)}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--bg);padding:17px 28px;border-radius:999px;font-weight:500;font-size:16px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn .fl{transition:transform .2s}.btn:hover .fl{transform:translateX(4px)}
+.btn.claro{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.claro:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+.btn.acc{background:var(--acc);color:#fff}
+/* header */
+header.top{position:sticky;top:0;z-index:50;background:rgba(243,240,233,.82);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.top.sc{border-bottom-color:var(--line)}
+header.top .w{display:flex;align-items:center;justify-content:space-between;height:74px}
+.marca{display:flex;align-items:baseline;gap:10px}
+.marca b{font-family:"Instrument Serif",serif;font-weight:400;font-size:27px;letter-spacing:-.01em}
+.marca b i{color:var(--acc)}
+.marca span{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft)}
+header nav{display:flex;gap:34px;font-size:15px;color:var(--soft)}
+header nav a:hover{color:var(--ink)}
+header .btn{padding:11px 20px;font-size:14.5px}
 /* hero */
-.hero { padding: 56px 0 72px; border-bottom: 1px solid var(--ink); }
-.hero .wrap { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.08fr); gap: 56px; align-items: start; }
-.sheet { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding-bottom: 12px; margin-bottom: 36px; }
-h1 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: clamp(54px, 7.6vw, 112px); line-height: .9; letter-spacing: -.02em; margin-bottom: 28px; }
-h1 em { color: var(--or); }
-.intro { font-size: 18px; color: #2e2b27; max-width: 470px; margin-bottom: 36px; }
-.builder { border: 1px solid var(--ink); background: #fbf9f4; padding: 22px; position: relative; }
-.builder::before { content: "FIG. 01 — TRY IT"; position: absolute; top: -9px; left: 16px; background: var(--paper); padding: 0 8px; font: 500 11px "JetBrains Mono", monospace; letter-spacing: .08em; color: var(--or); }
-.builder label { display: block; margin-bottom: 8px; }
-.builder input { width: 100%; border: 0; border-bottom: 2px solid var(--ink); background: transparent; font: 400 34px "Instrument Serif", serif; padding: 6px 0; outline: none; color: var(--ink); }
-.builder input::placeholder { color: #b3aca0; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-.chips button { font: 500 11.5px "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .05em; border: 1px solid var(--line); background: none; padding: 8px 12px; cursor: pointer; color: var(--soft); }
-.chips button.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
-/* drawing */
-.draw { position: relative; padding: 34px 0 0; }
-.dim-h { position: absolute; top: 6px; left: 0; right: 0; border-top: 1px solid var(--ink); text-align: center; }
-.dim-h::before, .dim-h::after { content: ""; position: absolute; top: -6px; width: 1px; height: 11px; background: var(--ink); }
-.dim-h::before { left: 0; } .dim-h::after { right: 0; }
-.dim-h span { position: relative; top: -9px; background: var(--paper); padding: 0 8px; }
-.dim-v { position: absolute; left: 6px; top: 34px; bottom: 30px; border-left: 1px solid var(--ink); }
-.dim-v span { position: absolute; top: 50%; left: -26px; transform: rotate(-90deg); background: var(--paper); padding: 0 8px; white-space: nowrap; }
-.frame { border: 1px solid var(--ink); background: #fff; box-shadow: 14px 14px 0 rgba(20,20,20,.08); overflow: hidden; }
-.bar { display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--ink); padding: 9px 12px; background: #fbf9f4; }
-.bar i { width: 9px; height: 9px; border: 1px solid var(--ink); border-radius: 50%; }
-.bar .url { flex: 1; margin-left: 8px; border: 1px solid var(--line); padding: 4px 10px; font: 400 11.5px "JetBrains Mono", monospace; color: var(--soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.site { position: relative; height: 470px; background: #222 center / cover no-repeat; color: #fff; transition: background-image .4s; }
-.site::before { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(10,10,10,.82), rgba(10,10,10,.25)); }
-.site .in { position: relative; padding: 26px 30px; height: 100%; display: flex; flex-direction: column; }
-.snav { display: flex; justify-content: space-between; align-items: center; font-size: 12px; opacity: .9; }
-.snav b { font-weight: 600; font-size: 14px; }
-.scall { background: var(--acc, #ff4f00); color: #111; padding: 6px 11px; font-weight: 600; font-size: 11.5px; }
-.shero { margin-top: auto; max-width: 420px; }
-.skick { font: 500 10.5px "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--acc, #ff4f00); }
-.sname { font-family: "Instrument Serif", serif; font-size: 50px; line-height: .95; margin: 10px 0 10px; overflow-wrap: anywhere; }
-.stag { font-size: 14px; opacity: .85; margin-bottom: 18px; }
-.sbtns { display: flex; gap: 8px; }
-.sbtns span { font-size: 12px; font-weight: 600; padding: 9px 13px; }
-.sbtns span:first-child { background: var(--acc, #ff4f00); color: #111; }
-.sbtns span:last-child { border: 1px solid rgba(255,255,255,.6); }
-.srate { margin-top: 16px; font-size: 12px; opacity: .85; }
-.srate em { color: #fbbc04; font-style: normal; letter-spacing: 2px; margin-right: 6px; }
-.call { position: absolute; display: flex; align-items: center; gap: 8px; font: 500 10.5px "JetBrains Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
-.call b { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--or); color: #fff; font-size: 10px; }
-.call::before { content: ""; width: 44px; height: 1px; background: var(--ink); order: 0; }
-.c1 { top: 140px; right: -6px; flex-direction: row-reverse; } .c2 { top: 330px; right: -6px; flex-direction: row-reverse; } .c3 { bottom: 64px; right: -6px; flex-direction: row-reverse; }
-.mk { position: absolute; z-index: 2; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--or); color: #fff; font: 500 11px "JetBrains Mono", monospace; box-shadow: 0 0 0 3px rgba(255,255,255,.85); }
-.m1 { top: 12px; left: 10px; } .m2 { top: 12px; right: 8px; } .m3 { bottom: 18px; left: 10px; }
-.legend { margin-top: 18px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
-.legend div { border-top: 1px solid var(--ink); padding-top: 8px; font-size: 13px; color: #2e2b27; }
-.legend b { color: var(--or); font: 500 11px "JetBrains Mono", monospace; display: block; }
-/* tape */
-.tape { border-bottom: 1px solid var(--ink); background: var(--ink); color: var(--paper); overflow: hidden; padding: 14px 0; }
-.tape .row { display: flex; width: max-content; animation: run 55s linear infinite; }
-.tape span { font: 500 12.5px "JetBrains Mono", monospace; letter-spacing: .1em; text-transform: uppercase; padding: 0 22px; border-right: 1px solid rgba(243,239,230,.25); }
-.tape span:nth-child(4n+1) { color: var(--or); }
-@keyframes run { to { transform: translateX(-50%); } }
-/* sections */
-section { padding: 110px 0; border-bottom: 1px solid var(--ink); }
-.shead { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 40px; margin-bottom: 56px; }
-h2 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: clamp(42px, 5.4vw, 76px); line-height: .95; letter-spacing: -.015em; }
-h2 em { color: var(--or); }
-.specs { border-top: 1px solid var(--ink); }
-.spec { display: grid; grid-template-columns: 220px minmax(0,1fr) auto; gap: 40px; padding: 22px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
-.spec .v { font-family: "Instrument Serif", serif; font-size: 30px; line-height: 1.1; }
-.spec .n { font: 400 12px "JetBrains Mono", monospace; color: var(--soft); }
-.steps { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-top: 1px solid var(--ink); }
-.step { padding: 30px 28px 34px 0; border-right: 1px dashed var(--line); }
-.step + .step { padding-left: 28px; }
-.step:last-child { border-right: 0; }
-.step .num { font-family: "Instrument Serif", serif; font-style: italic; font-size: 92px; line-height: 1; color: var(--or); }
-.step h3 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: 32px; margin: 14px 0 8px; }
-.step p { color: #3b3732; }
-/* estimate */
-.est { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.1fr); gap: 56px; align-items: start; }
-.doc { background: #fff; border: 1px solid var(--ink); padding: 34px; box-shadow: 14px 14px 0 rgba(20,20,20,.08); position: relative; }
-.doc .dh { display: flex; justify-content: space-between; border-bottom: 2px solid var(--ink); padding-bottom: 14px; margin-bottom: 8px; }
-.tabs { display: flex; gap: 0; margin-bottom: 18px; border: 1px solid var(--ink); width: fit-content; }
-.tabs button { font: 500 11.5px "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .05em; padding: 9px 14px; border: 0; background: none; cursor: pointer; }
-.tabs button.on { background: var(--ink); color: var(--paper); }
-.li { display: flex; align-items: baseline; gap: 10px; padding: 12px 0; font-size: 15px; }
-.li .dots { flex: 1; border-bottom: 1px dotted rgba(20,20,20,.35); transform: translateY(-4px); }
-.li .p { font: 500 14px "JetBrains Mono", monospace; }
-.tot { border-top: 2px solid var(--ink); margin-top: 10px; padding-top: 16px; display: flex; justify-content: space-between; align-items: baseline; }
-.tot .big { font-family: "Instrument Serif", serif; font-size: 64px; line-height: 1; }
-.stamp { position: absolute; right: 26px; bottom: 96px; border: 2px solid var(--or); color: var(--or); padding: 8px 12px; font: 500 12px "JetBrains Mono", monospace; letter-spacing: .1em; transform: rotate(-8deg); }
-.custom { margin-top: 26px; font-size: 15px; color: #3b3732; }
-.custom a { color: var(--or); }
+.hero{padding:70px 0 40px;display:grid;grid-template-columns:1.12fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(52px,7vw,108px);line-height:.95;margin:26px 0 30px}
+.hero h1 em{color:var(--acc)}
+.hero .lead{font-size:20px;color:var(--soft);max-width:31em;line-height:1.55}
+.hero .acc{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
+.garantia{display:flex;align-items:center;gap:12px;margin-top:34px;font-size:14.5px;color:var(--soft)}
+.garantia svg{flex:none}
+.telefonos{position:relative;height:640px}
+.tel{position:absolute;width:250px;border-radius:38px;background:#0d0d0c;padding:9px;box-shadow:0 40px 80px -20px rgba(17,17,16,.35),0 0 0 1px rgba(0,0,0,.05)}
+.tel img{border-radius:30px;width:100%;aspect-ratio:390/844;object-fit:cover;object-position:top}
+.tel.t1{left:6%;top:70px;transform:rotate(-7deg);z-index:1}
+.tel.t2{left:34%;top:0;z-index:3}
+.tel.t3{left:62%;top:90px;transform:rotate(6deg);z-index:2}
+.tel figcaption{position:absolute;left:50%;bottom:-38px;transform:translateX(-50%);white-space:nowrap;font-size:12.5px;color:var(--soft)}
+/* cinta */
+.cinta{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:60px;overflow:hidden;white-space:nowrap}
+.cinta div{display:inline-flex;gap:56px;padding:22px 0;animation:mov 46s linear infinite;font-family:"Instrument Serif",serif;font-size:30px;color:var(--soft)}
+.cinta span:nth-child(odd){color:var(--ink)}
+.cinta i{color:var(--acc);font-style:normal}
+@keyframes mov{to{transform:translateX(-50%)}}
+/* números */
+.cifras{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.cifras div{padding:44px 28px 40px 0}
+.cifras div+div{padding-left:28px;border-left:1px solid var(--line)}
+.cifras b{display:block;font-family:"Instrument Serif",serif;font-weight:400;font-size:52px;line-height:1;margin-bottom:10px}
+.cifras span{font-size:15px;color:var(--soft)}
+section{padding:130px 0}
+.cab{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:70px}
+.cab h2{font-size:clamp(44px,5.6vw,84px);margin-top:20px}
+.cab h2 em{color:var(--acc)}
+.cab p{color:var(--soft);font-size:18.5px;max-width:30em;justify-self:end}
+/* trabajo */
+.trabajo{background:var(--dark);color:var(--dtxt)}
+.trabajo .eti,.trabajo .cab p{color:var(--dsoft)}
+.proy{display:grid;grid-template-columns:1.55fr 1fr;gap:64px;align-items:center;padding:60px 0;border-top:1px solid var(--dline)}
+.proy:nth-of-type(even){grid-template-columns:1fr 1.55fr}
+.proy:nth-of-type(even) .nav{order:2}
+.nav{border-radius:14px;overflow:hidden;background:#1d1c1a;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);transition:transform .4s}
+.proy:hover .nav{transform:translateY(-6px)}
+.nav .barra{display:flex;align-items:center;gap:7px;padding:12px 16px;background:#252421}
+.nav .barra i{width:10px;height:10px;border-radius:50%;background:#3d3b37}
+.nav .barra span{margin-left:14px;font-size:12px;color:#8d887e;background:#1a1917;padding:4px 14px;border-radius:6px;flex:1;max-width:320px}
+.nav img{width:100%;aspect-ratio:1440/900;object-fit:cover;object-position:top}
+.proy .num{font-family:"Instrument Serif",serif;font-size:20px;color:var(--acc)}
+.proy h3{font-size:clamp(40px,4vw,58px);margin:14px 0 8px}
+.proy .giro{font-size:14px;color:var(--dsoft);letter-spacing:.04em}
+.proy p{color:#bcb7ad;margin:24px 0 26px;max-width:28em}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.tags span{font-size:13px;border:1px solid var(--dline);border-radius:999px;padding:5px 13px;color:#bcb7ad}
+.ver{display:inline-flex;gap:10px;align-items:center;font-size:15.5px;border-bottom:1px solid var(--acc);padding-bottom:4px}
+.ver:hover{color:#fff}
+.aviso{margin-top:40px;font-size:14px;color:var(--dsoft);border-top:1px solid var(--dline);padding-top:26px}
+/* método */
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.paso{background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px 30px 32px;display:flex;flex-direction:column;min-height:330px}
+.paso .n{font-family:"Instrument Serif",serif;font-size:62px;line-height:1;color:var(--acc)}
+.paso h3{font-size:32px;margin:auto 0 12px}
+.paso p{color:var(--soft);font-size:15.5px}
+.paso small{display:block;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+/* incluye */
+.incluye{background:var(--bg2)}
+.lista{display:grid;grid-template-columns:repeat(2,1fr);column-gap:70px}
+.item{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:28px 0;border-top:1px solid var(--line)}
+.item svg{width:28px;height:28px;color:var(--acc);margin-top:4px}
+.item h3{font-size:28px;margin-bottom:8px}
+.item p{color:var(--soft);font-size:16px}
+/* estándar */
+.estandar{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.no{border-radius:24px;padding:40px;border:1px solid var(--line)}
+.no:first-child{background:var(--ink);color:var(--dtxt);border-color:var(--ink)}
+.no h3{font-size:34px;margin-bottom:20px}
+.no ul{list-style:none}
+.no li{padding:14px 0;border-top:1px solid var(--line);display:flex;gap:14px;font-size:16.5px}
+.no:first-child li{border-top-color:var(--dline)}
+.no li b{font-weight:500}
+.no li span{color:var(--soft)}
+.no:first-child li span{color:var(--dsoft)}
+.no li:before{content:"—";color:var(--acc)}
+/* estudio */
+.estudio{display:grid;grid-template-columns:1fr 1.25fr;gap:80px}
+.estudio h2{font-size:clamp(44px,5.4vw,80px);margin-top:20px}
+.estudio h2 em{color:var(--acc)}
+.estudio .txt p{font-size:20px;line-height:1.6;color:#3b3934}
+.estudio .txt p+p{margin-top:22px}
+.estudio .txt p.firma{font-family:"Instrument Serif",serif;font-size:28px;color:var(--ink)}
 /* faq */
-details { border-top: 1px solid var(--line); padding: 22px 0; }
-details:last-child { border-bottom: 1px solid var(--line); }
-summary { cursor: pointer; list-style: none; display: flex; gap: 18px; align-items: baseline; font-family: "Instrument Serif", serif; font-size: 30px; }
-summary::-webkit-details-marker { display: none; }
-summary i { font: normal 500 11.5px "JetBrains Mono", monospace; color: var(--or); }
-details p { margin: 10px 0 0 58px; color: #3b3732; max-width: 640px; }
-/* foot */
-.final { padding: 110px 0 40px; border: 0; }
-.giant { font-family: "Instrument Serif", serif; font-size: clamp(80px, 17vw, 260px); line-height: .82; letter-spacing: -.03em; }
-.giant em { color: var(--or); }
-.fl { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; border-top: 1px solid var(--ink); margin-top: 40px; padding-top: 18px; }
-.xy { position: fixed; left: 16px; bottom: 14px; z-index: 50; font: 500 11px "JetBrains Mono", monospace; background: var(--ink); color: var(--paper); padding: 6px 10px; pointer-events: none; }
-.wafab { position: fixed; right: 18px; bottom: 18px; z-index: 60; display: inline-flex; align-items: center; gap: 10px; background: #25d366; color: #0b2e1a; text-decoration: none; padding: 12px 18px 12px 14px; border-radius: 999px; font: 600 14px Inter, sans-serif; box-shadow: 0 10px 28px rgba(20,20,20,.22); transition: transform .2s, box-shadow .2s; }
-.wafab:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(20,20,20,.28); }
-.wafab svg { flex: none; }
-.btn.wa { background: #25d366; border-color: #25d366; color: #0b2e1a; } .btn.wa:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
-.btn.wa svg { width: 18px; height: 18px; }
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
-.reveal.in { opacity: 1; transform: none; }
-.nojs .reveal { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .tape .row { animation: none; } .reveal { opacity: 1; transform: none; transition: none; } }
-
-/* quiz */
-#quiz { background: var(--paper); }
-.qz { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); gap: 56px; align-items: start; }
-.qz .pitch p { color: #3b3732; font-size: 17px; max-width: 430px; margin-top: 22px; }
-.qz .pitch ul { list-style: none; margin-top: 28px; border-top: 1px solid var(--ink); max-width: 430px; }
-.qz .pitch li { display: flex; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; color: #2e2b27; }
-.qz .pitch li b { font: 500 11px "JetBrains Mono", monospace; color: var(--or); min-width: 34px; padding-top: 3px; }
-.qcard { background: #fff; border: 1px solid var(--ink); box-shadow: 14px 14px 0 rgba(20,20,20,.08); position: relative; min-height: 520px; display: flex; flex-direction: column; }
-.qcard::before { content: "FIG. 06 — DIAGNOSIS"; position: absolute; top: -9px; left: 16px; background: var(--paper); padding: 0 8px; font: 500 11px "JetBrains Mono", monospace; letter-spacing: .08em; color: var(--or); }
-html[lang=es] .qcard::before { content: "FIG. 06 — DIAGNÓSTICO"; }
-.qtop { display: flex; justify-content: space-between; align-items: center; padding: 18px 26px; border-bottom: 1px solid var(--ink); }
-.qback { font: 500 11.5px "JetBrains Mono", monospace; letter-spacing: .05em; text-transform: uppercase; background: none; border: 0; cursor: pointer; color: var(--soft); padding: 4px 0; }
-.qback:hover { color: var(--or); } .qback[hidden] { visibility: hidden; display: inline; }
-.qrule { display: flex; gap: 4px; padding: 0 26px; margin-top: 18px; }
-.qrule i { flex: 1; height: 6px; border: 1px solid var(--ink); background: transparent; transition: background .3s; }
-.qrule i.on { background: var(--or); border-color: var(--or); }
-.qbody { padding: 26px 26px 30px; flex: 1; display: flex; flex-direction: column; }
-.qbody.anim { animation: qin .45s ease; }
-@keyframes qin { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
-.qq { font-family: "Instrument Serif", serif; font-size: clamp(32px, 3.6vw, 46px); line-height: 1; letter-spacing: -.01em; margin: 8px 0 22px; }
-.qhint { color: var(--soft); font-size: 14px; margin: -10px 0 18px; }
-.qopts { border-top: 1px solid var(--ink); }
-.qopt { width: 100%; display: grid; grid-template-columns: 30px minmax(0,1fr) auto; gap: 14px; align-items: center; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 15px 8px 15px 0; cursor: pointer; color: var(--ink); font: inherit; transition: background .15s, padding .15s; }
-.qopt:hover, .qopt:focus-visible { background: #f7f4ec; padding-left: 8px; outline: none; }
-.qopt .k { display: grid; place-items: center; width: 26px; height: 26px; border: 1px solid var(--ink); border-radius: 50%; font: 500 11px "JetBrains Mono", monospace; }
-.qopt:hover .k, .qopt.sel .k { background: var(--or); border-color: var(--or); color: #fff; }
-.qopt .tt { font-family: "Instrument Serif", serif; font-size: 25px; line-height: 1.1; display: block; }
-.qopt .ss { display: block; font-size: 13.5px; color: var(--soft); margin-top: 2px; }
-.qopt .ar { font: 500 13px "JetBrains Mono", monospace; color: var(--or); opacity: 0; transition: opacity .15s; }
-.qopt:hover .ar, .qopt.sel .ar { opacity: 1; }
-.qopt.sel { background: #f7f4ec; }
-.qform label { display: block; margin: 0 0 4px; }
-.qform input, .qform textarea { width: 100%; border: 0; border-bottom: 2px solid var(--ink); background: transparent; font: 400 26px "Instrument Serif", serif; padding: 4px 0 6px; outline: none; color: var(--ink); margin-bottom: 18px; border-radius: 0; }
-.qform textarea { font: 400 16px Inter, sans-serif; resize: vertical; min-height: 54px; border: 1px solid var(--line); padding: 10px; }
-.qform input::placeholder, .qform textarea::placeholder { color: #b3aca0; }
-.qform input:focus { border-bottom-color: var(--or); }
-.qform .err { color: #c62d00; font-size: 13px; margin: -10px 0 14px; min-height: 18px; }
-.qform .btn { width: 100%; justify-content: center; cursor: pointer; }
-.qfine { font-size: 12.5px; color: var(--soft); margin-top: 12px; }
-.qres .stamp2 { display: inline-block; border: 2px solid var(--or); color: var(--or); padding: 6px 10px; font: 500 11.5px "JetBrains Mono", monospace; letter-spacing: .1em; transform: rotate(-4deg); margin-bottom: 14px; }
-.qres h3 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: clamp(34px, 3.8vw, 48px); line-height: 1; margin-bottom: 6px; }
-.qres h3 em { color: var(--or); }
-.qres .pk { color: #3b3732; margin-bottom: 18px; }
-.qres .row { border-top: 1px solid var(--line); padding: 14px 0; display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 16px; }
-.qres .row > b { font: 500 11px "JetBrains Mono", monospace; letter-spacing: .06em; text-transform: uppercase; color: var(--or); padding-top: 3px; }
-.qres .row ul { list-style: none; } .qres .row li { padding: 2px 0 2px 24px; position: relative; }
-.qres .row li::before { content: "—"; position: absolute; left: 0; color: var(--soft); }
-.qres .acts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
-.qres .acts .btn { cursor: pointer; }
-.qres .ok { font-size: 14px; color: var(--ink); margin-top: 16px; padding: 12px 14px; background: #f7f4ec; border-left: 3px solid var(--or); }
-.qres .ok a { color: var(--or); font-weight: 600; }
-@media (max-width: 980px) { .qz { grid-template-columns: minmax(0,1fr); gap: 36px; } .qcard { min-height: 0; } .qz .pitch ul { display: none; } }
-@media (max-width: 560px) { .qtop, .qbody { padding-left: 18px; padding-right: 18px; } .qrule { padding: 0 18px; }
-  .qopt .tt { font-size: 22px; } .qres .row { grid-template-columns: minmax(0,1fr); gap: 4px; } .qform input { font-size: 23px; } }
-
-@media (max-width: 980px) {
-  .mid { display: none; } .top .wrap { grid-template-columns: 1fr auto; }
-  .hero .wrap, .est, .shead { grid-template-columns: minmax(0,1fr); gap: 36px; }
-  .steps { grid-template-columns: minmax(0,1fr); } .step, .step + .step { padding: 28px 0; border-right: 0; border-bottom: 1px dashed var(--line); }
-  .spec { grid-template-columns: minmax(0,1fr); gap: 4px; }
-  .call, .dim-v { display: none; } .draw { padding: 30px 0 0; } .dim-h { left: 0; right: 0; }
-  .site { height: 420px; } .xy { display: none; }
-  section { padding: 80px 0; }
+.faq{display:grid;grid-template-columns:1fr 1.6fr;gap:80px}
+.faq h2{font-size:clamp(44px,5vw,74px);margin-top:20px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;font-family:"Instrument Serif",serif;font-size:29px;line-height:1.15}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-family:"Inter Tight",sans-serif;font-size:26px;font-weight:300;color:var(--acc);transition:transform .25s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{color:var(--soft);padding:0 60px 28px 0;font-size:17px}
+/* contacto */
+.contacto{background:var(--dark);color:var(--dtxt);border-radius:40px;margin:0 20px 20px;padding:130px 0 60px;text-align:center}
+.contacto .eti{color:var(--dsoft)}
+.contacto h2{font-size:clamp(54px,8vw,128px);line-height:.95;margin:28px auto 30px;max-width:12em}
+.contacto h2 em{color:var(--acc)}
+.contacto p{color:#bcb7ad;font-size:19px;max-width:32em;margin:0 auto 44px}
+.contacto .acc{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.contacto .btn.claro{color:var(--dtxt);box-shadow:inset 0 0 0 1px #3a3935}
+.contacto .btn.claro:hover{box-shadow:inset 0 0 0 1px var(--dtxt)}
+.pie{margin-top:120px;padding-top:30px;border-top:1px solid var(--dline);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--dsoft);text-align:left}
+.pie a:hover{color:#fff}
+/* aparición */
+.ap{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.ap.vis{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.ap{opacity:1;transform:none;transition:none}.cinta div{animation:none}html{scroll-behavior:auto}}
+@media (max-width:1060px){
+ .hero{grid-template-columns:1fr;padding-top:40px}
+ .telefonos{height:560px;max-width:620px;width:100%;margin:0 auto}
+ .pasos{grid-template-columns:1fr 1fr}
+ .proy,.proy:nth-of-type(even){grid-template-columns:1fr;gap:34px}
+ .proy:nth-of-type(even) .nav{order:0}
 }
-@media (max-width: 560px) { .act .sm { display: none; } .wafab { padding: 14px; right: 14px; bottom: 14px; } .wafab span { display: none; } .mk { position: absolute; z-index: 2; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--or); color: #fff; font: 500 11px "JetBrains Mono", monospace; box-shadow: 0 0 0 3px rgba(255,255,255,.85); }
-.m1 { top: 12px; left: 10px; } .m2 { top: 12px; right: 8px; } .m3 { bottom: 18px; left: 10px; }
-.legend { grid-template-columns: minmax(0,1fr); } .sname { font-size: 40px; } .builder input { font-size: 28px; } .doc { padding: 22px; } .tot .big { font-size: 48px; } }
-</style>
-<script>document.documentElement.className = "js";</script>
-</head><body>
-<header class="top"><div class="wrap">
-  <a class="word" href="#">Sitio <em>Listo</em></a>
-  <nav class="mid lbl"><a href="#specs"><span data-en="Specs" data-es="Especificaciones">Specs</span></a><a href="#process"><span data-en="Process" data-es="Proceso">Process</span></a><a href="#estimate"><span data-en="Estimate" data-es="Cotización">Estimate</span></a><a href="#faq">FAQ</a><a href="#quiz"><span data-en="Diagnosis" data-es="Diagnóstico">Diagnosis</span></a></nav>
-  <div class="act"><button class="lang" onclick="cambiarIdioma()">ES</button><a class="btn sm out walink" href="https://wa.me/525664274135" target="_blank" rel="noopener">WhatsApp</a><a class="btn sm" href="#quiz"><span data-en="Get yours free" data-es="Pedir la mía">Get yours free</span> →</a></div>
+@media (max-width:760px){
+ .w{padding:0 18px}
+ header nav{display:none}
+ .marca span{display:none}
+ header.top .w{height:64px}
+ .hero h1{margin:20px 0 22px}
+ .hero .lead{font-size:18px}
+ .telefonos{height:440px}
+ .tel{width:172px;border-radius:28px;padding:6px}
+ .tel img{border-radius:23px}
+ .tel.t1{left:0;top:60px}.tel.t2{left:50%;margin-left:-86px}.tel.t3{left:auto;right:0;top:70px}
+ .tel figcaption{display:none}
+ .cinta div{font-size:24px;gap:36px}
+ .cifras{grid-template-columns:1fr 1fr}
+ .cifras div,.cifras div+div{padding:28px 14px 26px 0;border-left:0}
+ .cifras div:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
+ .cifras div:nth-child(n+3){border-top:1px solid var(--line)}
+ .cifras b{font-size:40px}
+ section{padding:90px 0}
+ .cab,.estudio,.faq{grid-template-columns:1fr;gap:22px}
+ .cab{margin-bottom:44px}
+ .cab p{justify-self:start;font-size:17px}
+ .pasos,.lista,.estandar{grid-template-columns:1fr}
+ .paso{min-height:0}.paso h3{margin-top:30px}
+ .no{padding:30px 24px}
+ .estudio{gap:30px}
+ .estudio .txt p{font-size:18px}
+ summary{font-size:24px}
+ details p{padding-right:0}
+ .contacto{margin:0 10px 10px;border-radius:28px;padding:90px 0 40px}
+ .contacto p{font-size:17px}
+ .pie{flex-direction:column;margin-top:80px}
+}
+</style></head>
+<body>
+
+<header class="top" id="top"><div class="w">
+ <a class="marca" href="#"><b>Sitio <i>Listo</i></b><span>Estudio web</span></a>
+ <nav><a href="#trabajo">Trabajo</a><a href="#metodo">Método</a><a href="#incluye">Qué incluye</a><a href="#estudio">Estudio</a><a href="#preguntas">Preguntas</a></nav>
+ <a class="btn" href="https://wa.me/525664274135?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20la%20de%20mi%20negocio." target="_blank" rel="noopener">Hablemos <span class="fl">→</span></a>
 </div></header>
 
-<section class="hero"><div class="wrap">
-  <div>
-    <div class="sheet lbl"><span><span data-en="Web studio · Sheet 01 / 05" data-es="Estudio web · Hoja 01 / 05">Web studio · Sheet 01 / 05</span></span><span><span data-en="Scale 1:1" data-es="Escala 1:1">Scale 1:1</span></span></div>
-    <h1><span data-en="We draw your website &lt;em&gt;before&lt;/em&gt; you ask for it." data-es="Dibujamos su página &lt;em&gt;antes&lt;/em&gt; de que la pida.">We draw your website <em>before</em> you ask for it.</span></h1>
-    <p class="intro" data-en="Premium websites for businesses that care how they look. Built with your real Google reviews. Your website is free: you only buy your domain." data-es="Páginas premium para negocios que cuidan su imagen. Hechas con sus reseñas reales de Google. Su página es gratis: usted solo compra su dominio.">Premium websites for businesses that care how they look. Built with your real Google reviews. Your website is free: you only buy your domain.</p>
-    <div class="builder">
-      <label class="lbl" for="nm"><span data-en="Type your business name" data-es="Escriba el nombre de su negocio">Type your business name</span></label>
-      <input id="nm" maxlength="40" placeholder="Bayou Smiles Dental" autocomplete="off">
-      <div class="chips" id="chips">
-        <button data-k="dental" class="on">Dental</button><button data-k="legal">Law</button><button data-k="inmobiliaria">Real estate</button>
-        <button data-k="arquitectura">Architecture</button><button data-k="ingenieria">Engineering</button><button data-k="taller">Auto</button>
-      </div>
-    </div>
-    <div class="cta"><a class="btn" href="#quiz" id="go"><span data-en="Draw mine for free" data-es="Dibujen la mía gratis">Draw mine for free</span> →</a><a class="btn out" id="sample" href="https://sitiolisto.github.io/muestra-dental/" target="_blank" rel="noopener"><span data-en="Open a full sample" data-es="Ver muestra completa">Open a full sample</span> ↗</a></div>
+<main>
+<div class="w">
+ <div class="hero">
+  <div class="ap">
+   <span class="eti">Estudio de diseño web · México y España</span>
+   <h1>Su reputación ya está hecha. <em>Nosotros</em> la ponemos en internet.</h1>
+   <p class="lead">Diseñamos páginas web a medida para consultorios, despachos y talleres cuyos clientes ya hablan bien de ellos. Una página que se ve como el negocio que usted construyó, y que convierte esas opiniones en citas.</p>
+   <div class="acc"><a class="btn" href="#trabajo">Ver trabajo <span class="fl">→</span></a><a class="btn claro" href="https://wa.me/525664274135?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20de%20mi%20negocio." target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+   <p class="garantia"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4471F" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6l7-3z"/><path d="M8.5 12l2.4 2.4L15.5 10"/></svg>Le mostramos su página terminada antes de pedirle un peso.</p>
   </div>
-  <div class="draw">
-    <div class="dim-h lbl"><span>1440 px</span></div>
-    <div class="frame">
-      <div class="bar"><i></i><i></i><i></i><span class="url" id="url">bayousmilesdental.com</span></div>
-      <div class="site" id="site"><b class="mk m1">A</b><b class="mk m2">B</b><b class="mk m3">C</b><div class="in">
-        <div class="snav"><b id="sn">Bayou Smiles Dental</b><span class="scall">(713) 555-0142</span></div>
-        <div class="shero"><div class="skick" id="sk">Dental office · Houston, TX</div><div class="sname" id="sname">Bayou Smiles Dental</div>
-          <div class="stag" id="stag">Gentle, modern dentistry for the whole family.</div>
-          <div class="sbtns"><span>Call now</span><span>Request a quote</span></div>
-          <div class="srate"><em>★★★★★</em><span data-en="Your real Google reviews" data-es="Sus reseñas reales de Google">Your real Google reviews</span></div></div>
-      </div></div>
-    </div>
-    <div class="legend"><div><b>A</b><span data-en="Name, colors and photos of your business." data-es="Nombre, colores y fotos de su negocio.">Name, colors and photos of your business.</span></div><div><b>B</b><span data-en="Call and quote buttons that follow on mobile." data-es="Botones de llamar y cotizar siempre a la mano.">Call and quote buttons that follow on mobile.</span></div><div><b>C</b><span data-en="Your best Google reviews, word for word." data-es="Sus mejores reseñas de Google, textuales.">Your best Google reviews, word for word.</span></div></div>
+  <div class="telefonos ap" aria-label="Tres proyectos del estudio vistos en celular">
+   <figure class="tel t1"><img src="assets/trabajo/clinica-alba-movil.jpg" alt="Página de Clínica Dental Alba en celular"></figure>
+   <figure class="tel t2"><img src="assets/trabajo/rios-ventura-movil.jpg" alt="Página de Ríos &amp; Ventura Abogados en celular"></figure>
+   <figure class="tel t3"><img src="assets/trabajo/taller-ibarra-movil.jpg" alt="Página de Taller Ibarra en celular"></figure>
   </div>
+ </div>
+</div>
+
+<div class="cinta" aria-hidden="true"><div>
+ <span>Consultorios dentales</span><i>✦</i><span>Despachos de abogados</span><i>✦</i><span>Talleres mecánicos</span><i>✦</i><span>Clínicas</span><i>✦</i><span>Arquitectos</span><i>✦</i><span>Notarías</span><i>✦</i>
+ <span>Consultorios dentales</span><i>✦</i><span>Despachos de abogados</span><i>✦</i><span>Talleres mecánicos</span><i>✦</i><span>Clínicas</span><i>✦</i><span>Arquitectos</span><i>✦</i><span>Notarías</span><i>✦</i>
+</div></div>
+
+<div class="w"><div class="cifras">
+ <div class="ap"><b>48 h</b><span>para ver la primera versión de su página</span></div>
+ <div class="ap"><b>100 %</b><span>a medida: ningún cliente comparte diseño</span></div>
+ <div class="ap"><b>Suyo</b><span>el dominio, a su nombre, desde el primer día</span></div>
+ <div class="ap"><b>60 / 40</b><span>se paga al aprobar y al publicar, nunca antes</span></div>
+</div></div>
+
+<section class="trabajo" id="trabajo"><div class="w">
+ <div class="cab ap"><div><span class="eti">Trabajo seleccionado</span><h2>Cada negocio, <em>su propia</em> página.</h2></div><p>Una clínica que quiere quitarle el miedo al paciente no se diseña igual que un despacho que tiene que inspirar respeto. Empezamos por entender eso.</p></div>
+
+ <article class="proy ap">
+  <a class="nav" href="trabajo/clinica-alba/" target="_blank" rel="noopener"><div class="barra"><i></i><i></i><i></i><span>clinicadentalalba.mx</span></div><img src="assets/trabajo/clinica-alba-escritorio.jpg" alt="Página de inicio de Clínica Dental Alba" loading="lazy"></a>
+  <div><span class="num">01</span><h3>Clínica Dental Alba</h3><span class="giro">Odontología · Monterrey</span>
+   <p>Para pacientes que llegan con miedo: colores cálidos, formas suaves, el costo por escrito desde la portada y una sección que explica, paso a paso, qué pasa en la primera visita.</p>
+   <div class="tags"><span>Identidad</span><span>Página web</span><span>Citas por WhatsApp</span></div>
+   <a class="ver" href="trabajo/clinica-alba/" target="_blank" rel="noopener">Ver proyecto completo ↗</a></div>
+ </article>
+
+ <article class="proy ap">
+  <a class="nav" href="trabajo/rios-ventura/" target="_blank" rel="noopener"><div class="barra"><i></i><i></i><i></i><span>riosventura.mx</span></div><img src="assets/trabajo/rios-ventura-escritorio.jpg" alt="Página de inicio de Ríos &amp; Ventura Abogados" loading="lazy"></a>
+  <div><span class="num">02</span><h3>Ríos &amp; Ventura</h3><span class="giro">Abogados · Guadalajara</span>
+   <p>Un despacho que vende confianza. Tipografía clásica, poco ruido y una promesa que sus clientes valoran más que cualquier título: saber en qué va su caso cada semana.</p>
+   <div class="tags"><span>Página web</span><span>Redacción</span><span>Consulta en línea</span></div>
+   <a class="ver" href="trabajo/rios-ventura/" target="_blank" rel="noopener">Ver proyecto completo ↗</a></div>
+ </article>
+
+ <article class="proy ap">
+  <a class="nav" href="trabajo/taller-ibarra/" target="_blank" rel="noopener"><div class="barra"><i></i><i></i><i></i><span>talleribarra.es</span></div><img src="assets/trabajo/taller-ibarra-escritorio.jpg" alt="Página de inicio de Taller Ibarra" loading="lazy"></a>
+  <div><span class="num">03</span><h3>Taller Ibarra</h3><span class="giro">Mecánica · Valencia, España</span>
+   <p>Directo, como el oficio. Precios a la vista, letra grande y un solo botón para pedir cita desde el celular. Lo que un conductor con prisa necesita en diez segundos.</p>
+   <div class="tags"><span>Página web</span><span>Precios</span><span>Google Maps</span></div>
+   <a class="ver" href="trabajo/taller-ibarra/" target="_blank" rel="noopener">Ver proyecto completo ↗</a></div>
+ </article>
+
+ <p class="aviso">Estos tres son proyectos de concepto: negocios ficticios que diseñamos para mostrar cómo trabaja el estudio.</p>
 </div></section>
 
-<div class="tape"><div class="row"><span>Dentists</span><span>Law firms</span><span>Real estate</span><span>Architects</span><span>Engineers</span><span>Med spas</span><span>Accountants</span><span>Clinics</span><span>Chiropractors</span><span>Veterinarians</span><span>Interior designers</span><span>Contractors</span><span>Roofers</span><span>Auto repair</span><span>Restaurants</span><span>Salons</span><span>Fitness studios</span><span>Photographers</span><span>Insurance agents</span><span>Plumbers</span><span>Landscapers</span><span>Dentists</span><span>Law firms</span><span>Real estate</span><span>Architects</span><span>Engineers</span><span>Med spas</span><span>Accountants</span><span>Clinics</span><span>Chiropractors</span><span>Veterinarians</span><span>Interior designers</span><span>Contractors</span><span>Roofers</span><span>Auto repair</span><span>Restaurants</span><span>Salons</span><span>Fitness studios</span><span>Photographers</span><span>Insurance agents</span><span>Plumbers</span><span>Landscapers</span></div></div>
-
-<section id="specs"><div class="wrap">
-  <div class="shead"><span class="lbl reveal"><b>FIG. 02</b> — <span data-en="Specifications" data-es="Especificaciones">Specifications</span></span><h2 class="reveal"><span data-en="Everything specified. &lt;em&gt;Nothing&lt;/em&gt; generic." data-es="Todo especificado. &lt;em&gt;Nada&lt;/em&gt; genérico.">Everything specified. <em>Nothing</em> generic.</span></h2></div>
-  <div class="specs">
-    <div class="spec reveal"><span class="lbl"><span data-en="Delivery" data-es="Entrega">Delivery</span></span><span class="v"><span data-en="48 hours from your approval" data-es="48 horas desde su aprobación">48 hours from your approval</span></span><span class="n">T+48h</span></div>
-    <div class="spec reveal"><span class="lbl"><span data-en="Content" data-es="Contenido">Content</span></span><span class="v"><span data-en="Your reviews, photos and hours, from your Google profile" data-es="Sus reseñas, fotos y horario, de su perfil de Google">Your reviews, photos and hours, from your Google profile</span></span><span class="n">SRC: GOOGLE</span></div>
-    <div class="spec reveal"><span class="lbl"><span data-en="Languages" data-es="Idiomas">Languages</span></span><span class="v">English · Español</span><span class="n">EN / ES</span></div>
-    <div class="spec reveal"><span class="lbl"><span data-en="Leads" data-es="Clientes">Leads</span></span><span class="v"><span data-en="Quote requests straight to your WhatsApp or email" data-es="Solicitudes directo a su WhatsApp o correo">Quote requests straight to your WhatsApp or email</span></span><span class="n">FORM → WA</span></div>
-    <div class="spec reveal"><span class="lbl"><span data-en="Ownership" data-es="Propiedad">Ownership</span></span><span class="v"><span data-en="Your domain, registered in your name" data-es="Su dominio, registrado a su nombre">Your domain, registered in your name</span></span><span class="n">.COM</span></div>
-    <div class="spec reveal"><span class="lbl"><span data-en="Upkeep" data-es="Mantenimiento">Upkeep</span></span><span class="v"><span data-en="Hosting and SSL, free" data-es="Hosting y SSL, gratis">Hosting and SSL, free</span></span><span class="n">$0</span></div>
-  </div>
+<section id="metodo"><div class="w">
+ <div class="cab ap"><div><span class="eti">Método</span><h2>Primero la ve. <em>Después</em> decide.</h2></div><p>No le pedimos que confíe en nosotros a ciegas. Le enseñamos su página hecha con sus propias reseñas, y si no le convence, no paga nada.</p></div>
+ <div class="pasos">
+  <div class="paso ap"><span class="n">01</span><h3>Escuchamos</h3><p>Una plática de quince minutos: qué servicio quiere que le pidan más y qué hace que sus clientes regresen.</p><small>Sin costo</small></div>
+  <div class="paso ap"><span class="n">02</span><h3>Diseñamos</h3><p>En 48 horas tiene la primera versión, con sus reseñas reales, sus fotos y sus servicios. La ve en su celular, terminada.</p><small>Sin costo</small></div>
+  <div class="paso ap"><span class="n">03</span><h3>Afinamos</h3><p>Cambiamos lo que usted quiera hasta que la sienta suya. Cuando la aprueba, se aparta con el 60 %.</p><small>60 % al aprobar</small></div>
+  <div class="paso ap"><span class="n">04</span><h3>Publicamos</h3><p>Dominio a su nombre, ficha de Google Maps lista y botón de WhatsApp funcionando. Liquida el 40 % con su página ya en línea.</p><small>40 % al publicar</small></div>
+ </div>
 </div></section>
 
-<section id="process"><div class="wrap">
-  <div class="shead"><span class="lbl reveal"><b>FIG. 03</b> — <span data-en="Process" data-es="Proceso">Process</span></span><h2 class="reveal"><span data-en="Drawn for you. &lt;em&gt;Free&lt;/em&gt; to keep." data-es="Se la dibujamos. &lt;em&gt;Gratis&lt;/em&gt; para usted.">Drawn for you. <em>Free</em> to keep.</span></h2></div>
-  <div class="steps">
-    <div class="step reveal"><div class="num">i.</div><h3><span data-en="We draw it" data-es="La dibujamos">We draw it</span></h3><p  data-en="A full preview of your site, with your name, services, photos and reviews. Free." data-es="Una vista previa completa con su nombre, servicios, fotos y reseñas. Gratis.">A full preview of your site, with your name, services, photos and reviews. Free.</p></div>
-    <div class="step reveal"><div class="num">ii.</div><h3><span data-en="You mark it up" data-es="Usted la corrige">You mark it up</span></h3><p  data-en="Change colors, photos or words. We revise until it feels like yours." data-es="Cambie colores, fotos o textos. Ajustamos hasta que se sienta suya.">Change colors, photos or words. We revise until it feels like yours.</p></div>
-    <div class="step reveal"><div class="num">iii.</div><h3><span data-en="We build it" data-es="La construimos">We build it</span></h3><p  data-en="You buy your domain, we connect it and keep it running. Add booking or a store whenever you want." data-es="Usted compra su dominio, nosotros la conectamos y la mantenemos. Agregue agenda o tienda cuando quiera.">You buy your domain, we connect it and keep it running. Add booking or a store whenever you want.</p></div>
-  </div>
+<section class="incluye" id="incluye"><div class="w">
+ <div class="cab ap"><div><span class="eti">Qué incluye</span><h2>Todo lo necesario. <em>Nada</em> de relleno.</h2></div><p>Cada proyecto incluye lo que hace que una página traiga clientes, no solo que se vea bonita.</p></div>
+ <div class="lista">
+  <div class="item ap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20l-7-7 3-3 4 4 4-4 3 3-7 7z"/><path d="M5 4h14"/></svg><div><h3>Diseño a medida</h3><p>Colores, tipografía y estructura pensados para su negocio. No usamos plantillas compartidas.</p></div></div>
+  <div class="item ap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.6 5.5 6 .8-4.4 4.1 1.1 6L12 16.6 6.7 19.4l1.1-6L3.4 9.3l6-.8z"/></svg><div><h3>Sus reseñas al frente</h3><p>Las mejores opiniones de sus clientes en Google, donde un visitante nuevo las lee primero.</p></div></div>
+  <div class="item ap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg><div><h3>Citas por WhatsApp</h3><p>Un botón en cada sección para que le escriban directo, con el mensaje ya redactado.</p></div></div>
+  <div class="item ap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><h3>Google Maps al día</h3><p>Dejamos su ficha con horario, fotos y el enlace a su página, para que lo encuentren cerca.</p></div></div>
+  <div class="item ap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><div><h3>Dominio propio</h3><p>suconsultorio.mx o el que elija, registrado a su nombre. Es suyo aunque deje de trabajar con nosotros.</p></div></div>
+  <div class="item ap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><div><h3>Hecha para el celular</h3><p>La mayoría de sus visitas llegarán desde un teléfono, así que la diseñamos primero para ahí.</p></div></div>
+  <div class="item ap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg><div><h3>Rápida y segura</h3><p>Carga en un par de segundos, con certificado de seguridad (el candado) incluido.</p></div></div>
+  <div class="item ap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg><div><h3>Inglés y español</h3><p>Si atiende pacientes o clientes de fuera, su página les habla en su idioma.</p></div></div>
+ </div>
 </div></section>
 
-<section id="estimate"><div class="wrap est">
-  <div><span class="lbl reveal"><b>FIG. 04</b> — <span data-en="Estimate" data-es="Cotización">Estimate</span></span><h2 class="reveal" style="margin-top:18px"><span data-en="Your website. &lt;em&gt;Zero&lt;/em&gt; to pay." data-es="Su página. &lt;em&gt;Cero&lt;/em&gt; por pagar.">Your website. <em>Zero</em> to pay.</span></h2>
-    <p class="custom reveal" data-en="No contracts, no monthly fee. You only pay for extras you ask for, with a clear quote first." data-es="Sin contratos ni mensualidad. Solo paga los extras que pida, con cotización clara antes.">No contracts, no monthly fee. You only pay for extras you ask for, with a clear quote first.</p>
-    <p class="custom reveal"><span data-en="Need something entirely custom? &lt;a href=&quot;#quiz&quot;&gt;Take the 1-minute diagnosis.&lt;/a&gt;" data-es="¿Necesita algo totalmente a la medida? &lt;a href=&quot;#quiz&quot;&gt;Haga el diagnóstico de 1 minuto.&lt;/a&gt;">Need something entirely custom? <a href="#quiz">Take the 1-minute diagnosis.</a></span></p></div>
-  <div class="doc reveal">
-    <div class="dh"><span class="serif" style="font-size:30px"><span data-en="Estimate" data-es="Cotización">Estimate</span></span><span class="lbl">No. 0001 · 2026</span></div>
-    <div class="li"><span id="item"><span data-en="Website design &amp; build" data-es="Diseño y construcción">Website design &amp; build</span></span><span class="dots"></span><span class="p" id="price"><span data-en="free" data-es="gratis">free</span></span></div>
-    <div class="li"><span><span data-en="Your reviews, photos &amp; hours" data-es="Sus reseñas, fotos y horario">Your reviews, photos &amp; hours</span></span><span class="dots"></span><span class="p"><span data-en="incl." data-es="incl.">incl.</span></span></div>
-    <div class="li"><span><span data-en="Quote form to WhatsApp / email" data-es="Formulario a WhatsApp / correo">Quote form to WhatsApp / email</span></span><span class="dots"></span><span class="p"><span data-en="incl." data-es="incl.">incl.</span></span></div>
-    <div class="li"><span>English / Español</span><span class="dots"></span><span class="p"><span data-en="incl." data-es="incl.">incl.</span></span></div>
-    <div class="li"><span><span data-en="Hosting &amp; SSL" data-es="Hosting y SSL">Hosting &amp; SSL</span></span><span class="dots"></span><span class="p"><span data-en="free" data-es="gratis">free</span></span></div>
-    <div class="li"><span><span data-en="Your domain (you buy it)" data-es="Su dominio (lo compra usted)">Your domain (you buy it)</span></span><span class="dots"></span><span class="p">~$12 / <span data-en="yr" data-es="año">yr</span></span></div>
-    <div class="li"><span><span data-en="Booking, store, Google Maps, edits (optional)" data-es="Agenda, tienda, Google Maps, cambios (opcional)">Booking, store, Google Maps, edits (optional)</span></span><span class="dots"></span><span class="p"><span data-en="quote" data-es="cotización">quote</span></span></div>
-    <div class="tot"><span class="lbl"><span data-en="Due today" data-es="Por pagar hoy">Due today</span></span><span class="big">$0</span></div>
-    <span class="stamp"><span data-en="FREE WEBSITE" data-es="PÁGINA GRATIS">FREE WEBSITE</span></span>
-  </div>
+<section><div class="w">
+ <div class="cab ap"><div><span class="eti">Nuestro estándar</span><h2>Cómo trabajamos, <em>por escrito.</em></h2></div><p>Lo que puede esperar de nosotros, y lo que nunca le vamos a hacer.</p></div>
+ <div class="estandar">
+  <div class="no ap"><h3>Lo que sí hacemos</h3><ul>
+   <li><span><b>Le contestamos el mismo día.</b> Por WhatsApp, en horario de oficina.</span></li>
+   <li><span><b>Precio cerrado y por escrito</b> antes de empezar. Sin cobros sorpresa.</span></li>
+   <li><span><b>Pocos proyectos a la vez</b>, para que el suyo tenga atención de verdad.</span></li>
+   <li><span><b>Cambios pequeños sin costo</b> durante el primer mes después de publicar.</span></li>
+  </ul></div>
+  <div class="no ap"><h3>Lo que nunca hacemos</h3><ul>
+   <li><span><b>Cobrarle antes de que vea su página.</b> Primero la ve, después decide.</span></li>
+   <li><span><b>Quedarnos con su dominio.</b> Se registra a su nombre.</span></li>
+   <li><span><b>Amarrarlo con contratos forzosos.</b> Se queda porque quiere.</span></li>
+   <li><span><b>Venderle lo que no necesita.</b> Si algo no le sirve, se lo decimos.</span></li>
+  </ul></div>
+ </div>
 </div></section>
 
-<section id="faq"><div class="wrap">
-  <div class="shead"><span class="lbl reveal"><b>FIG. 05</b> — FAQ</span><h2 class="reveal"><span data-en="Fine print, &lt;em&gt;in plain English.&lt;/em&gt;" data-es="La letra chica, &lt;em&gt;en claro.&lt;/em&gt;">Fine print, <em>in plain English.</em></span></h2></div>
-  <div class="reveal"><details><summary><i>Q.01</i><span data-en="Is the website really free?" data-es="¿De verdad la página es gratis?">Is the website really free?</span></summary><p  data-en="Yes. We draw it, publish it and host it at no cost. You only buy your own domain (about $12 a year, wherever you like) and we connect it." data-es="Sí. La dibujamos, la publicamos y la hospedamos sin costo. Usted solo compra su dominio (cuesta poco al año y lo compra donde quiera) y nosotros lo conectamos.">Yes. We draw it, publish it and host it at no cost. You only buy your own domain (about $12 a year, wherever you like) and we connect it.</p></details><details><summary><i>Q.02</i><span data-en="Why is it free?" data-es="¿Por qué es gratis?">Why is it free?</span></summary><p  data-en="Every site carries a small “by Sitio Listo” at the bottom. That is how other businesses find us." data-es="Cada página lleva abajo un pequeño “by Sitio Listo”. Así nos conocen otros negocios.">Every site carries a small “by Sitio Listo” at the bottom. That is how other businesses find us.</p></details><details><summary><i>Q.03</i><span data-en="What do you charge for?" data-es="¿Qué se cobra?">What do you charge for?</span></summary><p  data-en="Only extras: online booking, a catalog or store, setting up your Google Maps listing, and edits after launch. You get a clear quote first." data-es="Solo lo extra: agenda de citas en línea, catálogo o tienda, dejar lista su ficha de Google Maps y los cambios después de publicarla. Primero recibe una cotización clara.">Only extras: online booking, a catalog or store, setting up your Google Maps listing, and edits after launch. You get a clear quote first.</p></details><details><summary><i>Q.04</i><span data-en="Who owns the domain?" data-es="¿De quién es el dominio?">Who owns the domain?</span></summary><p  data-en="You do. You buy it in your name." data-es="Suyo. Lo compra a su nombre.">You do. You buy it in your name.</p></details></div>
+<section class="incluye" id="estudio"><div class="w estudio">
+ <div class="ap"><span class="eti">El estudio</span><h2>Un estudio pequeño, <em>a propósito.</em></h2></div>
+ <div class="txt ap">
+  <p>Sitio Listo nació de algo que vimos una y otra vez: los negocios con mejores reseñas en Google casi nunca tienen una página que les haga justicia. Un dentista con doscientas opiniones de cinco estrellas aparece en internet con una foto borrosa y un teléfono que no contesta.</p>
+  <p>Trabajamos de forma remota con negocios de México y España. Diseñamos cada página desde cero, la escribimos con las palabras de sus propios clientes y nos quedamos cerca después de publicarla.</p>
+  <p class="firma">Usted ya hizo lo difícil. Nosotros hacemos que se vea.</p>
+ </div>
 </div></section>
 
-<section id="quiz"><div class="wrap qz">
-  <div class="pitch">
-    <span class="lbl reveal"><b>FIG. 06</b> — <span data-en="Diagnosis" data-es="Diagnóstico">Diagnosis</span></span>
-    <h2 class="reveal" style="margin-top:18px"><span data-en="What is your business &lt;em&gt;missing&lt;/em&gt; online?" data-es="¿Qué le &lt;em&gt;falta&lt;/em&gt; a su negocio en internet?">What is your business <em>missing</em> online?</span></h2>
-    <p class="reveal" data-en="Five quick questions, one minute. You get a diagnosis made for your business: what fits you, what we would build and what to avoid." data-es="Cinco preguntas rápidas, un minuto. Recibe un diagnóstico hecho para su negocio: qué le conviene, qué le haríamos y qué evitar.">Five quick questions, one minute. You get a diagnosis made for your business: what fits you, what we would build and what to avoid.</p>
-    <ul class="reveal">
-      <li><b>01</b><span data-en="Where your business is today" data-es="En qué etapa está su negocio">Where your business is today</span></li>
-      <li><b>02</b><span data-en="What you want to achieve" data-es="Qué quiere lograr">What you want to achieve</span></li>
-      <li><b>03</b><span data-en="What you have tried before" data-es="Qué ha intentado antes">What you have tried before</span></li>
-      <li><b>04</b><span data-en="What is holding you back" data-es="Qué lo frena hoy">What is holding you back</span></li>
-      <li><b>05</b><span data-en="When you want it" data-es="Para cuándo lo quiere">When you want it</span></li>
-    </ul>
-  </div>
-  <div class="qcard reveal" id="qcard" aria-live="polite">
-    <div class="qtop"><button class="qback" id="qback" type="button" hidden></button><span class="lbl" id="qstep"></span></div>
-    <div class="qrule" id="qrule"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="qbody" id="qbody"></div>
-  </div>
+<section id="preguntas"><div class="w faq">
+ <div class="ap"><span class="eti">Preguntas</span><h2>Lo que nos <em>preguntan</em> antes de empezar.</h2></div>
+ <div class="ap">
+  <details open><summary>¿Cuánto cuesta una página?</summary><p>Depende de lo que necesite su negocio. Después de una plática corta le mandamos una propuesta por escrito con precio cerrado. Se paga en dos partes: 60 % cuando aprueba el diseño y 40 % cuando su página ya está publicada.</p></details>
+  <details><summary>¿Y si no me gusta?</summary><p>No paga nada. Usted ve su página terminada antes de cualquier pago. Si no le convence después de los ajustes, ahí termina, sin compromiso.</p></details>
+  <details><summary>¿Cuánto tarda?</summary><p>La primera versión, 48 horas. Con sus comentarios, la mayoría de las páginas queda publicada en una semana.</p></details>
+  <details><summary>¿De quién es la página y el dominio?</summary><p>Suyos. El dominio se registra a su nombre y, si algún día quiere irse, se lleva todo.</p></details>
+  <details><summary>¿Necesito saber de computación?</summary><p>No. Para cambiar un horario, un precio o una foto, nos manda un WhatsApp y lo cambiamos nosotros.</p></details>
+  <details><summary>¿Trabajan fuera de México?</summary><p>Sí. Trabajamos con negocios de México y España, y diseñamos páginas en español e inglés. Todo el proceso es en línea.</p></details>
+ </div>
 </div></section>
+</main>
 
-<section class="final"><div class="wrap">
-  <span class="lbl"><b>END OF SHEET</b> — <span data-en="Ready when you are" data-es="Listos cuando usted diga">Ready when you are</span></span>
-  <div class="giant">Sitio<br><em>Listo.</em></div>
-  <div class="cta"><a class="btn wa walink" href="https://wa.me/525664274135" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span data-en="Message us on WhatsApp" data-es="Escríbanos por WhatsApp">Message us on WhatsApp</span></a><a class="btn out" href="#quiz"><span data-en="Take the 1-minute diagnosis" data-es="Hacer el diagnóstico de 1 minuto">Take the 1-minute diagnosis</span> ↑</a></div>
-  <div class="fl lbl"><span>© 2026 Sitio Listo · <span data-en="Web studio" data-es="Estudio web">Web studio</span></span><span><a class="walink" href="https://wa.me/525664274135" target="_blank" rel="noopener">WhatsApp +52 56 6427 4135</a> · <a href="#quiz"><span data-en="Free diagnosis" data-es="Diagnóstico gratis">Free diagnosis</span> ↑</a></span></div>
-</div></section>
-<div class="xy" id="xy">X 0000 · Y 0000</div>
-<a class="wafab walink" href="https://wa.me/525664274135" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span><span data-en="Questions? WhatsApp us" data-es="¿Dudas? Escríbanos">Questions? WhatsApp us</span></span></a>
+<footer class="contacto" id="contacto"><div class="w">
+ <span class="eti ap">Contacto</span>
+ <h2 class="ap">¿Le mostramos cómo <br>se vería <em>la suya?</em></h2>
+ <p class="ap">Mándenos el nombre de su negocio. En 48 horas le enseñamos su página terminada, con sus reseñas, sin costo y sin compromiso.</p>
+ <div class="acc ap"><a class="btn acc" href="https://wa.me/525664274135?text=Hola%2C%20me%20gustar%C3%ADa%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20p%C3%A1gina%20de%20mi%20negocio%3A%20" target="_blank" rel="noopener">Escribir por WhatsApp <span class="fl">→</span></a><a class="btn claro" href="mailto:vd561838@gmail.com?subject=P%C3%A1gina%20para%20mi%20negocio">vd561838@gmail.com</a></div>
+ <div class="pie"><span>© 2026 Sitio Listo · Estudio de diseño web</span><span>México · España · En línea</span><a href="#top">Volver arriba ↑</a></div>
+</div></footer>
 
 <script>
-var P = {
-  dental: ["https://sitiolisto.github.io/assets/img/dental-0.jpg", "#5eead4", "Dental office", "Consultorio dental", "Gentle, modern dentistry for the whole family.", "Odontología moderna y amable para toda la familia.", "Bayou Smiles Dental"],
-  legal: ["https://sitiolisto.github.io/assets/img/legal-0.jpg", "#c8a96a", "Law firm", "Despacho de abogados", "Experienced legal counsel, on your side.", "Asesoría legal con experiencia, de su lado.", "Reyes & Cole Law"],
-  inmobiliaria: ["https://sitiolisto.github.io/assets/img/inmobiliaria-0.jpg", "#d4b483", "Real estate", "Bienes raíces", "Find the home that fits your life.", "Encuentre la casa que va con su vida.", "Live Oak Realty"],
-  arquitectura: ["https://sitiolisto.github.io/assets/img/arquitectura-0.jpg", "#ff7a3d", "Architecture studio", "Estudio de arquitectura", "Spaces designed around the way you live.", "Espacios diseñados según su forma de vivir.", "Linea Studio"],
-  ingenieria: ["https://sitiolisto.github.io/assets/img/ingenieria-0.jpg", "#f5a524", "Engineering firm", "Firma de ingeniería", "Engineering you can build on.", "Ingeniería sobre la que se puede construir.", "Gulf Structural"],
-  taller: ["https://sitiolisto.github.io/assets/img/taller-0.jpg", "#c8f31d", "Auto repair", "Taller mecánico", "Honest auto repair, close to home.", "Mecánica honesta, cerca de casa.", "Northside Auto"]
-};
-var es = false, k = "dental", typed = "";
-function slugify(s) { return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/&/g, "and").replace(/[^a-z0-9]+/g, ""); }
-function draw() {
-  var p = P[k], name = typed || p[6], site = document.getElementById("site");
-  site.style.backgroundImage = "url(" + p[0] + ")"; site.style.setProperty("--acc", p[1]);
-  document.getElementById("sn").textContent = name; document.getElementById("sname").textContent = name;
-  document.getElementById("sk").textContent = (es ? p[3] : p[2]) + " · Houston, TX";
-  document.getElementById("stag").textContent = es ? p[5] : p[4];
-  document.getElementById("url").textContent = (slugify(name) || "yourbusiness") + ".com";
-  document.getElementById("nm").placeholder = p[6];
-  document.getElementById("sample").href = "https://sitiolisto.github.io/muestra-" + k + "/";
-}
-document.getElementById("go").addEventListener("click", function () { if (window.qPrefill) qPrefill(typed); });
-document.getElementById("nm").addEventListener("input", function (ev) { typed = ev.target.value.trim(); draw(); });
-document.querySelectorAll("#chips button").forEach(function (b) { b.addEventListener("click", function () {
-  document.querySelectorAll("#chips button").forEach(function (x) { x.classList.remove("on"); }); b.classList.add("on"); k = b.dataset.k; draw(); }); });
-document.querySelectorAll("#tabs button").forEach(function (b) { b.addEventListener("click", function () {
-  document.querySelectorAll("#tabs button").forEach(function (x) { x.classList.remove("on"); }); b.classList.add("on");
-  document.getElementById("price").textContent = "$" + b.dataset.p; }); });
-function cambiarIdioma() { es = !es; document.documentElement.lang = es ? "es" : "en";
-  document.querySelectorAll("[data-en]").forEach(function (n) { n.innerHTML = n.getAttribute(es ? "data-es" : "data-en"); });
-  document.querySelector(".lang").textContent = es ? "EN" : "ES"; draw(); waUpd(); if (window.qRender) qRender(); }
-var WA = "525664274135";
-function waUpd() { document.querySelectorAll(".walink").forEach(function (a) { a.href = "https://wa.me/" + WA + "?text=" + encodeURIComponent(es ? "Hola, vi la página de Sitio Listo y quiero información para mi negocio." : "Hi! I saw the Sitio Listo website and I would like info for my business."); }); }
-waUpd();
-var xy = document.getElementById("xy");
-addEventListener("mousemove", function (ev) { var x = String(ev.pageX).padStart(4, "0"), y = String(Math.round(ev.pageY)).padStart(4, "0"); xy.textContent = "X " + x + " · Y " + y; });
-if ("IntersectionObserver" in window) {
-  var io = new IntersectionObserver(function (xs) { xs.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }); }, { threshold: .12 });
-  document.querySelectorAll(".reveal").forEach(function (n) { io.observe(n); });
-} else { document.documentElement.className = "nojs"; }
-
-(function () {
-  var MAIL = "vd561838@gmail.com", WA = "525664274135";
-  var L = {
-    en: {
-      step: "Question", of: "of", back: "← Back", contactStep: "Last step", resultStep: "Your diagnosis",
-      q: [
-        { id: "etapa", t: "Where is your business today?", o: [
-          ["start", "Starting", "Just opened, or still looking for steady customers."],
-          ["sell", "Selling", "I have customers. I want more of them, more often."],
-          ["grow", "Growing", "Business is good. I want to scale: team, branches, online sales."]] },
-        { id: "meta", t: "What would you like to achieve first?", o: [
-          ["google", "Get found on Google", "When someone searches for what I do, they find me."],
-          ["wa", "More bookings or orders on WhatsApp", "Fewer questions, more people ready to buy."],
-          ["store", "Sell online", "A catalog or store customers can order from."],
-          ["pro", "Look more professional", "An image that matches the quality of my work."]] },
-        { id: "intento", t: "What have you tried before?", o: [
-          ["nada", "Nothing yet", "This would be my first step online."],
-          ["redes", "Social media only", "Facebook, Instagram or TikTok."],
-          ["web", "A website", "Made by me or by someone else."],
-          ["ads", "Paid ads", "Facebook, Google, flyers…"],
-          ["agencia", "An agency or freelancer", "Someone I hired to handle it."]] },
-        { id: "porque", t: "And why didn't it work?", h: "Be honest: it helps us know what not to promise you.", o: [
-          ["clientes", "It didn't bring customers", ""],
-          ["caro", "It was too expensive", ""],
-          ["desaparecio", "It took forever, or they disappeared", ""],
-          ["actualizar", "I couldn't update it myself", ""],
-          ["sirve", "It works, but I want something better", ""]] },
-        { id: "freno", t: "What's holding you back today?", o: [
-          ["tiempo", "Time", "I don't have hours to spend on this."],
-          ["dinero", "Money", "I can't spend much right now."],
-          ["miedo", "Fear", "That it won't work, or that I won't know how to use it."]] },
-        { id: "cuando", t: "When would you like it?", o: [
-          ["mes", "This month", "The sooner the better."],
-          ["pronto", "In the next 1–3 months", "I'm planning it."],
-          ["viendo", "I'm just looking", "Curious to see what's possible."]] }
-      ],
-      cT: "Where should we send your diagnosis?", cH: "We'll send you the full plan and a free preview of your website.",
-      fName: "Your name", fBiz: "Business name", fCon: "WhatsApp or email", fNote: "Anything else? (optional)",
-      fNoteP: "City, type of business, what you'd love your website to do…",
-      send: "Send & see my diagnosis →", fine: "Your answers reach us instantly and we'll contact you within 24 hours. No spam, no calls you didn't ask for.",
-      errN: "Please write your name and your business.", errC: "Write a WhatsApp number or an email so we can send it to you.",
-      rStamp: "DIAGNOSIS", rFor: "for", rPk: "Recommended package", rBuild: "What we'd build", rDiff: "What we'll do differently",
-      rBlock: "About what's holding you back", rNext: "Next step",
-      sending: "Sending your answers…", sentOk: "✓ We got your answers. We'll contact you within 24 hours at ", sentFail: "We couldn't send it automatically. ", viaMail: "Send it by email →", waQ: "Prefer to talk now?", waBtn: "Message us on WhatsApp →", waMsg: "Hi! I'm {n} from {b}. I just took the diagnosis on your website (package: {p}). Can you help me?",
-      pk: { start: ["Starter", "Your website, free, with your Google reviews, photos and hours, on your own domain."],
-            sell: ["Complete", "Your website plus what turns visits into customers: Google Maps listing ready, WhatsApp buttons per service and a QR for your shop."],
-            grow: ["Custom", "A one-of-a-kind design for your brand, ready to add online booking or a full store."] },
-      build: { google: ["Your Google Maps listing set up: phone, hours, photos and link", "A website that tells Google your city and your services", "Your best reviews where people decide"],
-               wa: ["A WhatsApp button on every service, with the message already written", "A booking request form that lands in your WhatsApp", "Answers to the usual questions, so chats are about buying"],
-               store: ["A catalog with photos and prices", "Orders sent straight to your WhatsApp", "Ready to grow into a full online store"],
-               pro: ["A design made for your brand: your colors, your photos", "Your real Google reviews, word for word", "Your own domain: yourbusiness.com"] },
-      diff: { nada: "Starting from zero is an advantage: we do it right the first time, with what already works for businesses like yours.",
-              clientes: "We won't promise you customers overnight. We put you where people already search and make it easy to reach you.",
-              caro: "The base website is free. You only pay for extras if you decide you want them.",
-              desaparecio: "You see your website finished before deciding anything, and you can reach us on WhatsApp or email.",
-              actualizar: "You don't touch anything technical: you ask for changes and we make them.",
-              sirve: "We keep what already works for you and improve the rest." },
-      block: { tiempo: "You don't have to do anything technical. We build it with what's already on your Google profile; you only review it.",
-               dinero: "Your website is free. You only buy your domain, and every extra is optional.",
-               miedo: "You see it finished before you decide. If you don't like it, nothing happens and you owe nothing." },
-      next: { mes: "You're a priority: we'll contact you within 24 hours. Your site can be ready 48 hours after you approve it.",
-              pronto: "We'll prepare your free preview so it's ready when you are.",
-              viendo: "No rush. We'll send you your diagnosis and a free preview to look at calmly." },
-      lN: "Name", lB: "Business", lC: "Contact", lX: "Note", subj: "My Sitio Listo diagnosis", urgent: "[THIS MONTH]", hello: "Hi! I took the diagnosis on your website."
-    },
-    es: {
-      step: "Pregunta", of: "de", back: "← Atrás", contactStep: "Último paso", resultStep: "Su diagnóstico",
-      q: [
-        { id: "etapa", t: "¿En qué etapa está su negocio?", o: [
-          ["start", "Empezando", "Recién abrí o todavía busco clientes fijos."],
-          ["sell", "Vendiendo", "Ya tengo clientes. Quiero más y más seguido."],
-          ["grow", "Creciendo", "Me va bien. Quiero crecer: equipo, sucursales, ventas en línea."]] },
-        { id: "meta", t: "¿Qué le gustaría lograr primero?", o: [
-          ["google", "Que me encuentren en Google", "Que quien busque lo que hago, me encuentre a mí."],
-          ["wa", "Más citas o pedidos por WhatsApp", "Menos preguntas, más gente lista para comprar."],
-          ["store", "Vender en línea", "Un catálogo o tienda donde me pidan directo."],
-          ["pro", "Verme más profesional", "Una imagen a la altura de la calidad de mi trabajo."]] },
-        { id: "intento", t: "¿Qué ha intentado antes?", o: [
-          ["nada", "Nada todavía", "Sería mi primer paso en internet."],
-          ["redes", "Solo redes sociales", "Facebook, Instagram o TikTok."],
-          ["web", "Una página web", "La hice yo o me la hizo alguien."],
-          ["ads", "Anuncios pagados", "Facebook, Google, volantes…"],
-          ["agencia", "Una agencia o freelance", "Contraté a alguien para que se encargara."]] },
-        { id: "porque", t: "¿Y por qué no le funcionó?", h: "Con confianza: nos ayuda a saber qué no prometerle.", o: [
-          ["clientes", "No me trajo clientes", ""],
-          ["caro", "Me salió muy caro", ""],
-          ["desaparecio", "Tardaron mucho o desaparecieron", ""],
-          ["actualizar", "No podía actualizarla yo", ""],
-          ["sirve", "Sí funciona, pero quiero algo mejor", ""]] },
-        { id: "freno", t: "¿Qué lo frena hoy?", o: [
-          ["tiempo", "El tiempo", "No tengo horas para dedicarle a esto."],
-          ["dinero", "El dinero", "Ahora no puedo gastar mucho."],
-          ["miedo", "El miedo", "A que no funcione o a no saber usarla."]] },
-        { id: "cuando", t: "¿Para cuándo lo quiere?", o: [
-          ["mes", "Para este mes", "Entre más pronto, mejor."],
-          ["pronto", "En 1 a 3 meses", "Lo estoy planeando."],
-          ["viendo", "Solo estoy viendo", "Tengo curiosidad de ver qué se puede."]] }
-      ],
-      cT: "¿A dónde le mandamos su diagnóstico?", cH: "Le enviamos el plan completo y una vista previa gratis de su página.",
-      fName: "Su nombre", fBiz: "Nombre del negocio", fCon: "WhatsApp o correo", fNote: "¿Algo más? (opcional)",
-      fNoteP: "Ciudad, giro, lo que le encantaría que hiciera su página…",
-      send: "Enviar y ver mi diagnóstico →", fine: "Sus respuestas nos llegan al instante y lo contactamos en menos de 24 horas. Sin spam ni llamadas que no pidió.",
-      errN: "Escriba su nombre y el de su negocio.", errC: "Escriba un WhatsApp o un correo para mandárselo.",
-      rStamp: "DIAGNÓSTICO", rFor: "para", rPk: "Paquete recomendado", rBuild: "Lo que le haríamos", rDiff: "Lo que haremos distinto",
-      rBlock: "Sobre lo que lo frena", rNext: "Siguiente paso",
-      sending: "Enviando sus respuestas…", sentOk: "✓ Recibimos sus respuestas. Lo contactamos en menos de 24 horas a ", sentFail: "No se pudo enviar automáticamente. ", viaMail: "Enviarlo por correo →", waQ: "¿Prefiere hablar ya?", waBtn: "Escríbanos por WhatsApp →", waMsg: "¡Hola! Soy {n} de {b}. Acabo de hacer el diagnóstico en su página (paquete: {p}). ¿Me pueden ayudar?",
-      pk: { start: ["Arranque", "Su página gratis, con sus reseñas de Google, fotos y horario, en su propio dominio."],
-            sell: ["Completo", "Su página más lo que convierte visitas en clientes: ficha de Google Maps lista, botones de WhatsApp por servicio y QR para su local."],
-            grow: ["A la medida", "Un diseño único para su marca, listo para agregar agenda en línea o una tienda completa."] },
-      build: { google: ["Su ficha de Google Maps lista: teléfono, horario, fotos y enlace", "Una página que le dice a Google su ciudad y sus servicios", "Sus mejores reseñas justo donde la gente decide"],
-               wa: ["Un botón de WhatsApp en cada servicio, con el mensaje ya escrito", "Un formulario de citas que llega a su WhatsApp", "Respuestas a las preguntas de siempre, para que los chats sean de venta"],
-               store: ["Un catálogo con fotos y precios", "Pedidos directo a su WhatsApp", "Lista para crecer a una tienda en línea completa"],
-               pro: ["Un diseño hecho para su marca: sus colores, sus fotos", "Sus reseñas reales de Google, textuales", "Su propio dominio: sunegocio.com"] },
-      diff: { nada: "Empezar de cero es una ventaja: lo hacemos bien a la primera, con lo que ya les funciona a negocios como el suyo.",
-              clientes: "No le vamos a prometer clientes de la noche a la mañana. Lo ponemos donde la gente ya busca y le facilitamos que lo contacten.",
-              caro: "La página base es gratis. Solo paga extras si usted decide que los quiere.",
-              desaparecio: "Ve su página terminada antes de decidir nada, y nos encuentra por WhatsApp o correo.",
-              actualizar: "Usted no toca nada técnico: nos pide los cambios y nosotros los hacemos.",
-              sirve: "Conservamos lo que ya le funciona y mejoramos lo demás." },
-      block: { tiempo: "Usted no tiene que hacer nada técnico. La armamos con lo que ya está en su perfil de Google; usted solo la revisa.",
-               dinero: "Su página es gratis. Solo compra su dominio, y cada extra es opcional.",
-               miedo: "La ve terminada antes de decidir. Si no le gusta, no pasa nada y no debe nada." },
-      next: { mes: "Es prioridad: lo contactamos en menos de 24 horas. Su página puede quedar lista 48 horas después de que la apruebe.",
-              pronto: "Le preparamos su vista previa gratis para que esté lista cuando usted lo esté.",
-              viendo: "Sin prisa. Le mandamos su diagnóstico y una vista previa gratis para que la vea con calma." },
-      lN: "Nombre", lB: "Negocio", lC: "Contacto", lX: "Comentario", subj: "Mi diagnóstico de Sitio Listo", urgent: "[ESTE MES]", hello: "¡Hola! Hice el diagnóstico en su página."
-    }
-  };
-  var A = {}, hist = [], cur = 0, form = { n: "", b: "", c: "", x: "" }, done = false, hp = "", estado = "", enviado = "";
-  var body = document.getElementById("qbody"), back = document.getElementById("qback"),
-      stepL = document.getElementById("qstep"), rule = document.querySelectorAll("#qrule i");
-  function D() { return L[(typeof es !== "undefined" && es) ? "es" : "en"]; }
-  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function num(i) { return i <= 2 ? i + 1 : (i === 3 ? 3 : i); }      // "porqué" comparte el n.º 3
-  function label(qi, code) { var q = D().q[qi]; for (var j = 0; j < q.o.length; j++) if (q.o[j][0] === code) return q.o[j][1]; return "—"; }
-  function setRule(n) { rule.forEach(function (r, i) { r.classList.toggle("on", i < n); }); }
-  function anim() { body.classList.remove("anim"); void body.offsetWidth; body.classList.add("anim"); }
-
-  function render(noAnim) {
-    var d = D();
-    back.textContent = d.back; back.hidden = hist.length === 0 && !done;
-    if (done) return result(noAnim);
-    if (cur === 6) return contact(noAnim);
-    var q = d.q[cur], n = num(cur);
-    stepL.textContent = d.step + " " + String(n).padStart(2, "0") + " " + d.of + " 05";
-    setRule(n - 1);
-    var h = '<div class="lbl"><b>Q.0' + n + (cur === 3 ? "b" : "") + "</b></div>" + '<div class="qq">' + esc(q.t) + "</div>" + (q.h ? '<p class="qhint">' + esc(q.h) + "</p>" : "") + '<div class="qopts">';
-    q.o.forEach(function (o, j) {
-      h += '<button type="button" class="qopt' + (A[q.id] === o[0] ? " sel" : "") + '" data-v="' + o[0] + '"><span class="k">' + "ABCDE"[j] + '</span><span><span class="tt">' + esc(o[1]) + "</span>" + (o[2] ? '<span class="ss">' + esc(o[2]) + "</span>" : "") + '</span><span class="ar">→</span></button>';
-    });
-    body.innerHTML = h + "</div>";
-    body.querySelectorAll(".qopt").forEach(function (b) { b.addEventListener("click", function () { pick(q.id, b.dataset.v, b); }); });
-    if (!noAnim) anim();
-  }
-  function pick(id, v, b) {
-    A[id] = v; b.classList.add("sel");
-    setTimeout(function () {
-      hist.push(cur);
-      cur = (cur === 2 && v === "nada") ? 4 : cur + 1;   // si no ha intentado nada, no se pregunta por qué
-      render();
-      if (window.innerWidth < 980) document.getElementById("qcard").scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 220);
-  }
-  function contact(noAnim) {
-    var d = D(); stepL.textContent = d.contactStep; setRule(5);
-    body.innerHTML = '<div class="lbl"><b>Q.06</b></div><div class="qq">' + esc(d.cT) + '</div><p class="qhint">' + esc(d.cH) + '</p>' +
-      '<form class="qform" id="qform" novalidate>' +
-      '<label class="lbl" for="qn">' + esc(d.fName) + '</label><input id="qn" autocomplete="name" maxlength="60" value="' + esc(form.n) + '">' +
-      '<label class="lbl" for="qb">' + esc(d.fBiz) + '</label><input id="qb" autocomplete="organization" maxlength="60" value="' + esc(form.b) + '">' +
-      '<label class="lbl" for="qc">' + esc(d.fCon) + '</label><input id="qc" autocomplete="email" maxlength="80" value="' + esc(form.c) + '">' +
-      '<label class="lbl" for="qx">' + esc(d.fNote) + '</label><textarea id="qx" maxlength="400" placeholder="' + esc(d.fNoteP) + '">' + esc(form.x) + '</textarea>' +
-      '<input type="text" name="_honey" id="qh" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">' +
-      '<div class="err" id="qerr"></div><button class="btn" type="submit">' + esc(d.send) + '</button><p class="qfine">' + esc(d.fine) + (WA ? ' ' + esc(d.waQ) + ' <a href="https://wa.me/' + WA + '" target="_blank" rel="noopener" style="color:var(--or)">WhatsApp</a>' : "") + "</p></form>";
-    var f = document.getElementById("qform");
-    ["qn", "qb", "qc", "qx"].forEach(function (id, i) { document.getElementById(id).addEventListener("input", function (ev) { form["nbcx"[i]] = ev.target.value; }); });
-    f.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var err = document.getElementById("qerr");
-      if (!form.n.trim() || !form.b.trim()) { err.textContent = d.errN; return; }
-      var c = form.c.trim();
-      if (!(/@.+\./.test(c) || c.replace(/\D/g, "").length >= 8)) { err.textContent = d.errC; return; }
-      hp = document.getElementById("qh").value; hist.push(6); done = true; render(); send();
-    });
-    if (!noAnim) anim();
-  }
-  function pkg() { return A.etapa || "start"; }
-  function texto() {
-    var d = D(), lines = [d.hello, "",
-      d.lN + ": " + form.n.trim(), d.lB + ": " + form.b.trim(), d.lC + ": " + form.c.trim(), "",
-      "1. " + d.q[0].t + " " + label(0, A.etapa),
-      "2. " + d.q[1].t + " " + label(1, A.meta),
-      "3. " + d.q[2].t + " " + label(2, A.intento)];
-    if (A.intento !== "nada") lines.push("   " + d.q[3].t + " " + label(3, A.porque));
-    lines.push("4. " + d.q[4].t + " " + label(4, A.freno), "5. " + d.q[5].t + " " + label(5, A.cuando));
-    if (form.x.trim()) lines.push("", d.lX + ": " + form.x.trim());
-    lines.push("", "[SL-QUIZ etapa=" + A.etapa + " paquete=" + d.pk[pkg()][0] + " meta=" + A.meta + " intento=" + A.intento +
-      " porque=" + (A.intento === "nada" ? "-" : A.porque) + " freno=" + A.freno + " cuando=" + A.cuando + " idioma=" + (es ? "es" : "en") + "]");
-    return lines.join("\n");
-  }
-  function mailto() {
-    var d = D(), s = (A.cuando === "mes" ? d.urgent + " " : "") + d.subj + " · " + form.b.trim();
-    return "mailto:" + MAIL + "?subject=" + encodeURIComponent(s) + "&body=" + encodeURIComponent(texto());
-  }
-  function lab(qi, code) { var q = L.es.q[qi]; for (var j = 0; j < q.o.length; j++) if (q.o[j][0] === code) return q.o[j][1]; return "—"; }
-  function codigos() { return "[SL-QUIZ etapa=" + A.etapa + " paquete=" + L.es.pk[pkg()][0] + " meta=" + A.meta + " intento=" + A.intento +
-      " porque=" + (A.intento === "nada" ? "-" : A.porque) + " freno=" + A.freno + " cuando=" + A.cuando + " idioma=" + (es ? "es" : "en") + "]"; }
-  function datos() {
-    var c = form.c.trim(), x = {
-      _subject: (A.cuando === "mes" ? "[ESTE MES] " : "") + "Diagnóstico Sitio Listo · " + form.b.trim() + " · " + L.es.pk[pkg()][0],
-      _template: "table", _captcha: "false", _honey: hp,
-      "Nombre": form.n.trim(), "Negocio": form.b.trim(), "Contacto (WhatsApp o correo)": c,
-      "1. Etapa": lab(0, A.etapa), "Paquete a ofrecer": L.es.pk[pkg()][0],
-      "2. Meta (adaptar el producto)": lab(1, A.meta),
-      "3. Ha intentado": lab(2, A.intento), "3b. Por qué no funcionó (no prometer)": A.intento === "nada" ? "—" : lab(3, A.porque),
-      "4. Lo que lo frena (objeción a contestar)": lab(4, A.freno), "5. Para cuándo": lab(5, A.cuando),
-      "Comentario": form.x.trim() || "—", "Idioma del visitante": es ? "español" : "inglés", "Códigos": codigos() };
-    if (/@.+\./.test(c)) x._replyto = c;
-    return x;
-  }
-  function pintaEstado() {
-    var ok = document.getElementById("qok"); if (!ok) return; var d = D();
-    if (estado === "ok") ok.innerHTML = esc(d.sentOk) + "<b>" + esc(form.c.trim()) + "</b>.";
-    else if (estado === "fail") ok.innerHTML = esc(d.sentFail) + '<a href="' + esc(mailto()) + '">' + esc(d.viaMail) + "</a>";
-    else ok.textContent = d.sending;
-  }
-  function send() {
-    var clave = JSON.stringify([A, form]);
-    if (clave === enviado && estado === "ok") { pintaEstado(); return; }
-    estado = "pend"; pintaEstado();
-    fetch("https://formsubmit.co/ajax/" + MAIL, { method: "POST", keepalive: true, headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(datos()) })
-      .then(function (r) { return r.json(); })
-      .then(function (j) { estado = (j && (j.success === true || j.success === "true")) ? "ok" : "fail"; if (estado === "ok") enviado = clave; pintaEstado(); })
-      .catch(function () { estado = "fail"; pintaEstado(); });
-  }
-  function result(noAnim) {
-    var d = D(), p = d.pk[pkg()], why = A.intento === "nada" ? "nada" : (A.porque || "nada");
-    stepL.textContent = d.resultStep; setRule(6);
-    var li = (d.build[A.meta] || d.build.pro).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
-    body.innerHTML = '<div class="qres"><span class="stamp2">' + d.rStamp + " · " + esc(form.b.trim()).toUpperCase() + '</span>' +
-      "<h3>" + esc(d.rPk) + ": <em>" + esc(p[0]) + "</em></h3><p class=\"pk\">" + esc(p[1]) + "</p>" +
-      '<div class="row"><b>' + esc(d.rBuild) + "</b><ul>" + li + "</ul></div>" +
-      '<div class="row"><b>' + esc(d.rDiff) + "</b><p>" + esc(d.diff[why]) + "</p></div>" +
-      '<div class="row"><b>' + esc(d.rBlock) + "</b><p>" + esc(d.block[A.freno]) + "</p></div>" +
-      '<div class="row"><b>' + esc(d.rNext) + "</b><p>" + esc(d.next[A.cuando]) + "</p></div>" +
-      '<p class="ok" id="qok"></p>' +
-      (WA ? '<div class="acts"><a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/' + WA + '?text=' + encodeURIComponent(d.waMsg.replace("{n}", form.n.trim()).replace("{b}", form.b.trim()).replace("{p}", p[0])) + '">' + esc(d.waBtn) + '</a></div>' : "") + '</div>';
-    pintaEstado();
-    if (!noAnim) anim();
-  }
-  back.addEventListener("click", function () {
-    if (done) { done = false; cur = 6; hist.pop(); render(); return; }
-    if (hist.length) { cur = hist.pop(); render(); }
-  });
-  window.qRender = function () { render(true); };
-  window.qPrefill = function (biz) { if (biz && !form.b) form.b = biz; };
-  render(true);
+(function(){
+  var h=document.getElementById('top');
+  addEventListener('scroll',function(){h.classList.toggle('sc',scrollY>8)},{passive:true});
+  var els=document.querySelectorAll('.ap');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vis')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
 })();
-
-draw();
-if (/^es/i.test(navigator.language || "") || /[?&]lang=es/.test(location.search)) cambiarIdioma();
 </script>
 </body></html>
