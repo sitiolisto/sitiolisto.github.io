@@ -4,13 +4,21 @@
 <meta name="description" content="Estudio de diseño web para consultorios, despachos y talleres con buena reputación. Páginas a medida, con su dominio propio. Le mostramos su página terminada antes de cobrarle.">
 <meta property="og:title" content="Sitio Listo · Estudio de diseño web">
 <meta property="og:description" content="Páginas web a medida para negocios que ya tienen buena reputación. Le mostramos la suya antes de cobrarle.">
-<meta property="og:image" content="https://sitiolisto.github.io/assets/og-estudio.jpg">
+<meta property="og:image" content="https://sitiolisto.github.io/assets/og-estudio.jpg?v=2">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:url" content="https://sitiolisto.github.io/"><meta property="og:type" content="website"><meta property="og:site_name" content="Sitio Listo">
 <meta property="og:locale" content="es_MX">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sitiolisto.github.io/assets/og-estudio.jpg?v=2">
+<meta property="og:image:alt" content="Sitio Listo, estudio de diseño web: su reputación ya está hecha, nosotros la ponemos en internet.">
 <meta name="theme-color" content="#F7F8FA">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232B4CFF'/%3E%3Ctext x='14' y='23' font-size='20' font-weight='700' text-anchor='middle' fill='%23FFFFFF' font-family='Arial,sans-serif'%3Es%3C/text%3E%3Ccircle cx='23.5' cy='21' r='3' fill='%23D7FF3F'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://sitiolisto.github.io/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Sitio Listo">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Sitio Listo","alternateName":"Sitio Listo · Estudio de diseño web","url":"https://sitiolisto.github.io/","logo":"https://sitiolisto.github.io/icon-512.png","image":"https://sitiolisto.github.io/assets/og-estudio.jpg?v=2","description":"Estudio de diseño web para consultorios, despachos y talleres con buena reputación. Páginas a medida, con su dominio propio.","areaServed":[{"@type":"Country","name":"México"},{"@type":"Country","name":"España"}],"knowsLanguage":"es","contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://wa.me/525664274135","availableLanguage":"es"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/trabajo/clinica-alba-movil-largo.jpg">
@@ -57,11 +65,54 @@ section{position:relative}
 .hd-in{max-width:1180px;margin:0 auto;padding:0 12px 0 22px;height:62px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-radius:999px;border:1px solid transparent;transition:background .4s,border-color .4s,box-shadow .4s}
 .hd.sc .hd-in{background:rgba(255,255,255,.78);border-color:var(--ln);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 20px 50px -24px rgba(16,24,40,.25)}
 .hd-wrap{padding:0 var(--gut)}
-.marca{display:flex;align-items:center;gap:8px;font-family:var(--disp);font-weight:700;font-size:21px;letter-spacing:-.03em;white-space:nowrap}
-.marca i{width:9px;height:9px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 3px rgba(215,255,63,.9);margin-top:6px}
-.hd nav{display:flex;gap:4px;font-size:14.5px}
+/* marca: cuadro cobalto con palomita (listo) y punto lima (publicada) */
+.marca{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;font-size:20.5px;letter-spacing:-.035em;white-space:nowrap;line-height:1}
+.logo{width:32px;height:32px;flex:none;overflow:visible;filter:drop-shadow(0 6px 10px rgba(43,76,255,.3));transition:transform .7s var(--ease)}
+.marca:hover .logo{transform:rotate(-8deg) scale(1.06)}
+.logo .lp-o{fill:none;stroke:#D7FF3F;stroke-width:2;opacity:0;transform-origin:48px 16px}
+@media (prefers-reduced-motion:no-preference){
+ html.js .logo .lp-k{stroke-dasharray:41;stroke-dashoffset:41;animation:traza 1s .35s var(--ease) forwards}
+ html.js .logo .lp-d{transform-origin:48px 16px;transform:scale(0);animation:brota .7s 1.1s var(--ease) forwards}
+ .logo .lp-o{animation:onda 3.2s 2s ease-out infinite}
+}
+@keyframes traza{to{stroke-dashoffset:0}}
+@keyframes brota{to{transform:none}}
+@keyframes onda{0%{opacity:.9;transform:scale(1)}70%,100%{opacity:0;transform:scale(2.3)}}
+.hd-der{display:flex;align-items:center;gap:8px}
+.hd nav{position:relative;display:flex;gap:4px;font-size:14.5px;isolation:isolate}
 .hd nav a{padding:8px 14px;border-radius:999px;color:var(--mu);transition:color .3s,background .3s}
 .hd nav a:hover{color:var(--tx);background:rgba(11,13,18,.05)}
+.hd nav a.on{color:var(--tx)}
+.hd nav .ind{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:999px;background:rgba(43,76,255,.09);box-shadow:inset 0 0 0 1px rgba(43,76,255,.14);z-index:-1;opacity:0;transition:transform .55s var(--ease),width .55s var(--ease),opacity .35s}
+/* botón de menú (tableta y celular) */
+.mn{display:none;position:relative;width:42px;height:42px;border-radius:50%;background:rgba(11,13,18,.06);transition:background .3s}
+.mn:hover{background:rgba(11,13,18,.1)}
+.mn i{position:absolute;left:13px;right:13px;top:50%;height:1.8px;margin-top:-.9px;border-radius:2px;background:var(--tx);transition:transform .5s var(--ease)}
+.mn i:first-child{transform:translateY(-3.5px)}.mn i:last-child{transform:translateY(3.5px)}
+html.menu .mn i:first-child{transform:rotate(45deg)}html.menu .mn i:last-child{transform:rotate(-45deg)}
+/* menú a pantalla completa */
+.menu{position:fixed;inset:0;z-index:55;display:flex;flex-direction:column;justify-content:space-between;gap:30px;padding:108px var(--gut) 26px;overflow-y:auto;background:rgba(247,248,250,.95);backdrop-filter:blur(24px) saturate(1.3);-webkit-backdrop-filter:blur(24px) saturate(1.3);opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility 0s .45s}
+html.menu .menu{opacity:1;visibility:visible;transition:opacity .45s var(--ease)}
+html.menu,html.menu body{overflow:hidden}
+html.menu .hd{transform:none}
+html.menu .hd .hd-in{background:#fff;border-color:var(--ln);box-shadow:0 20px 50px -24px rgba(16,24,40,.25)}
+.menu nav{display:flex;flex-direction:column}
+.menu nav a{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--ln);font-family:var(--disp);font-weight:700;font-size:clamp(34px,8.6vw,58px);letter-spacing:-.04em;line-height:1.05;opacity:0;transform:translateY(26px);transition:transform .8s var(--ease),opacity .6s var(--ease),color .3s;transition-delay:calc(var(--i)*55ms + 90ms)}
+.menu nav a small{font:500 12px var(--mono);letter-spacing:.06em;color:var(--mu2)}
+.menu nav a.on{color:var(--acc)}
+html.menu .menu nav a{opacity:1;transform:none}
+.menu-pie{display:grid;gap:10px;opacity:0;transition:opacity .6s .4s}
+html.menu .menu-pie{opacity:1}
+.menu-pie .btn,.menu-pie .btn2{justify-content:center;width:100%}
+.menu-pie .mono{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:10px;color:var(--mu2)}
+/* progreso de lectura */
+.prog{position:fixed;left:0;top:0;width:100%;height:3px;z-index:62;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--acc),var(--aqua) 60%,var(--lima));pointer-events:none}
+/* WhatsApp siempre a la mano (aparece después de la portada) */
+.fwa{position:fixed;right:18px;bottom:18px;z-index:58;display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 20px 0 16px;border-radius:999px;background:var(--tx);color:#fff;font-weight:600;font-size:15px;box-shadow:0 18px 40px -14px rgba(11,13,18,.55);opacity:0;transform:translateY(130%);pointer-events:none;transition:transform .6s var(--ease),opacity .4s,background .3s}
+.fwa.vis{opacity:1;transform:none;pointer-events:auto}
+.fwa:hover{background:var(--acc)}
+.fwa svg{width:22px;height:22px;flex:none}
+.fwa b{position:absolute;top:9px;left:31px;width:9px;height:9px;border-radius:50%;background:var(--lima);box-shadow:0 0 0 2px var(--tx)}
 .hd .cta{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;border-radius:999px;background:var(--tx);color:#fff;font-weight:600;font-size:14px;white-space:nowrap;transition:background .3s}
 .hd .cta:hover{background:var(--acc);color:#fff}
 
@@ -376,6 +427,11 @@ section{position:relative}
 .contacto .btn:before{background:var(--lima)}
 .contacto .btn2{border-color:rgba(255,255,255,.35);background:transparent;color:#fff}
 .contacto .btn2:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.sobre{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linejoin:round;stroke-linecap:round}
+.firma-m{display:inline-flex;align-items:center;gap:10px}.firma-m svg{width:22px;height:22px;flex:none}
+.gigante b{display:inline-block;width:.15em;height:.15em;margin-left:.04em;border-radius:50%;background:var(--lima);vertical-align:baseline}
+.aviso{position:fixed;left:50%;bottom:24px;z-index:90;max-width:calc(100vw - 32px);padding:12px 18px;border-radius:14px;background:var(--tx);color:#fff;font-size:14.5px;box-shadow:0 18px 40px -14px rgba(11,13,18,.5);transform:translate(-50%,140%);opacity:0;transition:transform .6s var(--ease),opacity .4s;pointer-events:none}
+.aviso.vis{transform:translate(-50%,0);opacity:1}
 .pie{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:110px;padding:24px 0;border-top:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8)}
 .gigante{color:#fff;font-family:var(--disp);font-weight:800;font-size:min(19vw,270px);line-height:.82;letter-spacing:-.06em;white-space:nowrap;margin:10px 0 -.1em -.03em}
 
@@ -424,7 +480,9 @@ section{position:relative}
 }
 
 /* ── responsive ── */
-@media (max-width:1180px){.hd nav{display:none}}
+@media (max-width:1180px){.hd nav{display:none}.mn{display:block}}
+@media (min-width:1181px){.menu{display:none}}
+@media (prefers-reduced-motion:reduce){.menu,.menu nav a,.menu-pie,.fwa,.prog{transition:none!important}}
 @media (max-width:1080px){
  .hx-dev{width:86vw}
  .hx-ph{width:27%}
@@ -440,8 +498,12 @@ section{position:relative}
 @media (max-width:760px){
  body{font-size:16px}
  .hd{top:10px}
- .hd-in{height:56px;padding:0 8px 0 18px}
+ .hd-in{height:56px;padding:0 8px 0 16px;gap:10px}
  .hd .cta{height:40px;padding:0 15px}
+ .hd-der{gap:6px}
+ .mn{width:40px;height:40px}.mn i{left:12px;right:12px}
+ .marca{font-size:19px;gap:9px}.logo{width:29px;height:29px}
+ .fwa{right:14px;bottom:14px;height:52px}
  .hx-st{padding-top:100px}
  .hx.cine .hx-top{top:92px}
  .hx h1{font-size:10.6vw;margin:14px auto 20px}
@@ -491,10 +553,29 @@ section{position:relative}
 <body>
 
 <header class="hd" id="hd"><div class="hd-wrap"><div class="hd-in">
- <a class="marca" href="#arriba">Sitio Listo<i></i></a>
- <nav aria-label="Secciones"><a href="#disenador">Pruébelo</a><a href="#trabajo">Trabajo</a><a href="#metodo">Método</a><a href="#incluye">Qué incluye</a><a href="#preguntas">Preguntas</a></nav>
- <a class="cta" href="https://wa.me/525664274135?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20la%20de%20mi%20negocio." target="_blank" rel="noopener">Hablemos ↗</a>
+ <a class="marca" href="#arriba" aria-label="Sitio Listo, ir al inicio"><svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lgA" x1="6" y1="2" x2="58" y2="62" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5B78FF"/><stop offset=".55" stop-color="#2B4CFF"/><stop offset="1" stop-color="#1A2FC4"/></linearGradient><linearGradient id="lhA" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/></linearGradient></defs><rect width="64" height="64" rx="18" fill="url(#lgA)"/><rect x=".75" y=".75" width="62.5" height="62.5" rx="17.25" fill="none" stroke="url(#lhA)" stroke-width="1.5"/><path class="lp-k" d="M16.5 34.5l9.5 9.5 16-17.5" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle class="lp-o" cx="48" cy="16" r="5.25"/><circle class="lp-d" cx="48" cy="16" r="5.25" fill="#D7FF3F"/></svg><span>Sitio Listo</span></a>
+ <nav aria-label="Secciones" id="hdNav"><span class="ind" aria-hidden="true"></span><a href="#disenador">Pruébelo</a><a href="#trabajo">Trabajo</a><a href="#metodo">Método</a><a href="#incluye">Qué incluye</a><a href="#preguntas">Preguntas</a></nav>
+ <div class="hd-der">
+  <a class="cta" href="https://wa.me/525664274135?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20la%20de%20mi%20negocio." target="_blank" rel="noopener">Hablemos ↗</a>
+  <button class="mn" id="mn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+ </div>
 </div></div></header>
+<div class="prog" id="prog" aria-hidden="true"></div>
+
+<div class="menu" id="menu" aria-hidden="true">
+ <nav aria-label="Menú">
+  <a href="#disenador" style="--i:0">Pruébelo <small>01</small></a>
+  <a href="#trabajo" style="--i:1">Trabajo <small>02</small></a>
+  <a href="#metodo" style="--i:2">Método <small>03</small></a>
+  <a href="#incluye" style="--i:3">Qué incluye <small>04</small></a>
+  <a href="#preguntas" style="--i:4">Preguntas <small>05</small></a>
+ </nav>
+ <div class="menu-pie">
+  <a class="btn" href="https://wa.me/525664274135?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20la%20de%20mi%20negocio." target="_blank" rel="noopener">Escribir por WhatsApp <span class="fl">→</span></a>
+  <button class="btn2" type="button" data-mail>Enviar correo</button>
+  <p class="mono"><span>Estudio de diseño web</span><span>México · España · En línea</span></p>
+ </div>
+</div>
 
 <main id="arriba">
 <section class="hx" id="hero">
@@ -680,11 +761,13 @@ section{position:relative}
  <p class="mono eti" data-r>(08) Contacto</p>
  <h2 data-r>¿Le mostramos cómo se vería la suya?</h2>
  <p class="lead" data-r style="--d:100">Mándenos el nombre de su negocio. En 48 horas le enseñamos su página terminada, con sus reseñas, sin costo y sin compromiso.</p>
- <div class="ctas" data-r style="--d:180"><a class="btn iman" href="https://wa.me/525664274135?text=Hola%2C%20me%20gustar%C3%ADa%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20p%C3%A1gina%20de%20mi%20negocio%3A%20" target="_blank" rel="noopener">Escribir por WhatsApp <span class="fl">→</span></a><a class="btn2" href="mailto:vd561838@gmail.com?subject=P%C3%A1gina%20para%20mi%20negocio">vd561838@gmail.com</a></div>
- <div class="pie mono"><span>© 2026 Sitio Listo · Estudio de diseño web</span><span>México · España · En línea</span><a href="#arriba">Volver arriba ↑</a></div>
- <div class="gigante" aria-hidden="true">Sitio Listo</div>
+ <div class="ctas" data-r style="--d:180"><a class="btn iman" href="https://wa.me/525664274135?text=Hola%2C%20me%20gustar%C3%ADa%20ver%20c%C3%B3mo%20quedar%C3%ADa%20la%20p%C3%A1gina%20de%20mi%20negocio%3A%20" target="_blank" rel="noopener">Escribir por WhatsApp <span class="fl">→</span></a><button class="btn2" type="button" data-mail><svg class="sobre" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>Enviar correo</button></div>
+ <div class="pie mono"><span class="firma-m"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x=".75" y=".75" width="62.5" height="62.5" rx="17.25" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.45)" stroke-width="1.5"/><path d="M16.5 34.5l9.5 9.5 16-17.5" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="16" r="5.25" fill="#D7FF3F"/></svg>© 2026 Sitio Listo · Estudio de diseño web</span><span>México · España · En línea</span><a href="#arriba">Volver arriba ↑</a></div>
+ <div class="gigante" aria-hidden="true">Sitio Listo<b></b></div>
 </div></footer>
 
+<a class="fwa" id="fwa" href="https://wa.me/525664274135?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20platicar%20sobre%20la%20de%20mi%20negocio." target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2z"/><path d="M8.6 9.2c.2 2.9 3.3 6 6.2 6.2" stroke-linecap="round"/></svg><b></b>WhatsApp</a>
+<div class="aviso" id="aviso" role="status" aria-live="polite"></div>
 <div class="cur" id="cur"><i>Ver ↗</i></div>
 <div class="cortina" id="cortina"></div>
 
@@ -847,10 +930,51 @@ section{position:relative}
  /* ── (03) Método y (06) Estudio ── */
  var pasos=$('#pasos'),riel=$('.riel'),cadaPaso=$$('.paso'),gr=$('#grande'),pal,ultimo=scrollY;
  gr.innerHTML=gr.textContent.trim().split(/\s+/).map(function(w){return '<span class="w">'+w+'</span>'}).join(' ');pal=$$('.w',gr);
+ /* ── Cabecera: progreso, sección activa, menú y WhatsApp fijo ── */
+ var prog=$('#prog'),hdNav=$('#hdNav'),ind=$('.ind',hdNav),fwa=$('#fwa'),contacto=$('#contacto'),menuAbierto=false,actAnt=null,escribe=false;
+ var secc=['disenador','trabajo','metodo','incluye','preguntas'].map(function(id){return d.getElementById(id)}),enlaces=$$('a[href^="#"]',hdNav).concat($$('#menu nav a'));
+ function marcaNav(id){
+  if(id===actAnt)return;actAnt=id;
+  enlaces.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)});
+  var a=id&&$('a[href="#'+id+'"]',hdNav);
+  if(a){ind.style.width=a.offsetWidth+'px';ind.style.transform='translateX('+a.offsetLeft+'px)';ind.style.opacity=1}else ind.style.opacity=0;
+ }
+ function cabecera(y,h){
+  var tot=d.documentElement.scrollHeight-h;prog.style.transform='scaleX('+(tot>0?lim(y/tot):0).toFixed(4)+')';
+  var act=null;secc.forEach(function(s){if(s.getBoundingClientRect().top<h*.42)act=s.id});
+  if(contacto.getBoundingClientRect().top<h*.5)act=null;marcaNav(act);
+  var finHero=hero.offsetTop+hero.offsetHeight-h*.5,veCont=contacto.getBoundingClientRect().top<h*.92;
+  var ver=y>finHero&&!veCont&&!menuAbierto&&!escribe;
+  if(ver!==fwa.classList.contains('vis')){fwa.classList.toggle('vis',ver);fwa.tabIndex=ver?0:-1;fwa.setAttribute('aria-hidden',!ver)}
+ }
+ d.addEventListener('focusin',function(e){escribe=/^(INPUT|TEXTAREA)$/.test(e.target.tagName);if(escribe)fwa.classList.remove('vis')});
+ d.addEventListener('focusout',function(){escribe=false});
+ var mn=$('#mn'),menu=$('#menu'),fuera=[$('main'),contacto];
+ function abreMenu(si){
+  menuAbierto=si;d.documentElement.classList.toggle('menu',si);mn.setAttribute('aria-expanded',si);mn.setAttribute('aria-label',si?'Cerrar menú':'Abrir menú');menu.setAttribute('aria-hidden',!si);
+  fuera.forEach(function(el){el.inert=si});
+  if(si){fwa.classList.remove('vis');setTimeout(function(){$('nav a',menu).focus({preventScroll:true})},60)}else alScroll();
+ }
+ mn.addEventListener('click',function(){abreMenu(!menuAbierto)});
+ $$('a',menu).forEach(function(a){a.addEventListener('click',function(){if(menuAbierto)abreMenu(false)})});
+ addEventListener('keydown',function(e){if(e.key==='Escape'&&menuAbierto){abreMenu(false);mn.focus()}});
+ addEventListener('resize',function(){actAnt='~';if(menuAbierto&&innerWidth>1180)abreMenu(false)});
+ if(d.fonts&&d.fonts.ready)d.fonts.ready.then(function(){actAnt='~';alScroll()});
+
+ /* correo: la dirección no aparece escrita en la página; se arma solo al hacer clic */
+ var aviso=$('#aviso'),tAv;
+ function avisa(t){aviso.textContent=t;aviso.classList.add('vis');clearTimeout(tAv);tAv=setTimeout(function(){aviso.classList.remove('vis')},4200)}
+ $$('[data-mail]').forEach(function(b){b.addEventListener('click',function(){
+  var dir=['838165dv','moc.liamg'].map(function(s){return s.split('').reverse().join('')}).join('@');
+  location.href='mailto:'+dir+'?subject='+encodeURIComponent('Página para mi negocio')+'&body='+encodeURIComponent('Hola, me gustaría ver cómo quedaría la página de mi negocio.\n\nNombre del negocio: \nCiudad: ');
+  avisa('Abriendo su aplicación de correo… Si no se abre, escríbanos por WhatsApp.');
+ })});
+
  function alScroll(){
   heroFrame();
   var y=scrollY,h=innerHeight;
-  hd.classList.toggle('sc',y>20);hd.classList.toggle('oculto',y>ultimo&&y>500);ultimo=y;
+  cabecera(y,h);
+  hd.classList.toggle('sc',y>20);hd.classList.toggle('oculto',!menuAbierto&&y>ultimo&&y>500);ultimo=y;
   if(fijo){var r=hz.getBoundingClientRect(),p=lim(-r.top/(r.height-h));tr.style.transform='translate3d('+(-p*dist)+'px,0,0)';hzBar.style.setProperty('--p',p);hzN.textContent='0'+(Math.min(pns.length-1,Math.round(p*(pns.length-1)))+1);
    pns.forEach(function(pn){var b=pn.getBoundingClientRect(),c=Math.abs(b.left+b.width/2-innerWidth/2)/innerWidth;pn.style.setProperty('--k',(1-Math.min(c,1)*.1).toFixed(3))})}
   var rp=pasos.getBoundingClientRect(),q=quieto?1:lim((h*.6-rp.top)/rp.height);riel.style.setProperty('--p',q);

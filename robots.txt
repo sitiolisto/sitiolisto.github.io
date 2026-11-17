@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /$
 Allow: /trabajo/
+Allow: /assets/og-estudio.jpg
+Allow: /favicon
+Allow: /icon-
+Allow: /apple-touch-icon.png
+Allow: /site.webmanifest
 Disallow: /
