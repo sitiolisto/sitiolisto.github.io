@@ -19,11 +19,15 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="apple-mobile-web-app-title" content="Site Web">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Site Web","alternateName":"Site Web · Estudio de diseño","url":"https://sitiolisto.github.io/","logo":"https://sitiolisto.github.io/icon-512.png","image":"https://sitiolisto.github.io/assets/og-estudio.jpg?v=5","description":"Estudio de diseño web para consultorios, despachos y talleres con buena reputación. Páginas a medida, con su dominio propio.","areaServed":[{"@type":"Country","name":"México"},{"@type":"Place","name":"Latinoamérica"},{"@type":"Country","name":"España"}],"knowsLanguage":"es","contactPoint":{"@type":"ContactPoint","contactType":"sales","url":"https://wa.me/525664274135","availableLanguage":"es"}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet';window.__fx=1">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap"></noscript>
-<link rel="preload" as="image" href="assets/trabajo/clinica-alba-escritorio-largo.webp" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/fuentes/bricolage.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fuentes/geist.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/trabajo/clinica-alba-escritorio-largo.webp" imagesrcset="assets/trabajo/clinica-alba-escritorio-largo-480.webp 480w, assets/trabajo/clinica-alba-escritorio-largo-800.webp 800w, assets/trabajo/clinica-alba-escritorio-largo.webp 1200w" imagesizes="(max-width:760px) 104vw, min(1080px,78vw)" fetchpriority="high">
 <style>
+/* fuentes alojadas en el sitio (latín). optional: si no llegan en ~100 ms se usa la de respaldo y el texto nunca se mueve */
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:500 800;font-display:optional;src:url(assets/fuentes/bricolage.woff2) format('woff2')}
+@font-face{font-family:'Geist';font-style:normal;font-weight:300 600;font-display:optional;src:url(assets/fuentes/geist.woff2) format('woff2')}
+@font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 500;font-display:optional;src:url(assets/fuentes/geist-mono.woff2) format('woff2')}
+
 /* ── Site Web · identidad: noche profunda, luz eléctrica (lima, aqua, cobalto) y tipografía de alto contraste ── */
 :root{
  --bg:#F7F8FA;--bg2:#EEF0F4;--card:#FFFFFF;--card2:#F4F6F9;--ln:rgba(11,13,18,.08);--ln2:rgba(11,13,18,.14);
@@ -552,12 +556,23 @@ html.mn-ab .menu-pie{opacity:1}
  .contacto h2{font-size:12.5vw}
  .pie{flex-direction:column;margin-top:70px}
 }
+/* ── modo ligero (celular): todo lo de arriba se pinta de inmediato, sin esperas ni WebGL ── */
+@media (prefers-reduced-motion:no-preference){
+ html.js.lig .hx .wd{opacity:1;filter:none;transform:translateY(.3em)}
+ html.js.lig .hx.in .wd{transform:none;transition:transform .7s var(--ease) calc(var(--i)*30ms)}
+ html.js.lig .hx .hx-dev{opacity:1}
+ html.js.lig .hx .wf{display:none}
+ html.js.lig .hx .hx-scr img.uno{clip-path:none}
+ html.js.lig .hx .scan{display:none}
+ html.js.lig .cinta-in{padding-right:40px;animation:cintaMov 38s linear infinite}
+ @keyframes cintaMov{to{transform:translate3d(-50%,0,0)}}
+}
 @media (hover:none){.cur{display:none}
  /* en celular el desenfoque de fondo cuesta mucho al desplazarse: fondo casi opaco en su lugar */
  .hd.sc .hd-in,.hx-pills,.btn2,.garantia,.menu{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
  .hd.sc .hd-in{background:rgba(255,255,255,.96)}.hx-pills{background:rgba(255,255,255,.96)}.btn2{background:rgba(255,255,255,.92)}.menu{background:rgba(247,248,250,.99)}}
 </style>
-<script>document.documentElement.classList.add('js')</script>
+<script>(function(h){h.classList.add('js');if(innerWidth<761||matchMedia('(hover:none)').matches)h.classList.add('lig')})(document.documentElement)</script>
 </head>
 <body>
 
@@ -598,9 +613,9 @@ html.mn-ab .menu-pie{opacity:1}
    <div class="hx-br">
     <div class="pv-bar"><i></i><i></i><i></i><span id="hxUrl">clinicadentalalba.mx</span><em class="estado" id="hxEst">Publicada</em></div>
     <div class="hx-scr" id="hxScr">
-     <img class="uno on" src="assets/trabajo/clinica-alba-escritorio-largo.webp" width="1200" height="2166" fetchpriority="high" alt="Página de Clínica Dental Alba en computadora">
-     <img data-src="assets/trabajo/rios-ventura-escritorio-largo.webp" width="1200" height="2166" decoding="async" alt="Página de Ríos &amp; Ventura en computadora">
-     <img data-src="assets/trabajo/taller-ibarra-escritorio-largo.webp" width="1200" height="2166" decoding="async" alt="Página de Taller Ibarra en computadora">
+     <img class="uno on" src="assets/trabajo/clinica-alba-escritorio-largo.webp" srcset="assets/trabajo/clinica-alba-escritorio-largo-480.webp 480w, assets/trabajo/clinica-alba-escritorio-largo-800.webp 800w, assets/trabajo/clinica-alba-escritorio-largo.webp 1200w" sizes="(max-width:760px) 104vw, min(1080px,78vw)" width="1200" height="2166" fetchpriority="high" alt="Página de Clínica Dental Alba en computadora">
+     <img data-src="assets/trabajo/rios-ventura-escritorio-largo.webp" data-srcset="assets/trabajo/rios-ventura-escritorio-largo-480.webp 480w, assets/trabajo/rios-ventura-escritorio-largo-800.webp 800w, assets/trabajo/rios-ventura-escritorio-largo.webp 1200w" sizes="(max-width:760px) 104vw, min(1080px,78vw)" width="1200" height="2166" decoding="async" alt="Página de Ríos &amp; Ventura en computadora">
+     <img data-src="assets/trabajo/taller-ibarra-escritorio-largo.webp" data-srcset="assets/trabajo/taller-ibarra-escritorio-largo-480.webp 480w, assets/trabajo/taller-ibarra-escritorio-largo-800.webp 800w, assets/trabajo/taller-ibarra-escritorio-largo.webp 1200w" sizes="(max-width:760px) 104vw, min(1080px,78vw)" width="1200" height="2166" decoding="async" alt="Página de Taller Ibarra en computadora">
      <div class="wf" aria-hidden="true">
       <i style="--k:0;left:4%;top:4.5%;width:15%;height:5%"></i><i style="--k:1;left:47%;top:5.5%;width:24%;height:3%"></i><i class="az" style="--k:2;right:4%;top:4.5%;width:10%;height:5.5%;border-radius:99px"></i>
       <i style="--k:3;left:6%;top:21%;width:17%;height:2.6%"></i><i style="--k:4;left:6%;top:27.5%;width:40%;height:7%"></i><i style="--k:5;left:6%;top:37%;width:31%;height:7%"></i>
@@ -613,9 +628,9 @@ html.mn-ab .menu-pie{opacity:1}
     </div>
    </div>
    <div class="hx-ph" id="hxPh"><div class="isla"></div><div class="pscr" id="hxPscr">
-    <img class="on" data-src="assets/trabajo/clinica-alba-movil-largo.webp" width="560" height="4020" decoding="async" alt="Página de Clínica Dental Alba en celular">
-    <img data-src="assets/trabajo/rios-ventura-movil-largo.webp" width="560" height="4020" decoding="async" alt="Página de Ríos &amp; Ventura en celular">
-    <img data-src="assets/trabajo/taller-ibarra-movil-largo.webp" width="560" height="4020" decoding="async" alt="Página de Taller Ibarra en celular">
+    <img class="on" data-src="assets/trabajo/clinica-alba-movil-largo.webp" data-srcset="assets/trabajo/clinica-alba-movil-largo-280.webp 280w, assets/trabajo/clinica-alba-movil-largo-340.webp 340w, assets/trabajo/clinica-alba-movil-largo-420.webp 420w, assets/trabajo/clinica-alba-movil-largo.webp 560w" sizes="(max-width:760px) 190px, 270px" width="560" height="4020" decoding="async" alt="Página de Clínica Dental Alba en celular">
+    <img data-src="assets/trabajo/rios-ventura-movil-largo.webp" data-srcset="assets/trabajo/rios-ventura-movil-largo-280.webp 280w, assets/trabajo/rios-ventura-movil-largo-340.webp 340w, assets/trabajo/rios-ventura-movil-largo-420.webp 420w, assets/trabajo/rios-ventura-movil-largo.webp 560w" sizes="(max-width:760px) 190px, 270px" width="560" height="4020" decoding="async" alt="Página de Ríos &amp; Ventura en celular">
+    <img data-src="assets/trabajo/taller-ibarra-movil-largo.webp" data-srcset="assets/trabajo/taller-ibarra-movil-largo-280.webp 280w, assets/trabajo/taller-ibarra-movil-largo-340.webp 340w, assets/trabajo/taller-ibarra-movil-largo-420.webp 420w, assets/trabajo/taller-ibarra-movil-largo.webp 560w" sizes="(max-width:760px) 190px, 270px" width="560" height="4020" decoding="async" alt="Página de Taller Ibarra en celular">
    </div></div>
   </div></div>
   <div class="hx-pills" id="hxPills" role="group" aria-label="Proyectos de concepto"><button type="button" aria-current="true">Clínica Alba</button><button type="button" aria-current="false">Ríos &amp; Ventura</button><button type="button" aria-current="false">Taller Ibarra</button></div>
@@ -671,21 +686,21 @@ html.mn-ab .menu-pie{opacity:1}
     <p class="d">Para pacientes que llegan con miedo: colores cálidos, formas suaves, el costo por escrito desde la portada y una sección que explica, paso a paso, qué pasa en la primera visita.</p>
     <ul class="tags mono"><li>Identidad</li><li>Página web</li><li>Citas por WhatsApp</li></ul>
     <a class="ver" href="trabajo/clinica-alba/" data-cortina="#1F4E4A">Ver proyecto completo ↗</a></div>
-   <a class="media" href="trabajo/clinica-alba/" data-cortina="#1F4E4A" aria-label="Abrir el proyecto Clínica Dental Alba"><div class="browser"><div class="barra"><i></i><i></i><i></i><span>clinicadentalalba.mx</span></div><div class="marco"><img src="assets/trabajo/clinica-alba-escritorio-largo.webp" width="1200" height="2166" decoding="async" alt="Página de inicio de Clínica Dental Alba" loading="lazy"></div></div><div class="mini"><img src="assets/trabajo/clinica-alba-movil.webp" width="780" height="1688" alt="" loading="lazy" decoding="async"></div></a>
+   <a class="media" href="trabajo/clinica-alba/" data-cortina="#1F4E4A" aria-label="Abrir el proyecto Clínica Dental Alba"><div class="browser"><div class="barra"><i></i><i></i><i></i><span>clinicadentalalba.mx</span></div><div class="marco"><img src="assets/trabajo/clinica-alba-escritorio-largo.webp" srcset="assets/trabajo/clinica-alba-escritorio-largo-480.webp 480w, assets/trabajo/clinica-alba-escritorio-largo-800.webp 800w, assets/trabajo/clinica-alba-escritorio-largo.webp 1200w" sizes="(max-width:1080px) 92vw, 720px" width="1200" height="2166" loading="lazy" decoding="async" alt="Página de inicio de Clínica Dental Alba" loading="lazy"></div></div><div class="mini"><img src="assets/trabajo/clinica-alba-movil.webp" srcset="assets/trabajo/clinica-alba-movil-240.webp 240w, assets/trabajo/clinica-alba-movil-400.webp 400w, assets/trabajo/clinica-alba-movil.webp 780w" sizes="(max-width:1080px) 120px, 200px" width="780" height="1688" alt="" loading="lazy" decoding="async"></div></a>
   </div></article>
   <article class="pn" style="--pbg:#0E1013;--ptx:#ECE7DD;--pmu:#A39E94;--pac:#B8955A;--pbt:#0E1013;--pf:'Cormorant Garamond',Georgia,serif;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)"><div class="pn-in">
    <div><span class="pn-num">02 — Concepto</span><h3>Ríos &amp; Ventura</h3><p class="mono giro">Abogados · Guadalajara</p>
     <p class="d">Un despacho que vende confianza. Tipografía clásica, poco ruido y una promesa que sus clientes valoran más que cualquier título: saber en qué va su caso cada semana.</p>
     <ul class="tags mono"><li>Página web</li><li>Redacción</li><li>Consulta en línea</li></ul>
     <a class="ver" href="trabajo/rios-ventura/" data-cortina="#0E1013">Ver proyecto completo ↗</a></div>
-   <a class="media" href="trabajo/rios-ventura/" data-cortina="#0E1013" aria-label="Abrir el proyecto Ríos y Ventura"><div class="browser"><div class="barra"><i></i><i></i><i></i><span>riosventura.mx</span></div><div class="marco"><img src="assets/trabajo/rios-ventura-escritorio-largo.webp" width="1200" height="2166" decoding="async" alt="Página de inicio de Ríos &amp; Ventura Abogados" loading="lazy"></div></div><div class="mini"><img src="assets/trabajo/rios-ventura-movil.webp" width="780" height="1688" alt="" loading="lazy" decoding="async"></div></a>
+   <a class="media" href="trabajo/rios-ventura/" data-cortina="#0E1013" aria-label="Abrir el proyecto Ríos y Ventura"><div class="browser"><div class="barra"><i></i><i></i><i></i><span>riosventura.mx</span></div><div class="marco"><img src="assets/trabajo/rios-ventura-escritorio-largo.webp" srcset="assets/trabajo/rios-ventura-escritorio-largo-480.webp 480w, assets/trabajo/rios-ventura-escritorio-largo-800.webp 800w, assets/trabajo/rios-ventura-escritorio-largo.webp 1200w" sizes="(max-width:1080px) 92vw, 720px" width="1200" height="2166" loading="lazy" decoding="async" alt="Página de inicio de Ríos &amp; Ventura Abogados" loading="lazy"></div></div><div class="mini"><img src="assets/trabajo/rios-ventura-movil.webp" srcset="assets/trabajo/rios-ventura-movil-240.webp 240w, assets/trabajo/rios-ventura-movil-400.webp 400w, assets/trabajo/rios-ventura-movil.webp 780w" sizes="(max-width:1080px) 120px, 200px" width="780" height="1688" alt="" loading="lazy" decoding="async"></div></a>
   </div></article>
   <article class="pn" style="--pbg:#F5C518;--ptx:#16181B;--pmu:#3D3A2A;--pac:#16181B;--pbt:#F5C518;--pf:'Barlow Condensed',Impact,sans-serif;--pw:700"><div class="pn-in">
    <div><span class="pn-num">03 — Concepto</span><h3 style="text-transform:uppercase;letter-spacing:0">Taller Ibarra</h3><p class="mono giro">Mecánica · Valencia, España</p>
     <p class="d">Directo, como el oficio. Precios a la vista, letra grande y un solo botón para pedir cita desde el celular. Lo que un conductor con prisa necesita en diez segundos.</p>
     <ul class="tags mono"><li>Página web</li><li>Precios</li><li>Google Maps</li></ul>
     <a class="ver" href="trabajo/taller-ibarra/" data-cortina="#16181B">Ver proyecto completo ↗</a></div>
-   <a class="media" href="trabajo/taller-ibarra/" data-cortina="#16181B" aria-label="Abrir el proyecto Taller Ibarra"><div class="browser"><div class="barra"><i></i><i></i><i></i><span>talleribarra.es</span></div><div class="marco"><img src="assets/trabajo/taller-ibarra-escritorio-largo.webp" width="1200" height="2166" decoding="async" alt="Página de inicio de Taller Ibarra" loading="lazy"></div></div><div class="mini"><img src="assets/trabajo/taller-ibarra-movil.webp" width="780" height="1688" alt="" loading="lazy" decoding="async"></div></a>
+   <a class="media" href="trabajo/taller-ibarra/" data-cortina="#16181B" aria-label="Abrir el proyecto Taller Ibarra"><div class="browser"><div class="barra"><i></i><i></i><i></i><span>talleribarra.es</span></div><div class="marco"><img src="assets/trabajo/taller-ibarra-escritorio-largo.webp" srcset="assets/trabajo/taller-ibarra-escritorio-largo-480.webp 480w, assets/trabajo/taller-ibarra-escritorio-largo-800.webp 800w, assets/trabajo/taller-ibarra-escritorio-largo.webp 1200w" sizes="(max-width:1080px) 92vw, 720px" width="1200" height="2166" loading="lazy" decoding="async" alt="Página de inicio de Taller Ibarra" loading="lazy"></div></div><div class="mini"><img src="assets/trabajo/taller-ibarra-movil.webp" srcset="assets/trabajo/taller-ibarra-movil-240.webp 240w, assets/trabajo/taller-ibarra-movil-400.webp 400w, assets/trabajo/taller-ibarra-movil.webp 780w" sizes="(max-width:1080px) 120px, 200px" width="780" height="1688" alt="" loading="lazy" decoding="async"></div></a>
   </div></article>
  </div>
  <div class="hz-pie mono"><span id="hzN">01</span><div class="hz-pr"><i id="hzBar"></i></div><span>03</span></div>
@@ -732,6 +747,7 @@ html.mn-ab .menu-pie{opacity:1}
  var d=document,$=function(s,c){return (c||d).querySelector(s)},$$=function(s,c){return [].slice.call((c||d).querySelectorAll(s))};
  var quieto=matchMedia('(prefers-reduced-motion: reduce)').matches;
  var fino=matchMedia('(hover:hover) and (pointer:fine)').matches;
+ var lig=d.documentElement.classList.contains('lig');
  var hero=$('#hero'),hd=$('#hd');
  function lim(v){return Math.max(0,Math.min(1,v))}
 
@@ -740,12 +756,15 @@ html.mn-ab .menu-pie{opacity:1}
   if(nd.nodeType===3){var f=d.createDocumentFragment();nd.textContent.split(/(\s+)/).forEach(function(w){if(!w)return;if(/^\s+$/.test(w)){f.appendChild(d.createTextNode(w));return}var s=d.createElement('span');s.className='wd';s.style.setProperty('--i',n++);s.textContent=w;f.appendChild(s)});el.replaceChild(f,nd)}
   else if(nd.nodeType===1)parte(nd)})}parte($('#titular'))})();
  var entra=function(){hero.classList.add('in')};
- /* la fuente del titular se pide sin bloquear; si tarda más de 1.2 s, el titular entra con la de respaldo */
- (function esperaFuente(n){if(window.__fx&&d.fonts&&d.fonts.load){d.fonts.load('600 60px "Bricolage Grotesque"').then(entra,entra);return}if(n>0)setTimeout(function(){esperaFuente(n-1)},50);else entra()})(24);setTimeout(entra,1200);
+ /* en celular el titular entra al instante; en escritorio espera la fuente (alojada y precargada) hasta 0.4 s */
+ if(lig)entra();else{(d.fonts&&d.fonts.load?d.fonts.load('600 60px "Bricolage Grotesque"'):Promise.resolve()).then(entra,entra);setTimeout(entra,400)}
 
  /* ── Fondo de luz en WebGL (ruido fractal que fluye y sigue al mouse) ── */
  (function(){
-  var cv=$('#gl'),gl=cv.getContext('webgl',{antialias:false,alpha:true,premultipliedAlpha:false});if(!gl)return;
+  if(lig)return;
+  var cv=$('#gl');
+  function enciende(){
+  var gl=cv.getContext('webgl',{antialias:false,alpha:true,premultipliedAlpha:false,powerPreference:'low-power'});if(!gl)return;
   var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
   var fs='precision mediump float;uniform vec2 r;uniform float t;uniform vec2 m;'+
   'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}'+
@@ -778,6 +797,9 @@ html.mn-ab .menu-pie{opacity:1}
   new IntersectionObserver(function(e){visible=e[0].isIntersecting;arranca()}).observe(hero);d.addEventListener('visibilitychange',arranca);
   cv.style.background='none';
   if(quieto)pinta(performance.now());else arranca();
+  }
+  function luego(){(window.requestIdleCallback||function(f){setTimeout(f,300)})(enciende,{timeout:2000})}
+  if(d.readyState==='complete')luego();else addEventListener('load',luego);
  })();
 
  /* ── Portada: la página se arma (boceto → diseño) y el scroll mueve la escena ── */
@@ -788,7 +810,8 @@ html.mn-ab .menu-pie{opacity:1}
  function ez(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
  function seg(p,a,b){return lim((p-a)/(b-a))}
  function ponI(i){if(i===hxI)return;hxI=i;dImgs.forEach(function(m,j){m.classList.toggle('on',j===i)});mImgs.forEach(function(m,j){m.classList.toggle('on',j===i)});pills.forEach(function(b,j){b.setAttribute('aria-current',j===i)});hxUrl.textContent=HP[i][0];hxHalo.style.color=HP[i][1]}
- if(cine){hero.classList.add('cine');hxEst.textContent='Boceto';
+ if(cine&&lig){hero.classList.add('cine','pintado')}
+ else if(cine){hero.classList.add('cine');hxEst.textContent='Boceto';
   setTimeout(function(){hero.classList.add('pintado');setTimeout(function(){hxEst.textContent='Publicada'},700)},1300)}
  /* medidas de la portada: se leen solo al cargar o cambiar de tamaño, nunca en cada cuadro del scroll */
  var hxSt=$('.hx-st'),M={vh:innerHeight},anchoAnt=0;
@@ -832,7 +855,7 @@ html.mn-ab .menu-pie{opacity:1}
   if(rm>0)mImgs[i].style.transform='translateY('+(-f*rm).toFixed(1)+'px)';
  }
  /* las capturas que no se ven al abrir se piden cuando la página ya cargó */
- function cargaDiferidas(){$$('img[data-src]',hero).forEach(function(m){m.addEventListener('load',function(){mide()},{once:true});m.src=m.dataset.src;delete m.dataset.src})}
+ function cargaDiferidas(){$$('img[data-src]',hero).forEach(function(m){m.addEventListener('load',function(){mide()},{once:true});if(m.dataset.srcset){m.srcset=m.dataset.srcset;delete m.dataset.srcset}m.src=m.dataset.src;delete m.dataset.src})}
  pills.forEach(function(b,i){b.addEventListener('click',function(){
   if(!cine){ponI(i);return}
   var H=M.heroH-M.vh;scrollTo({top:M.heroTop+(.46+(i+.5)/3*.44)*H,behavior:'smooth'})})});
@@ -851,7 +874,7 @@ html.mn-ab .menu-pie{opacity:1}
  var cinta=$('#cinta'),x=0,vel=0,yAnt=scrollY;
  var cintaW=0,cintaVis=false,cintaCorre=false;
  function gira(){if(!cintaVis||d.hidden){cintaCorre=false;return}var y=scrollY;vel=vel*.9+(y-yAnt)*.1;yAnt=y;x-=.6+Math.min(Math.abs(vel),60)*.4;if(cintaW&&-x>=cintaW)x+=cintaW;cinta.style.transform='translate3d('+x.toFixed(1)+'px,0,0)';requestAnimationFrame(gira)}
- function arrancaCinta(){if(!quieto&&cintaVis&&!cintaCorre&&!d.hidden){cintaCorre=true;yAnt=scrollY;requestAnimationFrame(gira)}}
+ function arrancaCinta(){if(!quieto&&!lig&&cintaVis&&!cintaCorre&&!d.hidden){cintaCorre=true;yAnt=scrollY;requestAnimationFrame(gira)}}
  new IntersectionObserver(function(e){cintaVis=e[0].isIntersecting;arrancaCinta()}).observe(cinta.parentNode);d.addEventListener('visibilitychange',arrancaCinta);
 
  /* ── (01) Diseñador en vivo ── */
