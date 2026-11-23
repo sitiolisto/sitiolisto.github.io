@@ -561,6 +561,7 @@ html.mn-ab .menu-pie{opacity:1}
 html.lig #disenador{content-visibility:auto;contain-intrinsic-size:auto 1840px}
 html.lig #incluye{content-visibility:auto;contain-intrinsic-size:auto 3040px}
 html.lig .contacto{content-visibility:auto;contain-intrinsic-size:auto 820px}
+html.lig .work{content-visibility:auto;contain-intrinsic-size:auto 3130px}
 @media (prefers-reduced-motion:no-preference){
  html.js.lig .hx .wd{opacity:1;filter:none;transform:translateY(.3em)}
  html.js.lig .hx.in .wd{transform:none;transition:transform .7s var(--ease) calc(var(--i)*30ms)}
@@ -1002,7 +1003,8 @@ html.lig .contacto{content-visibility:auto;contain-intrinsic-size:auto 820px}
  if(!cine)cargaDiferidas();
 
  /* capturas: al pasar el mouse se recorre la página completa */
- $$('.media').forEach(function(m){var mc=$('.marco',m);function mide(){m.style.setProperty('--mh',mc.clientHeight+'px')}mide();addEventListener('resize',mide)});
+ /* el alto del marco se lee después de maquetar (ResizeObserver), no al arrancar: así no obliga a maquetar toda la sección al cargar */
+ $$('.media').forEach(function(m){var mc=$('.marco',m);function mide(){m.style.setProperty('--mh',mc.clientHeight+'px')}if(window.ResizeObserver)new ResizeObserver(mide).observe(mc);else{mide();addEventListener('resize',mide)}});
 
  /* (07) Preguntas */
  $$('.pr button').forEach(function(b){b.addEventListener('click',function(){var pr=b.parentNode,ab=!pr.classList.contains('ab');pr.classList.toggle('ab',ab);b.setAttribute('aria-expanded',ab)})});
