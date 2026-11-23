@@ -740,8 +740,8 @@ html.mn-ab .menu-pie{opacity:1}
   if(nd.nodeType===3){var f=d.createDocumentFragment();nd.textContent.split(/(\s+)/).forEach(function(w){if(!w)return;if(/^\s+$/.test(w)){f.appendChild(d.createTextNode(w));return}var s=d.createElement('span');s.className='wd';s.style.setProperty('--i',n++);s.textContent=w;f.appendChild(s)});el.replaceChild(f,nd)}
   else if(nd.nodeType===1)parte(nd)})}parte($('#titular'))})();
  var entra=function(){hero.classList.add('in')};
- /* la fuente del titular se pide sin bloquear; si tarda más de 0.6 s, el titular entra con la de respaldo */
- (function esperaFuente(n){if(window.__fx&&d.fonts&&d.fonts.load){d.fonts.load('600 60px "Bricolage Grotesque"').then(entra,entra);return}if(n>0)setTimeout(function(){esperaFuente(n-1)},50);else entra()})(12);setTimeout(entra,600);
+ /* la fuente del titular se pide sin bloquear; si tarda más de 1.2 s, el titular entra con la de respaldo */
+ (function esperaFuente(n){if(window.__fx&&d.fonts&&d.fonts.load){d.fonts.load('600 60px "Bricolage Grotesque"').then(entra,entra);return}if(n>0)setTimeout(function(){esperaFuente(n-1)},50);else entra()})(24);setTimeout(entra,1200);
 
  /* ── Fondo de luz en WebGL (ruido fractal que fluye y sigue al mouse) ── */
  (function(){
