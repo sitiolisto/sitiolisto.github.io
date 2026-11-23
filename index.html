@@ -557,6 +557,10 @@ html.mn-ab .menu-pie{opacity:1}
  .pie{flex-direction:column;margin-top:70px}
 }
 /* ── modo ligero (celular): todo lo de arriba se pinta de inmediato, sin esperas ni WebGL ── */
+/* las secciones de abajo se maquetan solo cuando están por aparecer (el alto reservado es el real en celular) */
+html.lig #disenador{content-visibility:auto;contain-intrinsic-size:auto 1840px}
+html.lig #incluye{content-visibility:auto;contain-intrinsic-size:auto 3040px}
+html.lig .contacto{content-visibility:auto;contain-intrinsic-size:auto 820px}
 @media (prefers-reduced-motion:no-preference){
  html.js.lig .hx .wd{opacity:1;filter:none;transform:translateY(.3em)}
  html.js.lig .hx.in .wd{transform:none;transition:transform .7s var(--ease) calc(var(--i)*30ms)}
@@ -864,7 +868,9 @@ html.mn-ab .menu-pie{opacity:1}
  /* ── Apariciones y contadores ── */
  function cuenta(el){var fin=+el.dataset.n,t0=null;el.textContent='0';function paso(t){t0=t0||t;var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(fin*(p===1?1:1-Math.pow(2,-10*p)));if(p<1)requestAnimationFrame(paso)}requestAnimationFrame(paso)}
  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;var t=en.target;t.classList.add('in');if(!quieto)$$('[data-n]',t).forEach(cuenta);io.unobserve(t)})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
- $$('[data-r]').forEach(function(el){io.observe(el)});
+ /* los títulos .h2 empiezan recortados (clip-path) y con área 0 el observador nunca los ve: se observa su contenedor */
+ var ioH=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;en.target.__r.forEach(function(h){h.classList.add('in')});ioH.unobserve(en.target)})},{threshold:0,rootMargin:'0px 0px -8% 0px'});
+ $$('[data-r]').forEach(function(el){if(el.classList.contains('h2')){var c=el.parentNode;(c.__r=c.__r||[]).push(el);ioH.observe(c)}else io.observe(el)});
  var gig=$('.gigante'),io4=new IntersectionObserver(function(es){if(es[0].isIntersecting){gig.classList.add('in');io4.disconnect()}});io4.observe($('.pie'));
  /* el bento solo anima mientras está en pantalla */
  var bento=$('#bento');new IntersectionObserver(function(e){bento.classList.toggle('vivo',e[0].isIntersecting)}).observe(bento);
